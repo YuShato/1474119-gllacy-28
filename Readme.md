@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Юлия Шатохина](https://up.htmlacademy.ru/htmlcss/28/user/1474119).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Островский](https://htmlacademy.ru/profile/grandmaus).
 
 ---
 
