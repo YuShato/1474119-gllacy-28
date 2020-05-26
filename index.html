@@ -45,6 +45,49 @@
           </a>
         </li>
       </ul>
+      <!--Выпадающий список (из каталога)-->
+      <!-- Я не знаю, куда правильно в разметке вставить разметку формы регистрации, поэтому пока оставляю здесь-->
+      <ul>
+        <li>
+          <a href="">Новинки</a>
+        </li>
+        <li>
+          <a href="">Сливочное</a>
+        </li>
+        <li>
+          <a href="">Щербеты</a>
+        </li>
+        <li>
+          <a href="">Фруктовый лед</a>
+        </li>
+        <li>
+          <a href="">Мелорин</a>
+        </li>
+      </ul>
+      <!--Форма поиска товара-->
+      <!-- Я не знаю, куда правильно в разметке вставить разметку формы регистрации, поэтому пока оставляю здесь-->
+      <section>
+        <label for="item-search" class="visually-hidden">Найти товар в каталоге</label>
+        <input type="text" name="item-search" id="item-search" placeholder="Крем-брюле">
+      </section>
+      <!--Форма регистрации и входа-->
+      <!-- Я не знаю, куда правильно в разметке вставить разметку формы регистрации, поэтому пока оставляю здесь-->
+      <section>
+        <h2 class="visually-hidden">Вход в личный кабинет</h2>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <p>
+            <label for="entrance-email">Электронная почта</label>
+            <input type="email" name="entrance-email" id="entrance-email" placeholder="email@example.com">
+          </p>
+          <p>
+            <label for="entrance-password">Пароль</label>
+            <input type="password" name="entrance-password" id="entrance-password" placeholder="••••••">
+          </p>
+          <a href="">Забыли пароль?</a>
+          <a href="">Новая регистрация</a>
+          <button type="submit">Войти</button>
+        </form>
+      </section>
     </nav>
   </header>
   <main>
@@ -55,8 +98,7 @@
     </div>
     <!--как бы слайдер-->
     <section>
-      <h2>Скидка при покупке двух товаров</h2>
-      <!--сделать скрытым!!!-->
+      <h2 class="visually-hidden">Скидка при покупке двух товаров</h2>
       <ul>
         <li>
           <!--первый экран-->
@@ -92,8 +134,7 @@
     </section>
     <!--блок акции-->
     <section>
-      <h2>Акции</h2>
-      <!--сделать скрытым!!!-->
+      <h2 class="visually-hidden">Акции</h2>
       <img src="https://via.placeholder.com/150x100" alt="Акция, малина в подарок!">
       <h2>Малинка даром!</h2>
       <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
@@ -106,11 +147,9 @@
       </p>
       <button type="submit">Хочу шоколадки!</button>
     </section>
-
     <!--блок мороженое-хит (4 вида)-->
     <section>
-      <h2>Хиты продаж</h2>
-      <!--сделать скрытым!!!-->
+      <h2 class="visually-hidden">Хиты продаж</h2>
       <article>
         <a href="">
           <img src="img/jam-icecream-min.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267"
@@ -182,17 +221,15 @@
     </section>
     <!--лид-магнит-->
     <section>
-      <h3>Подпишитесь на рассылку</h3>
-      <!--сделать скрытым!!!-->
+      <h3 class="visually-hidden">Подпишитесь на рассылку</h3>
       <p> Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит.
         Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-      <input type="text" placeholder="email@example.com">
+      <input type="email" placeholder="email@example.com">
       <input type="submit" value="Отправить">
     </section>
     <!--карта и контакты-->
     <section>
-      <h3>Контакты:</h3>
-      <!--сделать скрытым!!!-->
+      <h3 class="visually-hidden">Контакты:</h3>
       <img src="https://via.placeholder.com/150x100" alt="схема проезда в магазин Глейси">
       <div>
         <!--контакты-->
@@ -236,12 +273,33 @@
       </li>
     </ul>
     <section>
-      <h3>Разработано в HTML Academy</h3>
-      <!--сделать скрытым!!!-->
+      <h3 class="visually-hidden">Разработано в HTML Academy</h3>
       <a href="https://htmlacademy.ru/intensive/htmlcss">Логотип HTML Academy</a>
       <p>Сделано в <a href=" https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</p>
     </section>
   </footer>
+
+  <!--Форма обратной связи-->
+  <!-- Я не знаю, куда правильно в разметке вставить разметку формы регистрации, поэтому пока оставляю здесь-->
+  <section>
+    <h2>Мы обязательно вам ответим!</h2>
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <p>
+        <label for="question-name" class="visually-hidden">Как вас зовут?</label>
+        <input type="text" name="question-name" id="question-name" placeholder="Имя Фамилия">
+      </p>
+      <p>
+        <label for="question-email" class="visually-hidden">Введите ваш e-mail</label>
+        <input type="email" name="question-email" id="question-email" placeholder="email@example.com">
+      </p>
+      <p>
+        <label for="question-text" class="visually-hidden">Введите ваше сообщение</label>
+        <input type="text" name="question-text" id="question-text" placeholder="В свободной форме">
+      </p>
+      <button type="submit">Отправить</button>
+    </form>
+  </section>
+
 </body>
 
 </html>
