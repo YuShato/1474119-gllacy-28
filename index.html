@@ -33,10 +33,32 @@
         <!--Поиск, вход, корзина-->
         <li>
           <img src="img/loupe.svg" alt="Поиск товаров в каталоге Gllacy" width="16" height="16">
+          <!--Форма поиска товара-->
+          <form action="https://echo.htmlacademy.ru" method="post">
+            <label for="item-search" class="visually-hidden">Найти товар в каталоге</label>
+            <input type="text" name="item-search" id="item-search" placeholder="Крем-брюле">
+          </form>
         </li>
         <li>
           <img src="img/entrance.svg" alt="вход в личный кабинет" width="20" height="19">
           <button type="submit">Вход</button>
+          <!--Форма регистрации и входа-->
+          <section>
+            <h2 class="visually-hidden">Вход в личный кабинет</h2>
+            <form action="https://echo.htmlacademy.ru" method="post">
+              <p>
+                <label for="entrance-email">Электронная почта</label>
+                <input type="email" name="entrance-email" id="entrance-email" placeholder="email@example.com">
+              </p>
+              <p>
+                <label for="entrance-password">Пароль</label>
+                <input type="password" name="entrance-password" id="entrance-password" placeholder="••••••">
+              </p>
+              <a href="">Забыли пароль?</a>
+              <a href="">Новая регистрация</a>
+              <button type="submit">Войти</button>
+            </form>
+          </section>
         </li>
         <li>
           <a href="">
@@ -64,30 +86,8 @@
           <a href="">Мелорин</a>
         </li>
       </ul>
-      <!--Форма поиска товара-->
-      <!-- Я не знаю, куда правильно в разметке вставить разметку формы регистрации, поэтому пока оставляю здесь-->
-      <section>
-        <label for="item-search" class="visually-hidden">Найти товар в каталоге</label>
-        <input type="text" name="item-search" id="item-search" placeholder="Крем-брюле">
-      </section>
-      <!--Форма регистрации и входа-->
-      <!-- Я не знаю, куда правильно в разметке вставить разметку формы регистрации, поэтому пока оставляю здесь-->
-      <section>
-        <h2 class="visually-hidden">Вход в личный кабинет</h2>
-        <form action="https://echo.htmlacademy.ru" method="post">
-          <p>
-            <label for="entrance-email">Электронная почта</label>
-            <input type="email" name="entrance-email" id="entrance-email" placeholder="email@example.com">
-          </p>
-          <p>
-            <label for="entrance-password">Пароль</label>
-            <input type="password" name="entrance-password" id="entrance-password" placeholder="••••••">
-          </p>
-          <a href="">Забыли пароль?</a>
-          <a href="">Новая регистрация</a>
-          <button type="submit">Войти</button>
-        </form>
-      </section>
+
+
     </nav>
   </header>
   <main>
@@ -224,8 +224,10 @@
       <h3 class="visually-hidden">Подпишитесь на рассылку</h3>
       <p> Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит.
         Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-      <input type="email" placeholder="email@example.com">
-      <input type="submit" value="Отправить">
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <input type="email" placeholder="email@example.com">
+        <button type="submit">Отправить</button>
+      </form>
     </section>
     <!--карта и контакты-->
     <section>
@@ -274,7 +276,7 @@
     </ul>
     <section>
       <h3 class="visually-hidden">Разработано в HTML Academy</h3>
-      <a href="https://htmlacademy.ru/intensive/htmlcss">Логотип HTML Academy</a>
+      <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Логотип HTML Academy">Логотип HTML Academy</a>
       <p>Сделано в <a href=" https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</p>
     </section>
   </footer>
