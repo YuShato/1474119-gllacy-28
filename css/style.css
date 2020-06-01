@@ -72,11 +72,10 @@ body {
   height: auto;
 }
 
-.user-navigation,
-.site-navigation,
-.main-slider-list,
-.main-slider-breadcrumbs {
+.list-reset {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 /*Hidden*/
@@ -94,6 +93,7 @@ body {
 /*Header*/
 .main-header {
   color: var(--text-color-light);
+  display: flex;
 }
 
 /* Скрытые поп-апы, потом отобразить!!! */
@@ -125,6 +125,21 @@ body {
   line-height: 30px;
 }
 
+.offer {
+  width: 560px;
+  height: 229px;
+  border-radius: 16px;
+  font-size: 18px;
+  color: var(--text-color-light);
+  font-weight: bold;
+  background-repeat: no-repeat;
+}
+
+.offer h2 {
+  font-size: 35px;
+  line-height: 41px;
+}
+
 .offer-raspberry {
   background-color: var(--basic-raspberry-backgr);
   background-image: url(../img/raspberry-backgr-min.jpg);
@@ -133,20 +148,6 @@ body {
 .offer-choco {
   background-color: var(--basic-choco-backgr);
   background-image: url(../img/chocolate-backgr-min.jpg);
-}
-
-.offer {
-  width: 560px;
-  height: 229px;
-  border-radius: 16px;
-  font-size: 18px;
-  color: var(--text-color-light);
-  font-weight: bold;
-}
-
-.offer h2 {
-  font-size: 35px;
-  line-height: 41px;
 }
 
 .button {
