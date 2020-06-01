@@ -208,52 +208,61 @@
     <section class="benefits">
       <h1>Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</h1>
       <div class="benefit-item">
-        <img src="img/ice-cream.svg" alt="Собственное производство и проверенные технологии" width="49" height="49">
-        <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и
+        <img class="benefit-item-img"> src="img/ice-cream.svg" alt="Собственное производство и проверенные технологии"
+        width="49" height="49">
+        <p class="benefit-item-descr">Все наше мороженое изготавливается на собственном производстве, с использованием
+          современного оборудования и
           проверенных временем технологий.</p>
       </div>
       <div class="benefit-item">
-        <img src="img/cow.svg" alt="Проверенные поставщики" width="49" height="49">
-        <p>Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас
+        <img class="benefit-item-img" src="img/cow.svg" alt="Проверенные поставщики" width="49" height="49">
+        <p class="benefit-item-descr">Закупка ингредиентов производится только у проверенных фермерских хозяйств и
+          компаний, с которыми нас
           связывает долговременное сотрудничество.</p>
       </div>
       <div class="benefit-item">
-        <img src="img/eco.svg" alt="Только продукты высочайшего качества" width="49" height="49">
-        <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные
+        <img class="benefit-item-img" src="img/eco.svg" alt="Только продукты высочайшего качества" width="49"
+          height="49">
+        <p class="benefit-item-descr">Для приготовления мороженого используются настоящие сливки и молоко высочайшего
+          качества. Все дополнительные
           ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
       </div>
       <div class="benefit-item">
-        <img src="img/thermometer.svg" alt="Качественная доставка" width="49" height="49">
-        <p>Доставка нашего мороженного до заказчиков осуществляется в специальном термопаке, который не дает мороженому
+        <img class="benefit-item-img" src="img/thermometer.svg" alt="Качественная доставка" width="49" height="49">
+        <p class="benefit-item-descr">Доставка нашего мороженного до заказчиков осуществляется в специальном термопаке,
+          который не дает мороженому
           растаять в пути и позволяет сохранить превосходный вкус.</p>
       </div>
     </section>
     <!--Блог компании, новости-->
     <section class="news">
-      <h3>Новое в нашем блоге</h3>
-      <p><a href="">10 способов сервировки фруктовых щербетов к столу</a></p>
+      <h3 class="news-title">Новое в нашем блоге</h3>
+      <p class="news-descr">
+        <a href="">10 способов сервировки фруктовых щербетов к столу</a>
+      </p>
       <img src="https://via.placeholder.com/150x100" alt="фруктовые щербеты от магазина Глейси">
     </section>
     <!--лид-магнит-->
     <section class="lead-magnit">
       <h3 class="visually-hidden">Подпишитесь на рассылку</h3>
-      <p> Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит.
+      <p class="lead-magnit-descr"> Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного,
+        что у нас происходит.
         Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-      <form action="https://echo.htmlacademy.ru" method="post">
+      <form class="lead-form" action="https://echo.htmlacademy.ru" method="post">
         <input type="email" placeholder="email@example.com">
         <button class="button" type="submit">Отправить</button>
       </form>
     </section>
     <!--карта и контакты-->
-    <section class="contacts">
+    <section class="contacts-wrap">
       <h3 class="visually-hidden">Контакты:</h3>
       <img src="https://via.placeholder.com/150x100" alt="схема проезда в магазин Глейси">
-      <div>
+      <div class="contacts">
         <!--контакты-->
-        <p>Адрес главного офиса и офлайн-магазина:</p>
-        <p>ул. Большая Конюшенная, 19/8, Санкт-Петербург</p>
-        <p>Для заказов по телефону: </p>
-        <a href="tel:+78124502525">8 812 450-25-25</a>
+        <p class="contacts-descr">Адрес главного офиса и офлайн-магазина:</p>
+        <p class="contacts-descr">ул. Большая Конюшенная, 19/8, Санкт-Петербург</p>
+        <p class="contacts-descr">Для заказов по телефону: </p>
+        <a class="contacts-link" href="tel:+78124502525">8 812 450-25-25</a>
         <p>(с 10 до 20 ежедневно)</p>
         <button class="button" type="submit">Форма обратной связи</button>
       </div>
@@ -289,18 +298,20 @@
         <a href="">Экологические стандарты</a>
       </li>
     </ul>
-    <section>
+    <section class="copywrite">
       <h3 class="visually-hidden">Разработано в HTML Academy</h3>
-      <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Логотип HTML Academy">Логотип HTML Academy</a>
-      <p>Сделано в <a href=" https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</p>
+      <a class="copywrite-link" href="https://htmlacademy.ru/intensive/htmlcss"
+        aria-label="Логотип HTML Academy">Логотип HTML Academy</a>
+      <p class="copywrite-descr">Сделано в <a href=" https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019
+      </p>
     </section>
   </footer>
 
   <!--Форма обратной связи-->
   <!-- Я не знаю, куда правильно в разметке вставить разметку формы регистрации, поэтому пока оставляю здесь-->
   <section class="popup">
-    <h2>Мы обязательно вам ответим!</h2>
-    <form action="https://echo.htmlacademy.ru" method="post">
+    <h2 class="popup-title">Мы обязательно вам ответим!</h2>
+    <form class="popup-form" action="https://echo.htmlacademy.ru" method="post">
       <p>
         <label for="question-name" class="visually-hidden">Как вас зовут?</label>
         <input type="text" name="question-name" id="question-name" placeholder="Имя Фамилия">
