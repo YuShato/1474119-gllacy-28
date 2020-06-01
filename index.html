@@ -21,19 +21,19 @@
       </a>
       <!--верхнее меню и навигация-->
       <ul class="site-navigation">
-        <li>
+        <li class="site-navigation-item">
           <a href="catalog.html">Каталог</a>
         </li>
-        <li>
+        <li class="site-navigation-item">
           <a href="">Доставка и оплата</a>
         </li>
-        <li>
+        <li class="site-navigation-item">
           <a href="">О компании</a>
         </li>
       </ul>
       <!--Поиск, вход, корзина-->
       <ul class="user-navigation">
-        <li>
+        <li class="user-navigation-item">
           <a class="search-link" href="">
             <img src="img/loupe.svg" alt="Поиск товаров в каталоге Gllacy" width="16" height="16">
             <!--Заменить img на <svg></svg>-->
@@ -44,7 +44,7 @@
             <input type="text" name="item-search" id="item-search" placeholder="Крем-брюле">
           </form>
         </li>
-        <li>
+        <li class="user-navigation-item">
           <a class="entrance-link" href="">
             <img src="img/entrance.svg" alt="Вход в личный кабинет" width="20" height="19">
             Вход
@@ -68,7 +68,7 @@
             </form>
           </section>
         </li>
-        <li>
+        <li class="user-navigation-item">
           <a href="">
             <img src="img/basket.svg" alt="корзина покупателя" width="21" height="20">
             <p>Пусто</p>
@@ -141,13 +141,15 @@
     <!--блок акции-->
     <section class="offer offer-raspberry">
       <h2 class="visually-hidden">Акции</h2>
-      <h2>Малинка даром!</h2>
-      <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+      <h2 class="offer-title">Малинка даром!</h2>
+      <p class="offer-description">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового
+        варенья бесплатно.</p>
       <button class="button" type="submit">Хочу варенье!</button>
     </section>
     <section class="offer offer-choco">
-      <h2>Шоколадки даром!</h2>
-      <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
+      <h2 class="offer-title">Шоколадки даром!</h2>
+      <p class="offer-description">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной
+        присыпки совершенно бесплатно.
       </p>
       <button class="button" type="submit">Хочу шоколадки!</button>
     </section>
@@ -155,38 +157,47 @@
     <section class="best-selling">
       <h2 class="visually-hidden">Хиты продаж</h2>
       <article class="best-selling-item">
-        <a href="">
-          <img src="img/jam-icecream-min.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267"
-            height="267">
-        </a>
+        <div class="best-selling-wrap">
+          <a href="">
+            <img src="img/jam-icecream-min.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267"
+              height="267">
+          </a>
+        </div>
         <p>310р/ <span>кг</span></p>
         <h3>
           <a href="">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
         </h3>
       </article>
       <article class="best-selling-item">
-        <a href="">
-          <img src="img/coffee-icecream-min.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
-        </a>
+        <div class="best-selling-wrap">
+          <a href="">
+            <img src="img/coffee-icecream-min.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267"
+              height="267">
+          </a>
+        </div>
         <p>380р/ <span>кг</span></p>
         <h3>
           <a href="">Сливочно-кофейное с кусочками шоколада</a>
         </h3>
       </article>
       <article class="best-selling-item">
-        <a href="">
-          <img src="img/strawberry-icecream-min.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада"
-            width="267" height="267">
-        </a>
+        <div class="best-selling-wrap">
+          <a href="">
+            <img src="img/strawberry-icecream-min.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада"
+              width="267" height="267">
+          </a>
+        </div>
         <p>355р/ <span>кг</span></p>
         <h3>
           <a href="">Сливочно-клубничное с присыпкой из белого шоколада</a>
         </h3>
       </article>
       <article class="best-selling-item">
-        <a href="">
-          <img src="img/caramel-icecream-min.jpg" alt="Сливочное крем-брюле с карамельной подливкой">
-        </a>
+        <div class="best-selling-wrap">
+          <a href="">
+            <img src="img/caramel-icecream-min.jpg" alt="Сливочное крем-брюле с карамельной подливкой">
+          </a>
+        </div>
         <p>415р/ <span>кг</span></p>
         <h3>
           <a href="">Сливочное крем-брюле с карамельной подливкой</a>
