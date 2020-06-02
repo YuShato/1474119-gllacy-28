@@ -54,7 +54,7 @@
 
 /*Global*/
 body {
-  min-width: 1220px;
+  min-width: 1200px;
   margin: 0;
   padding: 0;
   background-color: var(--basic-green-dark);
@@ -67,7 +67,7 @@ body {
   min-height: 100%;
 }
 
-.img {
+img {
   max-width: 100%;
   height: auto;
 }
@@ -103,8 +103,9 @@ body {
   display: none;
 }
 
-.site-navigation a,
-.user-navigation a {
+/* Скрытые поп-апы, закончились */
+
+.header-link {
   color: var(--text-color-light);
   text-decoration: none;
   font-weight: bold;
@@ -119,7 +120,7 @@ body {
   background-repeat: repeat;
 }
 
-.benefits h1 {
+.benefits-title {
   font-weight: 500;
   font-size: 24px;
   line-height: 30px;
@@ -135,7 +136,7 @@ body {
   background-repeat: no-repeat;
 }
 
-.offer h2 {
+.offer-title {
   font-size: 35px;
   line-height: 41px;
 }
