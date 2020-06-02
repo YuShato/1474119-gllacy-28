@@ -1,55 +1,33 @@
 /*Colors*/
 :root {
-  /*ЦВЕТ ФОНА НА СТРАНИЦАХ*/
-  --basic-green-dark: #849D8F;
-  --basic-green-light: #D7F2E3;
-  /*серо-зеленый цвет*/
-  --basic-blue-dark: #8996A6;
-  --basic-blue-light: #DAE4EF;
-  /*серо-голубой цвет*/
-  --basic-beige-dark: #9D8B84;
-  --basic-beige-light: #EFE0DA;
-  /*бежевый цвет*/
-  --basic-raspberry-backgr: #9a073f;
-  --basic-choco-backgr: #8f4814;
-  /*ЦВЕТ ТЕКСТА НА СТРАНИЦАХ*/
-  --text-color-light: #ffffff;
-  --text-color-dark: #323232;
-  --text-color-placeholder: #999999;
-  --text-weight-basket: #000000;
-  /*цвет веса товара в корзине*/
-  --text-price-basket: #ABABAB;
-  /*цвет цены/кг товара в корзине*/
-  /*КНОПКИ*/
-  --slider-switch-hover: rgba(255, 255, 255, 0.4);
-  /*наведение на переключатель слайдера*/
-  --header-button: #D07058;
-  /*одноцветная кнопка в шапке каталога && находимся на выбранной странице в выпад.списке*/
-  --header-button-hover: #EDEDED;
-  /*одноцветная кнопка в шапке каталога при клике*/
-  --button-linear: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
-  /*градиентные кнопки на всех страницах*/
-  --button-linear-hover: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
-  /*градиентные кнопки на всех страницах при наведении*/
-  --button-linear-click: linear-gradient(0deg, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
-  /*градиентные кнопки на всех страницах при клике*/
-  /*ШАПКА*/
-  --menu-color-click: #F6B5A5;
-  /*клик по пункту меню*/
-  --menu-color-hover: #FBDED7;
-  /*наведение по пункту меню*/
-  --meny-user-enter: rgba(255, 255, 255, 0.2);
-  /*значок поиска и вход в личный кабинет, пустая корзина*/
-  /*ВСЕ ССЫЛКИ В МАКЕТЕ (КРОМЕ ССЫЛОК ЗАГОЛОВКОВ ГЛАВНОГО МЕНЮ)*/
-  --light-link-hover: #FFBC9E;
-  /*нажатие и наведение на светлые ссылки*/
-  --dark-link-hover: #E84D37;
-  /*нажатие и наведение на темные ссылки*/
-  --input-frame: rgba(46, 136, 228, 0.52);
-  /*курсор внутри поля инпута*/
-  --input-hover-frame: rgba(178, 178, 178, 0.52);
-  /*наведение на поле инпута, поле с введенными данными*/
-
+  --basic-dark-beige: #9D8B84;
+  --basic-dark-gray: #8996A6;
+  --basic-green-gray: #849D8F;
+  --white-text: #FFFFFF;
+  --dark-text: #323232;
+  --black: #000000;
+  --gray: #ABABAB;
+  --light-gray-form: #F8F7F4;
+  --light-gray-logo: #FBFCFB;
+  --medium-gray-frame: #B2B2B2;
+  --gray-input: #D3D3D2;
+  --gray-price: #C4C4C4;
+  --gray-basket-hr: #CACAC7;
+  --gray-header-btn: #EDEDED;
+  --gray-switch-hover: #rgba(255, 255, 255, 0.4);
+  --wine-button-shadow: #942718;
+  --orange-button-shadow: #AC1000;
+  --bordo-button-shadow: rgba(172, 16, 0, 0.64);
+  --black-cross: #2C2829;
+  --orange-brown: #D07058;
+  --orange-link: #E84D37;
+  --orange-button: #F26843;
+  --red-orange-button: ##E74A35;
+  --salmon-link: #FFBC9E;
+  --salmon-link-border: #FFBC9E;
+  --salmon-catalog-click: #F6B5A5;
+  --salmon-catalog-hover: #FBDED7;
+  --blue-ininput: #2E88E4;
 }
 
 /*Global*/
@@ -158,5 +136,4 @@ img {
   vertical-align: middle;
   text-transform: uppercase;
   border: none;
-  background-color: var(--button-linear);
 }
