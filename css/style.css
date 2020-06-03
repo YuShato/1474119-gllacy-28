@@ -27,38 +27,38 @@
 
 /*Colors*/
 :root {
-  --basic-dark-beige: #9D8B84;
-  --basic-dark-gray: #8996A6;
-  --basic-green-gray: #849D8F;
+  --basic-dark-beige: #9d8b84;
+  --basic-dark-gray: #8996a6;
+  --basic-green-gray: #849d8f;
   --basic-raspberry-backgr: #9a073f;
   --basic-choco-backgr: #8f4814;
-  --white-text: #FFFFFF;
+  --white-text: #ffffff;
   --dark-text: #323232;
   --black: #000000;
-  --gray: #ABABAB;
-  --light-gray-form: #F8F7F4;
-  --light-gray-logo: #FBFCFB;
+  --gray: #ababab;
+  --light-gray-form: #f8f7f4;
+  --light-gray-logo: #fbfcfb;
   --light-gray-button: rgba(255, 255, 255, 0.2);
-  --medium-gray-frame: #B2B2B2;
-  --gray-input: #D3D3D2;
-  --gray-price: #C4C4C4;
-  --gray-basket-hr: #CACAC7;
-  --gray-header-btn: #EDEDED;
+  --medium-gray-frame: #b2b2b2;
+  --gray-input: #d3d3d2;
+  --gray-price: #c4c4c4;
+  --gray-basket-hr: #cacac7;
+  --gray-header-btn: #ededed;
   --gray-switch-hover: #rgba(255, 255, 255, 0.4);
   --wine-button-shadow: #942718;
-  --orange-button-shadow: #AC1000;
+  --orange-button-shadow: #ac1000;
   --bordo-button-shadow: rgba(172, 16, 0, 0.64);
-  --black-cross: #2C2829;
+  --black-cross: #2c2829;
   --black-button: rgba(0, 0, 0, 0.07);
-  --orange-brown: #D07058;
-  --orange-link: #E84D37;
-  --orange-button: #F26843;
-  --red-orange-button: #E74A35;
-  --salmon-link: #FFBC9E;
-  --salmon-link-border: #FFBC9E;
-  --salmon-catalog-click: #F6B5A5;
-  --salmon-catalog-hover: #FBDED7;
-  --blue-ininput: #2E88E4;
+  --orange-brown: #d07058;
+  --orange-link: #e84d37;
+  --orange-button: #f26843;
+  --red-orange-button: #e74a35;
+  --salmon-link: #ffbc9e;
+  --salmon-link-border: #ffbc9e;
+  --salmon-catalog-click: #f6b5a5;
+  --salmon-catalog-hover: #fbded7;
+  --blue-ininput: #2e88e4;
 }
 
 /*Global*/
@@ -180,4 +180,10 @@ img {
 .button:active {
   background: linear-gradient(0deg, var(--black-button), var(--black-button)), linear-gradient(180deg, var(--orange-button) 0%, var(--red-orange-button) 100%);
   box-shadow: inset 0px 2px 2px var(--wine-button-shadow);
+}
+
+.best-selling-wrap {
+  width: 267px;
+  height: 267px;
+  border-radius: 50%;
 }
