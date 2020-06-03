@@ -186,4 +186,5 @@ img {
   width: 267px;
   height: 267px;
   border-radius: 50%;
+  overflow: hidden;
 }
