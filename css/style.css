@@ -40,6 +40,7 @@
   --light-gray-logo: #fbfcfb;
   --light-gray-button: rgba(255, 255, 255, 0.2);
   --medium-gray-frame: #b2b2b2;
+  --medium-gray: rgba(178, 178, 178, 0.52);
   --gray-input: #d3d3d2;
   --gray-price: #c4c4c4;
   --gray-basket-hr: #cacac7;
@@ -187,4 +188,12 @@ img {
   height: 267px;
   border-radius: 50%;
   overflow: hidden;
+}
+
+.inp {
+  font: inherit;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background: var(--white-text);
+  border: 1px solid var(--medium-gray);
 }
