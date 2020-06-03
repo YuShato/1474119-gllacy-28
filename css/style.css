@@ -37,15 +37,18 @@
   --black: #000000;
   --gray: #ababab;
   --light-gray-form: #f8f7f4;
+  --light-gray-contacts: #fefefe;
   --light-gray-logo: #fbfcfb;
   --light-gray-button: rgba(255, 255, 255, 0.2);
   --medium-gray-frame: #b2b2b2;
   --medium-gray: rgba(178, 178, 178, 0.52);
   --gray-input: #d3d3d2;
   --gray-price: #c4c4c4;
+  --gray-placeholder: #999999;
   --gray-basket-hr: #cacac7;
   --gray-header-btn: #ededed;
   --gray-switch-hover: #rgba(255, 255, 255, 0.4);
+  --gray-lead-magnit: #5a5a5a;
   --wine-button-shadow: #942718;
   --orange-button-shadow: #ac1000;
   --bordo-button-shadow: rgba(172, 16, 0, 0.64);
@@ -60,9 +63,16 @@
   --salmon-catalog-click: #f6b5a5;
   --salmon-catalog-hover: #fbded7;
   --blue-ininput: #2e88e4;
+  --blue-gray: rgba(46, 136, 228, 0.52);
+  --blue-black: rgba(49, 50, 53, 0.5);
+  --bordo: rgba(160, 32, 11, 0.76);
 }
 
 /*Global*/
+.page {
+  height: 100%;
+}
+
 body {
   min-width: 1200px;
   margin: 0;
@@ -75,11 +85,19 @@ body {
   font-style: normal;
   color: var(--text-color-dark);
   min-height: 100%;
+  box-sizing: border-box;
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+.page-body {
+  display: grid;
+  min-height: 100%;
+  grid-template-rows: 114px 1fr 104px;
+  align-content: start;
 }
 
 .list-reset {
@@ -100,10 +118,75 @@ img {
   overflow: hidden;
 }
 
+.button {
+  font: inherit;
+  text-align: center;
+  color: var(--white-text);
+  vertical-align: middle;
+  text-transform: uppercase;
+  border: none;
+  background: linear-gradient(180deg, var(--orange-button) 0%, var(--red-orange-button) 100%);
+  box-shadow: 0px 2px 2px var(--bordo-button-shadow);
+  border-radius: 50px;
+}
+
+.button:hover {
+  background: linear-gradient(0deg, var(--light-gray-button), var(--light-gray-button)), linear-gradient(180deg, var(--orange-button) 0%, var(--red-orange-button) 100%);
+  box-shadow: 0px 2px 2px var(--orange-button-shadow);
+}
+
+.button:active {
+  background: linear-gradient(0deg, var(--black-button), var(--black-button)), linear-gradient(180deg, var(--orange-button) 0%, var(--red-orange-button) 100%);
+  box-shadow: inset 0px 2px 2px var(--wine-button-shadow);
+}
+
+.inp {
+  font: inherit;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background: var(--white-text);
+  border: 1px solid var(--medium-gray);
+}
+
+.inp:hover {
+  border: 2px solid var(--medium-gray);
+}
+
+.inp:focus {
+  border: 2px solid var(--blue-gray);
+}
+
+.inp::placeholder {
+  color: var(--gray-placeholder);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+
 /*Header*/
 .main-header {
   color: var(--white-text);
   display: flex;
+  flex-direction: row;
+  height: 114px;
+  width: 1146px;
+  /* padding-top: 9px;
+  padding-left: 27px;
+  padding-right: 27px; */
+}
+
+.main-navigation {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.main-header-logo {
+  width: 154px;
+  height: 64px;
+  margin-left: 24px;
 }
 
 /* Скрытые поп-апы, потом отобразить!!! */
@@ -119,6 +202,54 @@ img {
   color: var(--white-text);
   text-decoration: none;
   font-weight: bold;
+}
+
+.title {
+  color: var(--white-text);
+  font-weight: bold;
+}
+
+.main-slider-title {
+  font-size: 60px;
+  line-height: 60px;
+  text-align: center;
+  width: 672px;
+}
+
+.main-slider-item .button {
+  width: 278px;
+  height: 63px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 44px;
+  text-shadow: 0px 2px 5px var(--bordo);
+  text-transform: none;
+}
+
+.best-selling-item {
+  width: 267px;
+  height: 324px;
+}
+
+
+.best-selling-price {
+  font-size: 45px;
+  line-height: 45px;
+  text-shadow: 0px 1px 3px var(--blue-black);
+}
+
+.best-selling-weight {
+  font-size: 30px;
+  line-height: 35px;
+  text-shadow: 0px 1px 3px var(--blue-black);
+}
+
+.best-selling-link {
+  font-weight: 500;
+  color: var(--white-text);
+  text-align: center;
+  text-decoration: none;
 }
 
 .benefits {
@@ -161,27 +292,35 @@ img {
   background-image: url(../img/chocolate-backgr-min.jpg);
 }
 
-.button {
-  font: inherit;
+.offer .button {
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: none;
   text-align: center;
-  color: var(--white-text);
-  vertical-align: middle;
-  text-transform: uppercase;
-  border: none;
-  background: linear-gradient(180deg, var(--orange-button) 0%, var(--red-orange-button) 100%);
-  box-shadow: 0px 2px 2px var(--bordo-button-shadow);
-  border-radius: 50px;
+  text-shadow: 0px 2px 5px var(--bordo);
+  border-radius: 70px;
 }
 
-.button:hover {
-  background: linear-gradient(0deg, var(--light-gray-button), var(--light-gray-button)), linear-gradient(180deg, var(--orange-button) 0%, var(--red-orange-button) 100%);
-  box-shadow: 0px 2px 2px var(--orange-button-shadow);
+.button-form {
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: none;
+  text-align: center;
+  text-shadow: 0px 2px 5px var(--bordo);
+  border-radius: 70px;
+  font-weight: bold;
 }
 
-.button:active {
-  background: linear-gradient(0deg, var(--black-button), var(--black-button)), linear-gradient(180deg, var(--orange-button) 0%, var(--red-orange-button) 100%);
-  box-shadow: inset 0px 2px 2px var(--wine-button-shadow);
+.offer-choco .button {
+  width: 191px;
+  height: 48px;
 }
+
+.offer-raspberry .button {
+  width: 164px;
+  height: 48px;
+}
+
 
 .best-selling-wrap {
   width: 267px;
@@ -190,10 +329,93 @@ img {
   overflow: hidden;
 }
 
-.inp {
-  font: inherit;
-  box-sizing: border-box;
-  border-radius: 4px;
+.best-selling-item::before {
+  content: url(../img/hit.svg);
+  width: 61px;
+  height: 61px;
   background: var(--white-text);
-  border: 1px solid var(--medium-gray);
+  position: absolute;
+  border-radius: 50%;
+}
+
+
+/* сделать дополнительно шрифт 14 пкс на плейсхолдеры в шапке!!! */
+.news-post {
+  width: 560px;
+  height: 220px;
+}
+
+.news {
+  color: var(--dark-text);
+  background-image: url(../img/strawberry-backgr-min.jpg);
+  background-repeat: no-repeat;
+  border-radius: 16px;
+}
+
+.news-title {
+  font-weight: 500;
+  text-align: center;
+}
+
+.news-link p {
+  width: 287px;
+}
+
+.news-link {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: inherit;
+}
+
+.lead-magnit-descr {
+  color: var(--gray-lead-magnit);
+}
+
+.lead-magnit {
+  background-image: url(../img/post-backgr-min.png);
+
+}
+
+.lead-input {
+  width: 368px;
+  height: 44px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  line-height: 24px;
+}
+
+.lead-form .button-form {
+  width: 130px;
+  height: 44px;
+}
+
+.contacts {
+  width: 303px;
+  height: 306px;
+  background-color: var(--light-gray-contacts);
+  border-radius: 16px;
+  color: var(--dark-text)
+}
+
+.contacts-info {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.contacts-descr {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.contacts-link {
+  text-decoration: none;
+  color: inherit;
+
+}
+
+.contacts .button-form {
+  width: 253px;
+  height: 43px;
 }
