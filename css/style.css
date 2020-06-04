@@ -35,6 +35,7 @@
   --white-text: #ffffff;
   --dark-text: #323232;
   --black: #000000;
+  --black-hover: rgba(0, 0, 0, 0.2);
   --black-shadow: rgba(0, 0, 0, 0.4);
   --gray: #ababab;
   --light-gray-form: #f8f7f4;
@@ -226,12 +227,12 @@ img {
   height: 84px;
 }
 
-/* Андрей, посмотри пожста. У меня при состоянии :focus на элементе item-search появляется черная рамка. Я не знаю, как ее убрать. Должна быть голубая рамка (по стайлгайду). Я поставила класс inp, которому прописана голубая рамка. Теперь у меня на этом элементе двойная рамка, и черная, и голубая.btn-item.
-И еще, когда я пишу текст в этом элементе, форма постоянно перезагружается, а текст не появляется. WTF?(( */
+/* Андрей, посмотри пожста.  когда я пишу текст в этом элементе, форма постоянно перезагружается, а текст не появляется. WTF?(( */
 
 .item-search {
   width: 311px;
   height: 44px;
+  outline: none;
 }
 
 .nav-link {
@@ -264,11 +265,46 @@ img {
   text-transform: none;
 }
 
+.main-slider-switch {
+  font-size: 0px;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  border: 2px solid var(--white-text);
+  box-sizing: border-box;
+  background: transparent;
+  outline: none;
+}
+
+.main-slider-switch:hover {
+  background: var(--gray-switch-hover);
+}
+
+.main-slider-switch:active {
+  background: var(--white-text);
+}
+
+
 .best-selling-item {
   width: 267px;
   height: 324px;
 }
 
+.best-selling-item:hover {
+  background: var(--white-text);
+  opacity: 0.2;
+  box-shadow: 0px 20px 20px var(--black-hover);
+  border-radius: 4px;
+}
+
+/* Агдрей, посмотри пожста, так вообще можно писать? И вообще, у меня проблемы с карточкой товара при наведении. Написала стили как в Фигме, а при верстке получается фигня */
+.best-selling-item:hover::after {
+  content: "Быстрый просмотр";
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--white-text);
+}
 
 .best-selling-price {
   font-size: 45px;
@@ -464,6 +500,12 @@ img {
 
 .for-providers {
   font-weight: bold;
+}
+
+.for-providers::before {
+  content: url(../img/heart.svg);
+  width: 15px;
+  height: 13px;
 }
 
 .footer-network {
