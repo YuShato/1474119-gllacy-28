@@ -50,6 +50,7 @@
   --gray-header-btn: #ededed;
   --gray-switch-hover: #rgba(255, 255, 255, 0.4);
   --gray-lead-magnit: #5a5a5a;
+  --gray-footer-frame: rgba(255, 255, 255, 0.5);
   --wine-button-shadow: #942718;
   --orange-button-shadow: #ac1000;
   --bordo-button-shadow: rgba(172, 16, 0, 0.64);
@@ -172,17 +173,12 @@ img {
   line-height: 20px;
 }
 
-
-/*Header*/
 .main-header {
   color: var(--white-text);
   display: flex;
   flex-direction: row;
   height: 114px;
   width: 1146px;
-  /* padding-top: 9px;
-  padding-left: 27px;
-  padding-right: 27px; */
 }
 
 .main-navigation {
@@ -215,6 +211,7 @@ img {
   color: var(--white-text);
   text-decoration: none;
   font-weight: bold;
+  border-bottom: 1px solid var(--light-gray-button);
 }
 
 .header-time {
@@ -233,9 +230,24 @@ img {
   height: 84px;
 }
 
+/* Андрей, посмотри пожста. У меня при состоянии :focus на элементе item-search появляется черная рамка. Я не знаю, как ее убрать. Должна быть голубая рамка (по стайлгайду). Я поставила класс inp, которому прописана голубая рамка. Теперь у меня на этом элементе двойная рамка, и черная, и голубая.btn-item.
+И еще, когда я пишу текст в этом элементе, форма постоянно перезагружается, а текст не появляется. WTF?(( */
+
 .item-search {
   width: 311px;
   height: 44px;
+}
+
+.nav-link {
+  text-decoration: inherit;
+}
+
+.user-navigation-descr {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--white-text);
+  text-decoration: none;
 }
 
 .main-slider-title {
@@ -350,7 +362,6 @@ img {
   height: 48px;
 }
 
-
 .best-selling-wrap {
   width: 267px;
   height: 267px;
@@ -366,7 +377,6 @@ img {
   position: absolute;
   border-radius: 50%;
 }
-
 
 /* сделать дополнительно шрифт 14 пкс на плейсхолдеры в шапке!!! */
 .news-post {
@@ -458,4 +468,51 @@ img {
 
 .for-providers {
   font-weight: bold;
+}
+
+.footer-network {
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--gray-footer-frame);
+  border-radius: 50%;
+  font-size: 0px;
+  background-repeat: no-repeat;
+}
+
+.fb-network {
+  background-image: url(../img/fb.svg);
+}
+
+.vk-network {
+  background-image: url(../img/vk.svg);
+}
+
+.insta-network {
+  background-image: url(../img/instagram.svg);
+}
+
+.twit-network {
+  background-image: url(../img/twitter.svg);
+}
+
+.copywrite {
+  width: 190px;
+  height: 60px;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--white-text);
+}
+
+.copywrite-link {
+  font-size: 0px;
+  background-image: url(../img/logo-htmlacademy.svg);
+  width: 108px;
+  height: 39px;
+  background-repeat: no-repeat;
+}
+
+.copywrite-descr-link {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid var(--light-gray-button);
 }

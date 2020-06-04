@@ -36,6 +36,8 @@
             <img src="img/loupe.svg" alt="Поиск товаров в каталоге Gllacy" width="16" height="16">
             <!--Заменить img на <svg></svg>-->
             <!--Форма поиска товара-->
+            <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+              Андрей, посмотри пожалуйста, почему у меня при вводе информации в инпут пеерзагружается страница, а текст не появляется в инпуте?-->
             <form class="form search-form" action="https://echo.htmlacademy.ru" method="post">
               <label for="item-search" class="visually-hidden">Найти товар в каталоге</label>
               <input class="inp item-search" type="text" name="item-search" id="item-search" placeholder="Крем-брюле">
@@ -43,9 +45,9 @@
           </a>
         </li>
         <li class="user-navigation-item">
-          <a class="entrance-link" href="">
+          <a class="entrance-link nav-link" href="">
             <img src="img/entrance.svg" alt="Вход в личный кабинет" width="20" height="19">
-            <p>Вход</p>
+            <p class="user-navigation-descr">Вход</p>
             <!--Форма регистрации и входа-->
             <section class="user-entrance">
               <h2 class="visually-hidden">Вход в личный кабинет</h2>
@@ -68,10 +70,10 @@
           </a>
           <!--Заменить img на <svg></svg>-->
         </li>
-        <li class="user-navigation-item">
-          <a href="">
+        <li class="user-navigation-item btn-item basket">
+          <a class="nav-link" href="">
             <img src="img/basket.svg" alt="корзина покупателя" width="21" height="20">
-            <p>Пусто</p>
+            <p class="user-navigation-descr">Пусто</p>
           </a>
         </li>
       </ul>
@@ -270,17 +272,17 @@
   </main>
   <footer class="footer">
     <ul class="footer-socials list-reset">
-      <li class="footer-network">
-        <a href="">Магазин Gllacy в Facebook</a>
+      <li class="footer-network fb-network">
+        <a class="fb-network" href="">Магазин Gllacy в Facebook</a>
       </li>
-      <li class="footer-network">
-        <a href="">Магазин Gllacy в Vkontakte</a>
+      <li class="footer-network vk-network">
+        <a class="vk-network" href="">Магазин Gllacy в Vkontakte</a>
       </li>
-      <li class="footer-network">
-        <a href="">Магазин Gllacy в instagram</a>
+      <li class="footer-network insta-network"">
+        <a class=" insta-network" href="">Магазин Gllacy в instagram</a>
       </li>
-      <li class="footer-network">
-        <a href="">Магазин Gllacy в Twitter</a>
+      <li class="footer-network twit-network">
+        <a class="twit-network" href="">Магазин Gllacy в Twitter</a>
       </li>
     </ul>
     <ul class="footer-list list-reset">
@@ -299,9 +301,12 @@
     </ul>
     <section class="copywrite">
       <h3 class="visually-hidden">Разработано в HTML Academy</h3>
-      <a class="copywrite-link" href="https://htmlacademy.ru/intensive/htmlcss"
-        aria-label="Логотип HTML Academy">Логотип HTML Academy</a>
-      <p class="copywrite-descr">Сделано в <a href=" https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019
+      <div class="copywrite-link">
+        <a class="copywrite-link" href="https://htmlacademy.ru/intensive/htmlcss"
+          aria-label="Логотип HTML Academy">Логотип HTML Academy</a>
+      </div>
+      <p class="copywrite-descr">Сделано в <a class="copywrite-descr-link"
+          href=" https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019
       </p>
     </section>
   </footer>
