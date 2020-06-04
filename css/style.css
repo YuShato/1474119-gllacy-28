@@ -198,14 +198,10 @@ img {
   font-weight: bold;
 }
 
-/* Скрытые поп-апы, потом отобразить!!! */
-.user-entrance,
-.dropdown-menu,
-.popup {
+
+.display-none {
   display: none;
 }
-
-/* Скрытые поп-апы, закончились */
 
 .header-link {
   color: var(--white-text);
@@ -369,7 +365,7 @@ img {
   overflow: hidden;
 }
 
-.best-selling-item::before {
+.hit::before {
   content: url(../img/hit.svg);
   width: 61px;
   height: 61px;
@@ -515,4 +511,31 @@ img {
   color: inherit;
   text-decoration: none;
   border-bottom: 1px solid var(--light-gray-button);
+}
+
+/* -----------------Catalog--------------- */
+
+.right-narrow::after {
+  content: url(../img/narrow-right.svg);
+  width: 6px;
+  height: 6px;
+}
+
+.full-basket {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--dark-text);
+}
+
+.paginator {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.narrow-next {
+  font-size: 0px;
+  width: 7px;
+  height: 12px;
+  background-image: url(../img/icon-right-small.svg);
 }
