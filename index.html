@@ -36,9 +36,9 @@
             <img src="img/loupe.svg" alt="Поиск товаров в каталоге Gllacy" width="16" height="16">
             <!--Заменить img на <svg></svg>-->
             <!--Форма поиска товара-->
-            <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+            <form class="form search-form" action="https://echo.htmlacademy.ru" method="post">
               <label for="item-search" class="visually-hidden">Найти товар в каталоге</label>
-              <input class="inp" type="text" name="item-search" id="item-search" placeholder="Крем-брюле">
+              <input class="inp item-search" type="text" name="item-search" id="item-search" placeholder="Крем-брюле">
             </form>
           </a>
         </li>
@@ -49,7 +49,7 @@
             <!--Форма регистрации и входа-->
             <section class="user-entrance">
               <h2 class="visually-hidden">Вход в личный кабинет</h2>
-              <form action="https://echo.htmlacademy.ru" method="post">
+              <form class="form" action="https://echo.htmlacademy.ru" method="post">
                 <p>
                   <label for="entrance-email">Электронная почта</label>
                   <input class="inp" class="inp" type="email" name="entrance-email" id="entrance-email"
@@ -98,8 +98,8 @@
   <main class="container">
     <!--главный экран со слайдером-->
     <div class="working-time">
-      <p>с 10 до 20, ежедневно</p>
-      <a href="tel:+78124502525">8 812 450-25-25</a>
+      <p class="title header-time">с 10 до 20, ежедневно</p>
+      <a class="title header-tel" href="tel:+78124502525">8 812 450-25-25</a>
     </div>
     <!--как бы слайдер-->
     <section class="main-slider">
@@ -284,7 +284,7 @@
       </li>
     </ul>
     <ul class="footer-list list-reset">
-      <li class="footer-item">
+      <li class="footer-item for-providers">
         <a href="">Для поставщиков</a>
       </li>
       <li class="footer-item">
@@ -310,7 +310,7 @@
   <!-- Я не знаю, куда правильно в разметке вставить разметку формы регистрации, поэтому пока оставляю здесь-->
   <section class="popup">
     <h2 class="popup-title">Мы обязательно вам ответим!</h2>
-    <form class="popup-form" action="https://echo.htmlacademy.ru" method="post">
+    <form class=" form popup-form" action="https://echo.htmlacademy.ru" method="post">
       <p>
         <label for="question-name" class="visually-hidden">Как вас зовут?</label>
         <input class="inp" type="text" name="question-name" id="question-name" placeholder="Имя Фамилия">

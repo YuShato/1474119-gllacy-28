@@ -35,6 +35,7 @@
   --white-text: #ffffff;
   --dark-text: #323232;
   --black: #000000;
+  --black-shadow: rgba(0, 0, 0, 0.4);
   --gray: #ababab;
   --light-gray-form: #f8f7f4;
   --light-gray-contacts: #fefefe;
@@ -140,6 +141,13 @@ img {
   box-shadow: inset 0px 2px 2px var(--wine-button-shadow);
 }
 
+.form {
+  background-color: var(--light-gray-form);
+  box-shadow: 0px 20px 20px var(--black-shadow);
+  border-radius: 4px;
+  color: var(--dark-text);
+}
+
 .inp {
   font: inherit;
   box-sizing: border-box;
@@ -189,6 +197,11 @@ img {
   margin-left: 24px;
 }
 
+.title {
+  color: var(--white-text);
+  font-weight: bold;
+}
+
 /* Скрытые поп-апы, потом отобразить!!! */
 .user-entrance,
 .dropdown-menu,
@@ -204,9 +217,25 @@ img {
   font-weight: bold;
 }
 
-.title {
-  color: var(--white-text);
-  font-weight: bold;
+.header-time {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.header-tel {
+  text-decoration: none;
+  font-size: 22px;
+  line-height: 24px;
+}
+
+.search-form {
+  width: 341px;
+  height: 84px;
+}
+
+.item-search {
+  width: 311px;
+  height: 44px;
 }
 
 .main-slider-title {
@@ -418,4 +447,15 @@ img {
 .contacts .button-form {
   width: 253px;
   height: 43px;
+}
+
+.footer-item a {
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--white-text);
+  text-decoration: none;
+}
+
+.for-providers {
+  font-weight: bold;
 }
