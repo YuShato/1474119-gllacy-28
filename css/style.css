@@ -109,6 +109,7 @@ img {
   margin: 0;
 }
 
+
 /*Hidden*/
 .visually-hidden {
   position: absolute;
@@ -183,7 +184,7 @@ img {
   color: var(--white-text);
   display: flex;
   flex-direction: row;
-  height: 114px;
+  /* height: 114px; */
   width: 1146px;
   justify-content: space-between;
 }
@@ -319,6 +320,11 @@ img {
   background: var(--white-text);
 }
 
+.best-selling {
+  display: grid;
+  grid-template-columns: repeat(4, 267px);
+  grid-gap: 26px;
+}
 
 .best-selling-item {
   width: 267px;
@@ -376,17 +382,20 @@ img {
 
 .offer {
   width: 560px;
-  height: 229px;
+  /* height: 229px; */
   border-radius: 16px;
   font-size: 18px;
   color: var(--white-text);
   font-weight: 700;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
 }
 
 .offer-title {
   font-size: 35px;
   line-height: 41px;
+  padding: 16px;
 }
 
 .offer-raspberry {
@@ -399,14 +408,13 @@ img {
   background-image: url(../img/chocolate-backgr-min.jpg);
 }
 
-.offer .button {
-  font-size: 18px;
-  line-height: 24px;
-  text-transform: none;
-  text-align: center;
-  text-shadow: 0px 2px 5px var(--bordo);
-  border-radius: 70px;
+.offer-description {
+  padding-left: 16px;
+  padding-right: 30px;
+  padding-bottom: 44px;
 }
+
+
 
 .button-form {
   font-size: 18px;
@@ -422,6 +430,18 @@ img {
   padding-bottom: 12px;
   padding-top: 12px;
 
+}
+
+.offer .button-form {
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: none;
+  text-align: center;
+  text-shadow: 0px 2px 5px var(--bordo);
+  border-radius: 70px;
+  margin-left: auto;
+  margin-bottom: 22px;
+  margin-right: 22px;
 }
 
 .offer-choco-link {
