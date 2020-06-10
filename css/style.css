@@ -89,18 +89,36 @@ body {
   color: var(--text-color-dark);
   min-height: 100%;
   box-sizing: border-box;
+  outline: 3px solid white;
 }
 
 img {
   max-width: 100%;
-  height: auto;
 }
 
-.page-body {
+/* .page-body {
   display: grid;
   min-height: 100%;
   grid-template-rows: 114px 1fr 104px;
   align-content: start;
+} */
+
+.container-wrap {
+  max-width: 1200px;
+  margin: 9px auto 0;
+  box-sizing: border-box;
+  outline: 5px solid darkgreen;
+  display: grid;
+  grid-template-rows: 114px 1fr 104px;
+}
+
+.container {
+  display: grid;
+  grid-row-gap: 40px;
+}
+
+.move {
+  margin: 0 27px;
 }
 
 .list-reset {
@@ -182,23 +200,56 @@ img {
 
 .main-header {
   color: var(--white-text);
-  display: flex;
-  flex-direction: row;
-  /* height: 114px; */
+  display: grid;
+  grid-row-gap: 9px;
   width: 1146px;
-  justify-content: space-between;
+  grid-template-rows: repeat(2, 1fr);
+  /* outline: 3px solid red; */
+
 }
 
 .main-navigation {
   display: flex;
   flex-direction: row;
   width: 100%;
+  /* outline: 3px solid blue; */
 }
+
+.site-navigation {
+  width: 702px;
+  /* outline: 3px solid pink; */
+  display: flex;
+  flex-direction: row;
+  gap: 31px;
+  /* Андрей, у меня почему-то не применяется свойство gap на флексах. А на гридах работает. Почему так может быть? пришлось выставлять margin */
+  padding-top: 22px;
+}
+
+.site-navigation-item {
+  /* outline: 3px solid rgb(5, 178, 231); */
+  font-weight: 700;
+  line-height: 18px;
+  margin-right: 32px;
+
+
+}
+
 
 .main-header-logo {
   width: 154px;
   height: 64px;
-  margin-left: 24px;
+  /* outline: 3px solid green; */
+  margin-right: 24px;
+}
+
+.working-time {
+  display: grid;
+  justify-self: end;
+  width: 168px;
+  /* outline: 1px solid yellow; */
+  margin-top: auto;
+  justify-items: end;
+
 }
 
 .title {
@@ -215,12 +266,12 @@ img {
   color: var(--white-text);
   text-decoration: none;
   font-weight: 700;
-  border-bottom: 1px solid var(--light-gray-button);
 }
 
 .header-time {
   font-size: 14px;
   line-height: 16px;
+  padding-bottom: 8px;
 }
 
 .header-tel {
@@ -237,8 +288,9 @@ img {
 .search-icon-wrap {
   width: 32px;
   height: 32px;
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--light-gray-button);
   border-radius: 50%;
+
 }
 
 .search-link img {
@@ -258,14 +310,36 @@ img {
 
 .nav-link {
   text-decoration: inherit;
-}
-
-.user-navigation-item a {
   display: flex;
   flex-direction: row;
-  height: 32px;
-  background: rgba(255, 255, 255, 0.2);
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+.user-navigation {
+  /* outline: 3px solid rgb(10, 58, 8); */
+  width: 244px;
+  display: grid;
+  column-gap: 10px;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(1, 32px);
+  grid-template-rows: 32px;
+  padding-top: 19px;
+  margin-left: 22px;
+}
+
+.user-navigation-item {
+  display: block;
+  /* outline: 1px solid fuchsia; */
+}
+
+.entrance-link {
+  background: var(--light-gray-button);
   border-radius: 20px;
+  display: flex;
+  align-items: center;
 }
 
 
@@ -275,6 +349,16 @@ img {
   line-height: 16px;
   color: var(--white-text);
   text-decoration: none;
+  margin: 0;
+  padding-left: 8px;
+
+}
+
+/* .entrance-link {
+  width: 92px;
+} */
+.main-slider-breadcrumbs {
+  display: flex;
 }
 
 .main-slider-title {
@@ -310,6 +394,8 @@ img {
   box-sizing: border-box;
   background: transparent;
   outline: none;
+  margin-right: 8px;
+  /* margin-bottom: 40px; */
 }
 
 .main-slider-switch:hover {
@@ -326,43 +412,69 @@ img {
   grid-gap: 26px;
 }
 
-.best-selling-item {
-  width: 267px;
-}
+/* .best-selling-item {
+  display: grid;
 
-.best-selling-item:hover {
+} */
+
+/* .best-selling-item:hover {
   background: var(--white-text);
   opacity: 0.2;
   box-shadow: 0px 20px 20px var(--black-hover);
   border-radius: 4px;
-}
+} */
 
 /* Андрей, посмотри пожста, так вообще можно писать? И вообще, у меня проблемы с карточкой товара при наведении. Написала стили как в Фигме, а при верстке получается фигня */
-.best-selling-item:hover::after {
+/* .best-selling-item:hover::after {
   content: "Быстрый просмотр";
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
   color: var(--white-text);
-}
+} */
 
 .best-selling-price {
   font-size: 45px;
   line-height: 45px;
   text-shadow: 0px 1px 3px var(--blue-black);
+  position: relative;
+  bottom: 58px;
+}
+
+.best-selling-weight::before {
+  content: url(../img/ruble.svg);
+  height: 31px;
+  width: 31px;
+  position: absolute;
+  left: -2px;
+  top: -4px;
 }
 
 .best-selling-weight {
   font-size: 30px;
   line-height: 35px;
-  text-shadow: 0px 1px 3px var(--blue-black);
+  position: relative;
+  padding-left: 32px;
+
 }
 
+
 .best-selling-link {
-  font-weight: 500;
   color: var(--white-text);
-  text-align: center;
   text-decoration: none;
+  width: 267px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  top: -50px;
+  left: -2px;
+  position: relative;
+  text-align: center;
+  display: block;
+}
+
+.text-underline {
+  border-bottom: 1px solid var(--light-gray-button);
 }
 
 .benefits {
@@ -372,17 +484,46 @@ img {
   background-image: url(../img/pattern-min.png);
   background-color: var(--basic-dark-beige);
   background-repeat: repeat;
+  display: grid;
+  grid-template-columns: repeat(2, 560px);
+  grid-template-rows: auto;
+  grid-column-gap: 6px;
+  /* margin-bottom: 40px; */
+  color: var(--dark-text);
 }
 
 .benefits-title {
   font-weight: 500;
   font-size: 24px;
   line-height: 30px;
+  width: 995px;
+  grid-column: 1 /3;
+  margin-top: 25px;
+  margin-left: 20px;
+
+}
+
+.benefit-item {
+  display: flex;
+}
+
+.benefit-item-img {
+  margin-right: 6px;
+  margin-left: 20px;
+  padding-top: 0px;
+}
+
+.benefit-item-descr {
+  margin-top: 8px;
+}
+
+.special-offers {
+  display: grid;
+  grid-template-columns: repeat(2, 560px);
+  grid-column-gap: 26px;
 }
 
 .offer {
-  width: 560px;
-  /* height: 229px; */
   border-radius: 16px;
   font-size: 18px;
   color: var(--white-text);
@@ -411,7 +552,8 @@ img {
 .offer-description {
   padding-left: 16px;
   padding-right: 30px;
-  padding-bottom: 44px;
+  padding-bottom: 43px;
+  line-height: 22px;
 }
 
 
@@ -457,6 +599,7 @@ img {
   height: 267px;
   border-radius: 50%;
   overflow: hidden;
+
 }
 
 .hit::before {
@@ -466,6 +609,7 @@ img {
   background: var(--white-text);
   position: absolute;
   border-radius: 50%;
+  position: absolute;
 }
 
 /* сделать дополнительно шрифт 14 пкс на плейсхолдеры в шапке!!! */
@@ -476,6 +620,7 @@ img {
 
 .news {
   color: var(--dark-text);
+  background-color: var(--gray);
   background-image: url(../img/strawberry-backgr-min.jpg);
   background-repeat: no-repeat;
   border-radius: 16px;
@@ -484,88 +629,144 @@ img {
 .news-title {
   font-weight: 500;
   text-align: center;
+  width: 163px;
+  font-size: 16px;
+  line-height: 22px;
+  padding-top: 18px;
+  padding-left: 20px;
+  margin-bottom: 5px;
 }
 
-.news-link p {
-  width: 287px;
-}
 
 .news-link {
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
   color: inherit;
+  margin-left: 20px;
+  display: block;
+  width: 287px;
+}
+
+
+.lead-magnet {
+  background-image: url(../img/post-backgr-min.png);
+  background-color: var(--gray);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+
 }
 
 .lead-magnet-descr {
   color: var(--gray-lead-magnet);
-}
-
-.lead-magnet {
-  background-image: url(../img/post-backgr-min.png);
-
+  margin-left: 26px;
+  padding-top: 12px;
+  width: 512px;
+  display: block;
+  margin-bottom: 44px;
 }
 
 .lead-input {
   width: 368px;
   padding-left: 14px;
-  padding-top: 15px;
-  padding-bottom: 14px;
+  padding-top: 9px;
+  padding-bottom: 9px;
   border-radius: 6px;
   box-sizing: border-box;
   line-height: 24px;
+  margin-right: 10px;
+}
+
+.lead-form {
+  margin-left: 26px;
+  display: flex;
+  flex-direction: row;
 }
 
 .lead-form .button-form {
   width: 130px;
-  height: 44px;
+  padding-bottom: 9px;
+  padding-top: 9px;
+
+}
+
+.contacts-wrap {
+  position: relative;
+  background: var(--gray);
+  height: 403px;
+
 }
 
 .contacts {
   width: 303px;
-  min-height: 306px;
   background-color: var(--light-gray-contacts);
   border-radius: 16px;
-  color: var(--dark-text)
+  color: var(--dark-text);
+  padding-bottom: 30px;
+  position: absolute;
+  top: 62px;
+  right: 27px;
+  z-index: 1;
 }
 
 .contacts-info {
   font-size: 14px;
   line-height: 20px;
+  width: 173px;
+  padding-left: 25px;
 }
+
+.contacts-info:first-child {
+  width: 155px;
+  /* padding-bottom: 1px; */
+  padding-top: 30px;
+
+}
+
+
 
 .contacts-descr {
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
+  width: 225px;
+  padding-left: 25px;
+}
+
+.address {
+  padding-bottom: 21px;
 }
 
 .contacts-link {
+  display: block;
   text-decoration: none;
   color: inherit;
-
+  padding-top: 3px;
 }
 
 .contacts .button-form {
   width: 253px;
-  height: 43px;
+  margin-top: 27px;
+  margin-left: 25px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
-.footer-item a {
-  font-size: 13px;
-  line-height: 18px;
-  color: var(--white-text);
-  text-decoration: none;
+
+.footer {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.for-providers {
-  font-weight: 700;
-}
-
-.for-providers::before {
-  content: url(../img/heart.svg);
-  width: 15px;
-  height: 13px;
+.footer-socials {
+  width: 164px;
+  /* margin-top: 36px; */
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-column-gap: 9px;
 }
 
 .footer-network {
@@ -575,6 +776,7 @@ img {
   border-radius: 50%;
   font-size: 0px;
   background-repeat: no-repeat;
+  background-color: var(--gray);
 }
 
 .fb-network {
@@ -593,9 +795,53 @@ img {
   background-image: url(../img/twitter.svg);
 }
 
+.footer-list {
+  width: 328px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-column-gap: 33px;
+  align-content: center;
+  grid-row-gap: 1px;
+
+}
+
+.footer-item {
+  display: block;
+  margin-bottom: 0;
+  padding-bottom: 0px;
+}
+
+.footer-item a {
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--white-text);
+  text-decoration: none;
+
+}
+
+.footer-item:nth-child(3) {
+  padding-left: 22px;
+}
+
+.for-providers {
+  font-weight: 700;
+  display: flex;
+  align-self: end;
+}
+
+.for-providers::before {
+  content: url(../img/heart.svg);
+  width: 15px;
+  height: 13px;
+  align-self: end;
+  margin-right: 7px;
+
+}
+
+
 .copyright {
   width: 190px;
-  height: 60px;
+  /* height: 60px; */
   font-size: 12px;
   line-height: 18px;
   color: var(--white-text);
@@ -608,12 +854,12 @@ img {
   width: 108px;
   height: 39px;
   background-repeat: no-repeat;
+  padding-bottom: 5px;
 }
 
 .copyright-descr-link {
   color: inherit;
   text-decoration: none;
-  border-bottom: 1px solid var(--light-gray-button);
 }
 
 /* -----------------Catalog--------------- */
