@@ -354,9 +354,11 @@ img {
 
 }
 
-/* .entrance-link {
-  width: 92px;
-} */
+.main-slider {
+  height: 440px;
+  /* потом убрать высоту!!! поставила чтобы проверить правильность расположения элементов на странице */
+}
+
 .main-slider-breadcrumbs {
   display: flex;
 }
@@ -395,7 +397,6 @@ img {
   background: transparent;
   outline: none;
   margin-right: 8px;
-  /* margin-bottom: 40px; */
 }
 
 .main-slider-switch:hover {
@@ -412,10 +413,14 @@ img {
   grid-gap: 26px;
 }
 
-/* .best-selling-item {
-  display: grid;
+.invisible {
+  height: 0;
+}
 
-} */
+.best-selling-item {
+  height: 324px;
+  /* высоту блока поставила временно, т.к. почему-то высота блока стояла автоматически 349рх и никак не менялась другими методами. Никак не могл понять, откуда берется лишнее пустое место внизу после ссылки*/
+}
 
 /* .best-selling-item:hover {
   background: var(--white-text);
@@ -457,6 +462,7 @@ img {
   padding-left: 32px;
 
 }
+
 
 
 .best-selling-link {
@@ -515,6 +521,7 @@ img {
 
 .benefit-item-descr {
   margin-top: 8px;
+  padding-bottom: 0;
 }
 
 .special-offers {
@@ -601,6 +608,7 @@ img {
   overflow: hidden;
 
 }
+
 
 .hit::before {
   content: url(../img/hit.svg);
@@ -694,7 +702,7 @@ img {
 .contacts-wrap {
   position: relative;
   background: var(--gray);
-  height: 403px;
+  height: 430px;
 
 }
 
@@ -755,10 +763,10 @@ img {
 
 
 .footer {
-  margin-top: 40px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 .footer-socials {
@@ -802,6 +810,8 @@ img {
   grid-column-gap: 33px;
   align-content: center;
   grid-row-gap: 1px;
+  margin-top: 1px;
+  margin-left: 2px;
 
 }
 
@@ -834,8 +844,8 @@ img {
   width: 15px;
   height: 13px;
   align-self: end;
-  margin-right: 7px;
-
+  margin-right: 6px;
+  margin-top: 1px;
 }
 
 
@@ -854,7 +864,7 @@ img {
   width: 108px;
   height: 39px;
   background-repeat: no-repeat;
-  padding-bottom: 5px;
+  padding-bottom: 2px;
 }
 
 .copyright-descr-link {
