@@ -330,6 +330,7 @@ img {
   margin-left: 22px;
 }
 
+
 .user-navigation-item {
   display: block;
   /* outline: 1px solid fuchsia; */
@@ -887,9 +888,26 @@ img {
   color: var(--dark-text);
 }
 
+
+.catalog-paginator {
+  outline: 1px solid blue;
+  width: 194px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-right: 27px;
+  margin-left: auto;
+}
+
 .paginator {
   font-size: 16px;
   line-height: 18px;
+  padding-right: 20px;
+  color: var(--white-text);
+  text-decoration: none;
+  font-weight: 500;
+
 }
 
 .narrow-next {
@@ -897,4 +915,15 @@ img {
   width: 7px;
   height: 12px;
   background-image: url(../img/icon-right-small.svg);
+}
+
+.goods-wrap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 26px;
+  grid-row-gap: 40px;
+}
+
+.catalog-title {
+  grid-column: 1 / 5;
 }
