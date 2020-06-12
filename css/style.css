@@ -52,6 +52,7 @@
   --gray-switch-hover: #rgba(255, 255, 255, 0.4);
   --gray-lead-magnet: #5a5a5a;
   --gray-footer-frame: rgba(255, 255, 255, 0.5);
+  --gray-network: rgba(255, 255, 255, 0.7);
   --wine-button-shadow: #942718;
   --orange-button-shadow: #ac1000;
   --bordo-button-shadow: rgba(172, 16, 0, 0.64);
@@ -789,9 +790,23 @@ img {
   font-size: 0px;
   background-repeat: no-repeat;
   background-color: var(--gray);
+  text-align: center;
 }
 
-/* Здесь прописать стили для соц.кнопок по наведению и клику!! */
+.footer-network:hover,
+.footer-network:focus,
+.footer-network:active {
+  background-color: var(--white-text);
+}
+
+/* .footer-network:hover path,
+.footer-network:focus path {
+  fill: var(--white-text);
+} */
+
+.footer-network:active {
+  border: 2px solid var(--gray-network);
+}
 
 .fb-network {
   background-image: url(../img/fb.svg);
