@@ -221,6 +221,7 @@ img {
   display: flex;
   flex-direction: row;
   gap: 31px;
+  flex-wrap: wrap;
   /* Андрей, у меня почему-то не применяется свойство gap на флексах. А на гридах работает. Почему так может быть? пришлось выставлять margin */
   padding-top: 22px;
 }
@@ -266,6 +267,7 @@ img {
   color: var(--white-text);
   text-decoration: none;
   font-weight: 700;
+  display: block;
 }
 
 .header-time {
@@ -356,7 +358,7 @@ img {
 }
 
 .main-slider {
-  height: 440px;
+  height: 490px;
   /* потом убрать высоту!!! поставила чтобы проверить правильность расположения элементов на странице */
 }
 
@@ -768,6 +770,7 @@ img {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  border-top: 1px solid var(--light-gray-button);
 }
 
 .footer-socials {
@@ -787,6 +790,8 @@ img {
   background-repeat: no-repeat;
   background-color: var(--gray);
 }
+
+/* Здесь прописать стили для соц.кнопок по наведению и клику!! */
 
 .fb-network {
   background-image: url(../img/fb.svg);
@@ -921,7 +926,7 @@ img {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 26px;
-  grid-row-gap: 40px;
+  grid-row-gap: 36px;
 }
 
 .catalog-title {
