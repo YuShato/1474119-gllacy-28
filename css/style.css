@@ -81,7 +81,6 @@ body {
   min-width: 1200px;
   margin: 0;
   padding: 0;
-  background-color: var(--basic-green-gray);
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 22px;
@@ -90,19 +89,13 @@ body {
   color: var(--text-color-dark);
   min-height: 100%;
   box-sizing: border-box;
-  outline: 3px solid white;
+
 }
 
 img {
   max-width: 100%;
 }
 
-/* .page-body {
-  display: grid;
-  min-height: 100%;
-  grid-template-rows: 114px 1fr 104px;
-  align-content: start;
-} */
 
 .container-wrap {
   max-width: 1200px;
@@ -111,6 +104,8 @@ img {
   outline: 5px solid darkgreen;
   display: grid;
   grid-template-rows: 114px 1fr 104px;
+  background-repeat: no-repeat;
+
 }
 
 .container {
@@ -359,13 +354,16 @@ img {
 }
 
 .main-slider {
-  /* width: 1146px;
+  width: 1146px;
   position: relative;
-  padding-top: 524px;
-  text-align: center; */
-  min-width: 940px;
+  padding-top: 494px;
+  /* text-align: center; */
   background-repeat: no-repeat;
   background-position: top center;
+  display: flex;
+  justify-content: center;
+  align-content: flex-end;
+
 }
 
 .slide-current {
@@ -375,7 +373,7 @@ img {
 .main-slider-breadcrumbs {
   display: flex;
   position: absolute;
-  bottom: 63px;
+  top: 446px;
   left: 0;
   z-index: 20;
   width: 79px;
@@ -386,13 +384,18 @@ img {
   font-size: 60px;
   line-height: 60px;
   width: 672px;
-  width: 700px;
   margin: 0 auto;
   margin-bottom: 27px;
+  position: absolute;
+  top: 284px;
+  text-align: center;
+  left: 237px;
+
 }
 
 .main-slider-item .button-form {
   display: inline-block;
+  position: absolute;
   width: 278px;
   font-style: normal;
   font-weight: 700;
@@ -402,12 +405,12 @@ img {
   text-transform: none;
   border: none;
   cursor: pointer;
-  /* letter-spacing: 0.05em; */
   padding-top: 9px;
   padding-bottom: 10px;
-  /* padding-left: 40px;
-  padding-right: 40px; */
+  top: 429px;
+  left: 433px;
   /* ПОТОМ ПРОВЕРИТЬ ЕЩЕ РАЗ СТИЛИ ЭТОЙ КНОПКИ! ВЫСОТА ПОЛУЧАЕТСЯ 62.63 ПКС, А В МАКЕТЕ 63ПКС. нО У МЕНЯ НЕ СОПАЛИ СТИЛИ В СТАЙЛГАЙДЕ И В МАКЕТЕ СТРАНИЦЫ */
+
 }
 
 .main-slider-switch {
