@@ -284,7 +284,6 @@ img {
 
 .search-icon-wrap {
   width: 32px;
-
   background: var(--light-gray-button);
   border-radius: 50%;
   text-align: center;
@@ -326,6 +325,19 @@ img {
   /* outline: 1px solid fuchsia; */
 }
 
+.user-navigation-item:hover p {
+  color: var(--dark-text);
+}
+
+.user-navigation-item:hover path {
+  fill: var(--dark-text);
+}
+
+/* .basket:hover {
+  /* сюда дописать стили корзины при наведении */
+/* } */
+
+
 .entrance-link {
   background: var(--light-gray-button);
   border-radius: 20px;
@@ -333,6 +345,10 @@ img {
   align-items: center;
 }
 
+.entrance-link:hover,
+.search-icon-wrap:hover {
+  background-color: var(--white-text);
+}
 
 .user-navigation-descr {
   font-weight: 500;
@@ -344,6 +360,7 @@ img {
   padding-left: 8px;
 
 }
+
 
 .main-slider {
   width: 1146px;
