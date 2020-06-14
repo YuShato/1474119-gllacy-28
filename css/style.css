@@ -99,7 +99,7 @@ img {
 
 .container-wrap {
   max-width: 1200px;
-  margin: 9px auto 0;
+  margin: 0 auto;
   box-sizing: border-box;
   outline: 5px solid darkgreen;
   display: grid;
@@ -124,6 +124,10 @@ img {
   margin: 0;
 }
 
+.text-reset {
+  padding: 0;
+  margin: 0;
+}
 
 /*Hidden*/
 .visually-hidden {
