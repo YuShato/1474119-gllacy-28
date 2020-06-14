@@ -107,6 +107,8 @@ img {
   background-repeat: no-repeat;
 }
 
+
+
 .container {
   display: grid;
   grid-row-gap: 40px;
@@ -218,7 +220,7 @@ img {
   gap: 31px;
   flex-wrap: wrap;
   /* Андрей, у меня почему-то не применяется свойство gap на флексах. А на гридах работает. Почему так может быть? пришлось выставлять margin */
-  padding-top: 22px;
+  align-items: center;
 }
 
 .site-navigation-item {
@@ -263,6 +265,16 @@ img {
   text-decoration: none;
   font-weight: 700;
   display: block;
+}
+
+.site-navigation-item.active {
+  background-color: var(--orange-brown);
+  border-radius: 26px;
+  padding-top: 9px;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-bottom: 10px;
+  margin-right: 17px;
 }
 
 .header-time {
@@ -329,13 +341,10 @@ img {
   color: var(--dark-text);
 }
 
-.user-navigation-item:hover path {
+.user-navigation-item:hover:not(.full-basket) path {
   fill: var(--dark-text);
 }
 
-/* .basket:hover {
-  /* сюда дописать стили корзины при наведении */
-/* } */
 
 
 .entrance-link {
@@ -940,6 +949,9 @@ img {
 }
 
 /* -----------------Catalog--------------- */
+.catalog-bg {
+  background-color: var(--basic-green-gray);
+}
 
 .right-narrow::after {
   content: url(../img/narrow-right.svg);
@@ -952,6 +964,16 @@ img {
   font-size: 14px;
   line-height: 16px;
   color: var(--dark-text);
+}
+
+.full-basket .entrance-link {
+  background-color: var(--white-text);
+  min-width: 90px;
+}
+
+.full-basket .nav-link {
+  padding-left: 14px;
+  padding-right: 14px;
 }
 
 
