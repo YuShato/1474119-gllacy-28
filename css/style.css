@@ -64,7 +64,6 @@
   --orange-button: #f26843;
   --red-orange-button: #e74a35;
   --salmon-link: #ffbc9e;
-  --salmon-link-border: #ffbc9e;
   --salmon-catalog-click: #f6b5a5;
   --salmon-catalog-hover: #fbded7;
   --blue-ininput: #2e88e4;
@@ -569,6 +568,25 @@ img {
   display: block;
 }
 
+.best-selling-link:focus,
+.best-selling-link:hover,
+.best-selling-link:active,
+.footer-item:hover a,
+.footer-item:focus a,
+.footer-item:active a {
+  color: var(--salmon-link);
+}
+
+.best-selling-link:focus span,
+.best-selling-link:hover span,
+.best-selling-link:active span,
+.footer-item:hover a,
+.footer-item:focus a,
+.footer-item:active a {
+  border-bottom: 1px solid var(--salmon-link);
+}
+
+
 .text-underline {
   border-bottom: 1px solid var(--light-gray-button);
 }
@@ -744,6 +762,12 @@ img {
   margin-left: 20px;
   display: block;
   width: 287px;
+}
+
+.news-link:hover,
+.news-link:focus,
+.news-link:active {
+  color: var(--orange-link);
 }
 
 
