@@ -49,6 +49,7 @@
   --gray-placeholder: #999999;
   --gray-basket-hr: #cacac7;
   --gray-header-btn: #ededed;
+  --gray-header-shadow: #696969;
   --gray-switch-hover: #rgba(255, 255, 255, 0.4);
   --gray-lead-magnet: #5a5a5a;
   --gray-footer-frame: rgba(255, 255, 255, 0.5);
@@ -267,23 +268,45 @@ img {
   display: block;
 }
 
-.site-navigation-item.active {
-  background-color: var(--orange-brown);
+.site-navigation-item.active,
+.site-navigation-item:hover:not(.active) a,
+.site-navigation-item:focus a,
+.site-navigation-item:active a {
   border-radius: 26px;
   padding-top: 8px;
   padding-left: 14px;
   padding-right: 14px;
   padding-bottom: 8px;
+}
+
+.site-navigation-item.active {
+  background-color: var(--orange-brown);
   margin-right: 17px;
 }
 
-.site-navigation-item.active:hover {
+.site-navigation-item:hover,
+.site-navigation-item:focus {
   background-color: var(--white-text);
+  color: var(--dark-text);
+  border-radius: 26px;
+  margin-right: 17px;
 }
 
-.site-navigation-item.active a {
-  border-bottom: none;
+.site-navigation-item:active a {
+  background: var(--gray-header-btn);
+  box-shadow: inset 0px 2px 1px var(--gray-header-shadow);
+  color: var(--dark-text);
+
 }
+
+.site-navigation-item.active a,
+.site-navigation-item:hover a,
+.site-navigation-item:focus a {
+  border-bottom: none;
+  color: inherit;
+}
+
+
 
 .header-time {
   font-size: 14px;
