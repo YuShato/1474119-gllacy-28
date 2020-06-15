@@ -89,6 +89,8 @@ body {
   color: var(--text-color-dark);
   min-height: 100%;
   box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: center top;
 
 }
 
@@ -101,7 +103,6 @@ img {
   max-width: 1200px;
   margin: 0 auto;
   box-sizing: border-box;
-  outline: 5px solid darkgreen;
   display: grid;
   grid-template-rows: 114px 1fr 104px;
   background-repeat: no-repeat;

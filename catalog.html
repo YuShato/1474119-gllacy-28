@@ -9,373 +9,371 @@
   <title>Каталог Gllacy Shop</title>
 </head>
 
-<body class="page-body">
-  <div class="container-wrap catalog-bg">
-    <header class="main-header move">
-      <nav class="main-navigation">
-        <!--логотип магазина-->
-        <a href="index.html" class="main-header-logo">
-          <img src="img/logo.svg" width="154" height="64"
-            alt="Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного проиводства на развес">
-        </a>
-        <!--верхнее меню и навигация-->
-        <ul class="site-navigation list-reset">
-          <li class="site-navigation-item active">
-            <a class="header-link site-link" href="catalog.html">Каталог</a>
-          </li>
-          <li class="site-navigation-item">
-            <a class="header-link site-link" href="">Доставка и оплата</a>
-          </li>
-          <li class="site-navigation-item">
-            <a class="header-link site-link" href="">О компании</a>
-          </li>
-        </ul>
-        <!--Поиск, вход, корзина-->
-        <ul class="user-navigation list-reset ">
-          <li class="user-navigation-item search-icon-wrap">
-            <a class="search-link" href="" aria-label="Поиск товаров в каталоге Gllacy">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M16 14.6652L11.0785 9.73294C11.9827 8.48188 12.3826 6.93501 12.1984 5.40134C12.0141 3.86767 11.2594 2.4601 10.0848 1.45982C8.91022 0.45954 7.40233 -0.0598191 5.86234 0.00548954C4.32234 0.0707982 2.86363 0.715967 1.77757 1.81212C0.691516 2.90827 0.0580813 4.3747 0.0038002 5.91849C-0.050481 7.46228 0.478388 8.96976 1.48476 10.1398C2.49113 11.3098 3.90092 12.0563 5.43251 12.2301C6.96409 12.4039 8.50472 11.9922 9.74663 11.0772L14.6586 16L16 14.6652ZM6.08152 10.3767C5.24079 10.3767 4.41895 10.1268 3.71991 9.65874C3.02087 9.19063 2.47604 8.5253 2.15431 7.74687C1.83258 6.96844 1.7484 6.11188 1.91241 5.28551C2.07643 4.45913 2.48128 3.70006 3.07576 3.10427C3.67024 2.50849 4.42766 2.10276 5.25223 1.93838C6.0768 1.77401 6.93149 1.85837 7.70822 2.1808C8.48495 2.50324 9.14883 3.04927 9.61591 3.74983C10.083 4.4504 10.3323 5.27404 10.3323 6.11661C10.3298 7.24568 9.88115 8.3278 9.08451 9.12618C8.28788 9.92456 7.20813 10.3742 6.08152 10.3767Z"
-                  fill="white" />
-              </svg>
-              <!--Форма поиска товара-->
-              <form class="form search-form remove" action="https://echo.htmlacademy.ru" method="post">
-                <label for="item-search" class="visually-hidden">Найти товар в каталоге</label>
-                <input class="inp item-search" type="text" name="item-search" id="item-search" placeholder="Крем-брюле">
+<body class="page-body container-wrap catalog-bg">
+  <header class="main-header move">
+    <nav class="main-navigation">
+      <!--логотип магазина-->
+      <a href="index.html" class="main-header-logo">
+        <img src="img/logo.svg" width="154" height="64"
+          alt="Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного проиводства на развес">
+      </a>
+      <!--верхнее меню и навигация-->
+      <ul class="site-navigation list-reset">
+        <li class="site-navigation-item active">
+          <a class="header-link site-link" href="catalog.html">Каталог</a>
+        </li>
+        <li class="site-navigation-item">
+          <a class="header-link site-link" href="">Доставка и оплата</a>
+        </li>
+        <li class="site-navigation-item">
+          <a class="header-link site-link" href="">О компании</a>
+        </li>
+      </ul>
+      <!--Поиск, вход, корзина-->
+      <ul class="user-navigation list-reset ">
+        <li class="user-navigation-item search-icon-wrap">
+          <a class="search-link" href="" aria-label="Поиск товаров в каталоге Gllacy">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M16 14.6652L11.0785 9.73294C11.9827 8.48188 12.3826 6.93501 12.1984 5.40134C12.0141 3.86767 11.2594 2.4601 10.0848 1.45982C8.91022 0.45954 7.40233 -0.0598191 5.86234 0.00548954C4.32234 0.0707982 2.86363 0.715967 1.77757 1.81212C0.691516 2.90827 0.0580813 4.3747 0.0038002 5.91849C-0.050481 7.46228 0.478388 8.96976 1.48476 10.1398C2.49113 11.3098 3.90092 12.0563 5.43251 12.2301C6.96409 12.4039 8.50472 11.9922 9.74663 11.0772L14.6586 16L16 14.6652ZM6.08152 10.3767C5.24079 10.3767 4.41895 10.1268 3.71991 9.65874C3.02087 9.19063 2.47604 8.5253 2.15431 7.74687C1.83258 6.96844 1.7484 6.11188 1.91241 5.28551C2.07643 4.45913 2.48128 3.70006 3.07576 3.10427C3.67024 2.50849 4.42766 2.10276 5.25223 1.93838C6.0768 1.77401 6.93149 1.85837 7.70822 2.1808C8.48495 2.50324 9.14883 3.04927 9.61591 3.74983C10.083 4.4504 10.3323 5.27404 10.3323 6.11661C10.3298 7.24568 9.88115 8.3278 9.08451 9.12618C8.28788 9.92456 7.20813 10.3742 6.08152 10.3767Z"
+                fill="white" />
+            </svg>
+            <!--Форма поиска товара-->
+            <form class="form search-form remove" action="https://echo.htmlacademy.ru" method="post">
+              <label for="item-search" class="visually-hidden">Найти товар в каталоге</label>
+              <input class="inp item-search" type="text" name="item-search" id="item-search" placeholder="Крем-брюле">
+            </form>
+          </a>
+        </li>
+        <li class="user-navigation-item">
+          <a class="entrance-link nav-link" href="">
+            <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.04 14.88L12.96 9.5L6.04 4.13V7.04H0V11.96H6.04V14.88Z" fill="white" />
+              <path
+                d="M18 0H5C4.46957 0 3.96086 0.210714 3.58579 0.585786C3.21071 0.960859 3 1.46957 3 2V4H5V2H18V17H5V15H3V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19H18C18.5304 19 19.0391 18.7893 19.4142 18.4142C19.7893 18.0391 20 17.5304 20 17V2C20 1.46957 19.7893 0.960859 19.4142 0.585786C19.0391 0.210714 18.5304 0 18 0Z"
+                fill="white" />
+            </svg>
+            <p class="user-navigation-descr">Вход</p>
+            <!--Форма регистрации и входа-->
+            <section class="user-entrance remove">
+              <h2 class="visually-hidden">Вход в личный кабинет</h2>
+              <form class="form" action="https://echo.htmlacademy.ru" method="post">
+                <p>
+                  <label for="entrance-email">Электронная почта</label>
+                  <input class="inp" class="inp" type="email" name="entrance-email" id="entrance-email"
+                    placeholder="email@example.com">
+                </p>
+                <p>
+                  <label for="entrance-password">Пароль</label>
+                  <input class="inp" type="password" name="entrance-password" id="entrance-password"
+                    placeholder="••••••">
+                </p>
+                <a href="">Забыли пароль?</a>
+                <a href="">Новая регистрация</a>
+                <button type="submit">Войти</button>
               </form>
-            </a>
-          </li>
-          <li class="user-navigation-item">
-            <a class="entrance-link nav-link" href="">
-              <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.04 14.88L12.96 9.5L6.04 4.13V7.04H0V11.96H6.04V14.88Z" fill="white" />
-                <path
-                  d="M18 0H5C4.46957 0 3.96086 0.210714 3.58579 0.585786C3.21071 0.960859 3 1.46957 3 2V4H5V2H18V17H5V15H3V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19H18C18.5304 19 19.0391 18.7893 19.4142 18.4142C19.7893 18.0391 20 17.5304 20 17V2C20 1.46957 19.7893 0.960859 19.4142 0.585786C19.0391 0.210714 18.5304 0 18 0Z"
-                  fill="white" />
-              </svg>
-              <p class="user-navigation-descr">Вход</p>
-              <!--Форма регистрации и входа-->
-              <section class="user-entrance remove">
-                <h2 class="visually-hidden">Вход в личный кабинет</h2>
-                <form class="form" action="https://echo.htmlacademy.ru" method="post">
-                  <p>
-                    <label for="entrance-email">Электронная почта</label>
-                    <input class="inp" class="inp" type="email" name="entrance-email" id="entrance-email"
-                      placeholder="email@example.com">
-                  </p>
-                  <p>
-                    <label for="entrance-password">Пароль</label>
-                    <input class="inp" type="password" name="entrance-password" id="entrance-password"
-                      placeholder="••••••">
-                  </p>
-                  <a href="">Забыли пароль?</a>
-                  <a href="">Новая регистрация</a>
-                  <button type="submit">Войти</button>
-                </form>
-              </section>
-            </a>
-            <!--Заменить img на <svg></svg>-->
-          </li>
-          <li class="user-navigation-item btn-item full-basket ">
-            <a class="nav-link entrance-link" aria-label="корзина покупателя" href="">
-              <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M7.03359 20C8.14664 20 9.04894 19.1046 9.04894 18C9.04894 16.8954 8.14664 16 7.03359 16C5.92054 16 5.01823 16.8954 5.01823 18C5.01823 19.1046 5.92054 20 7.03359 20Z"
-                  fill="#343434" />
-                <path
-                  d="M16.1027 20C17.2157 20 18.118 19.1046 18.118 18C18.118 16.8954 17.2157 16 16.1027 16C14.9896 16 14.0873 16.8954 14.0873 18C14.0873 19.1046 14.9896 20 16.1027 20Z"
-                  fill="#343434" />
-                <path
-                  d="M5.70345 2L5.46161 0H0V2H3.66795L5.17946 15H19.2869L21 2H5.70345ZM17.5034 13H6.97313L5.96545 4H18.6924L17.5034 13Z"
-                  fill="#343434" />
-                <path d="M5.93506 4.03003L6.97297 13H17.5032L18.6923 4.03003H5.93506Z" fill="#E84D37" />
-              </svg>
-
-              <p class="user-navigation-descr full-basket">2 товара</p>
-
-              <!--Выпадающая корзина с товарами-->
-              <div class="remove">
-                <table>
-                  <!--первый товар в корзине-->
-                  <tr>
-                    <td>
-                      <button class="button" type="button" aria-label="Удалить товар"></button>
-                    </td>
-                    <td>
-                      <a href="">
-                        <img src="img/jam-icecream-mini-min.jpg" alt="Пломбир с апельсиновым джемом" width="33"
-                          height="33">
-                      </a>
-                    </td>
-                    <td>
-                      <a href="">Пломбир с апельсиновым джемом</a>
-                    </td>
-                    <td>1,5 кг х <span>200 руб.</span></td>
-                    <td>300 руб.</td>
-                  </tr>
-                  <!--второй товар в корзине-->
-                  <tr>
-                    <td>
-                      <button class="button" type="button" aria-label="Удалить товар"></button>
-                    </td>
-                    <td>
-                      <a href="">
-                        <img src="img/strawberry-choco-mini-min.jpg"
-                          alt="Клубничный пломбир с присыпкой из белого шоколада" width="33" height="33">
-                      </a>
-                    </td>
-                    <td>
-                      <a href="">Клубничный пломбир с присыпкой из белого шоколада</a>
-                    </td>
-                    <td>1,5 кг х <span>300 руб.</span></td>
-                    <td>450 руб.</td>
-                  </tr>
-                  <tr>
-                    <td>Итого: 750 руб.</td>
-                  </tr>
-                </table>
-                <a href="">Оформить заказ</a>
-              </div>
-            </a>
-          </li>
-          </li>
-        </ul>
-      </nav>
-      <ul class="list-reset header-time catalog-nav remove">
-        <li>
-          <a class="contacts-link copywrite-descr-link right-narrow" href="index.html">Главная</a>
+            </section>
+          </a>
+          <!--Заменить img на <svg></svg>-->
         </li>
-        <li>
-          <a class="contacts-link copywrite-descr-link right-narrow" href="catalog.html">Каталог</a>
+        <li class="user-navigation-item btn-item full-basket ">
+          <a class="nav-link entrance-link" aria-label="корзина покупателя" href="">
+            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M7.03359 20C8.14664 20 9.04894 19.1046 9.04894 18C9.04894 16.8954 8.14664 16 7.03359 16C5.92054 16 5.01823 16.8954 5.01823 18C5.01823 19.1046 5.92054 20 7.03359 20Z"
+                fill="#343434" />
+              <path
+                d="M16.1027 20C17.2157 20 18.118 19.1046 18.118 18C18.118 16.8954 17.2157 16 16.1027 16C14.9896 16 14.0873 16.8954 14.0873 18C14.0873 19.1046 14.9896 20 16.1027 20Z"
+                fill="#343434" />
+              <path
+                d="M5.70345 2L5.46161 0H0V2H3.66795L5.17946 15H19.2869L21 2H5.70345ZM17.5034 13H6.97313L5.96545 4H18.6924L17.5034 13Z"
+                fill="#343434" />
+              <path d="M5.93506 4.03003L6.97297 13H17.5032L18.6923 4.03003H5.93506Z" fill="#E84D37" />
+            </svg>
+
+            <p class="user-navigation-descr full-basket">2 товара</p>
+
+            <!--Выпадающая корзина с товарами-->
+            <div class="remove">
+              <table>
+                <!--первый товар в корзине-->
+                <tr>
+                  <td>
+                    <button class="button" type="button" aria-label="Удалить товар"></button>
+                  </td>
+                  <td>
+                    <a href="">
+                      <img src="img/jam-icecream-mini-min.jpg" alt="Пломбир с апельсиновым джемом" width="33"
+                        height="33">
+                    </a>
+                  </td>
+                  <td>
+                    <a href="">Пломбир с апельсиновым джемом</a>
+                  </td>
+                  <td>1,5 кг х <span>200 руб.</span></td>
+                  <td>300 руб.</td>
+                </tr>
+                <!--второй товар в корзине-->
+                <tr>
+                  <td>
+                    <button class="button" type="button" aria-label="Удалить товар"></button>
+                  </td>
+                  <td>
+                    <a href="">
+                      <img src="img/strawberry-choco-mini-min.jpg"
+                        alt="Клубничный пломбир с присыпкой из белого шоколада" width="33" height="33">
+                    </a>
+                  </td>
+                  <td>
+                    <a href="">Клубничный пломбир с присыпкой из белого шоколада</a>
+                  </td>
+                  <td>1,5 кг х <span>300 руб.</span></td>
+                  <td>450 руб.</td>
+                </tr>
+                <tr>
+                  <td>Итого: 750 руб.</td>
+                </tr>
+              </table>
+              <a href="">Оформить заказ</a>
+            </div>
+          </a>
         </li>
-        <li>
-          <a class="contacts-link" href="">Сливочное</a>
         </li>
       </ul>
-      <div class="working-time">
-        <p class="title header-time">с 10 до 20, ежедневно</p>
-        <a class="title header-tel" href="tel:+78124502525">8 812 450-25-25</a>
-      </div>
-    </header>
-    <main class="container">
-      <section class="goods-wrap move">
-        <h2 class="title offer-title catalog-title text-reset">Сливочное мороженое</h2>
-        <!--здесь будут фильтры, но я их пока не умею делать-->
-        <!-- 1й ряд товаров -->
-        <article class="best-selling-item">
-          <div class="best-selling-wrap">
-            <a href="">
-              <img src="img/jam-icecream-min.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"
-                width="267" height="267">
-            </a>
-          </div>
-          <p class="best-selling-price title text-reset">310 <span class="best-selling-weight">/кг</span></p>
-          <h3 class="invisible">
-            <a class="best-selling-link" href=""><span class="site-link">Сливочное с апельсиновым джемом и
-                цитрусовой стружкой</span></a>
-          </h3>
-        </article>
-        <article class="best-selling-item">
-          <div class="best-selling-wrap">
-            <a href="">
-              <img src="img/coffee-icecream-min.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267"
-                height="267">
-            </a>
-          </div>
-          <p class="best-selling-price title text-reset">380 <span class="best-selling-weight">/кг</span></p>
-          <h3 class="invisible">
-            <a class="best-selling-link" href=""><span class="site-link">Сливочно-кофейное с кусочками
-                шоколада</span></a>
-          </h3>
-        </article>
-        <article class="best-selling-item">
-          <div class="best-selling-wrap">
-            <a href="">
-              <img src="img/strawberry-icecream-min.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада"
-                width="267" height="267">
-            </a>
-          </div>
-          <p class="best-selling-price title text-reset">355 <span class="best-selling-weight">/кг</span></p>
-          <h3 class="invisible">
-            <a class="best-selling-link" href=""><span class="site-link">Сливочно-клубничное с присыпкой из белого
-                шоколада</span></a>
-          </h3>
-        </article>
-        <article class="best-selling-item">
-          <div class="best-selling-wrap">
-            <a href="">
-              <img class="item-pic" src="img/caramel-icecream-min.jpg"
-                alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
-            </a>
-          </div>
-          <p class="best-selling-price title text-reset">415 <span class="best-selling-weight">/кг</span></p>
-          <h3 class="invisible">
-            <a class="best-selling-link" href=""><span class="site-link">Сливочное крем-брюле с карамельной
-                подливкой</span></a>
-          </h3>
-        </article>
-        <!-- 2й ряд товаров -->
-        <article class="best-selling-item">
-          <div class="best-selling-wrap">
-            <a href="">
-              <img src="img/lingonberry-icecream-min.jpg" alt="Сливочное с брусничным джемом" width="267" height="267">
-            </a>
-          </div>
-          <p class="best-selling-price title text-reset">325 <span class="best-selling-weight">/кг</span></p>
-          <h3 class="invisible">
-            <a class="best-selling-link" href=""><span class="site-link">Сливочное с брусничным<br>
-                джемом</span></a>
-          </h3>
-        </article>
-        <article class="best-selling-item">
-          <div class="best-selling-wrap">
-            <a href="">
-              <img src="img/blueberry-icecream-min.jpg" alt="Сливочно-черничное с цельными ягодами черники" width="267"
-                height="267">
-            </a>
-          </div>
-          <p class="best-selling-price title text-reset">410 <span class="best-selling-weight">/кг</span></p>
+    </nav>
+    <ul class="list-reset header-time catalog-nav remove">
+      <li>
+        <a class="contacts-link copywrite-descr-link right-narrow" href="index.html">Главная</a>
+      </li>
+      <li>
+        <a class="contacts-link copywrite-descr-link right-narrow" href="catalog.html">Каталог</a>
+      </li>
+      <li>
+        <a class="contacts-link" href="">Сливочное</a>
+      </li>
+    </ul>
+    <div class="working-time">
+      <p class="title header-time">с 10 до 20, ежедневно</p>
+      <a class="title header-tel" href="tel:+78124502525">8 812 450-25-25</a>
+    </div>
+  </header>
+  <main class="container">
+    <section class="goods-wrap move">
+      <h2 class="title offer-title catalog-title text-reset">Сливочное мороженое</h2>
+      <!--здесь будут фильтры, но я их пока не умею делать-->
+      <!-- 1й ряд товаров -->
+      <article class="best-selling-item">
+        <div class="best-selling-wrap">
+          <a href="">
+            <img src="img/jam-icecream-min.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267"
+              height="267">
+          </a>
+        </div>
+        <p class="best-selling-price title text-reset">310 <span class="best-selling-weight">/кг</span></p>
+        <h3 class="invisible">
+          <a class="best-selling-link" href=""><span class="site-link">Сливочное с апельсиновым джемом и
+              цитрусовой стружкой</span></a>
+        </h3>
+      </article>
+      <article class="best-selling-item">
+        <div class="best-selling-wrap">
+          <a href="">
+            <img src="img/coffee-icecream-min.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267"
+              height="267">
+          </a>
+        </div>
+        <p class="best-selling-price title text-reset">380 <span class="best-selling-weight">/кг</span></p>
+        <h3 class="invisible">
+          <a class="best-selling-link" href=""><span class="site-link">Сливочно-кофейное с кусочками
+              шоколада</span></a>
+        </h3>
+      </article>
+      <article class="best-selling-item">
+        <div class="best-selling-wrap">
+          <a href="">
+            <img src="img/strawberry-icecream-min.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада"
+              width="267" height="267">
+          </a>
+        </div>
+        <p class="best-selling-price title text-reset">355 <span class="best-selling-weight">/кг</span></p>
+        <h3 class="invisible">
+          <a class="best-selling-link" href=""><span class="site-link">Сливочно-клубничное с присыпкой из белого
+              шоколада</span></a>
+        </h3>
+      </article>
+      <article class="best-selling-item">
+        <div class="best-selling-wrap">
+          <a href="">
+            <img class="item-pic" src="img/caramel-icecream-min.jpg" alt="Сливочное крем-брюле с карамельной подливкой"
+              width="267" height="267">
+          </a>
+        </div>
+        <p class="best-selling-price title text-reset">415 <span class="best-selling-weight">/кг</span></p>
+        <h3 class="invisible">
+          <a class="best-selling-link" href=""><span class="site-link">Сливочное крем-брюле с карамельной
+              подливкой</span></a>
+        </h3>
+      </article>
+      <!-- 2й ряд товаров -->
+      <article class="best-selling-item">
+        <div class="best-selling-wrap">
+          <a href="">
+            <img src="img/lingonberry-icecream-min.jpg" alt="Сливочное с брусничным джемом" width="267" height="267">
+          </a>
+        </div>
+        <p class="best-selling-price title text-reset">325 <span class="best-selling-weight">/кг</span></p>
+        <h3 class="invisible">
+          <a class="best-selling-link" href=""><span class="site-link">Сливочное с брусничным<br>
+              джемом</span></a>
+        </h3>
+      </article>
+      <article class="best-selling-item">
+        <div class="best-selling-wrap">
+          <a href="">
+            <img src="img/blueberry-icecream-min.jpg" alt="Сливочно-черничное с цельными ягодами черники" width="267"
+              height="267">
+          </a>
+        </div>
+        <p class="best-selling-price title text-reset">410 <span class="best-selling-weight">/кг</span></p>
+        <h3>
+          <a class="best-selling-link" href=""><span class="site-link">Сливочно-черничное с цельными ягодами
+              черники</span></a>
+        </h3>
+      </article>
+      <article class="best-selling-item">
+        <div class="best-selling-wrap">
+          <a href="">
+            <img src="img/limon-icecream-min.jpg" alt="Сливочно-лимонное с карамельной присыпкой" width="267"
+              height="267">
+          </a>
+        </div>
+        <p class="best-selling-price title text-reset">315 <span class="best-selling-weight">/кг</span></p>
+        <h3>
+          <a class="best-selling-link" href=""><span class="site-link">Сливочно-лимонное с карамельной
+              присыпкой</span></a>
+        </h3>
+      </article>
+      <article class="best-selling-item">
+        <div class="best-selling-wrap">
+          <a href="">
+            <img src="img/chocolate-icecream-min.jpg" alt="Сливочное с шоколадной стружкой" width="267" height="267">
+          </a>
+        </div>
+        <p class="best-selling-price title text-reset">320 <span class="best-selling-weight">/кг</span></p>
+        <h3>
+          <a class="best-selling-link" href=""><span class="site-link">Сливочное с шоколадной стружкой</span></a>
+        </h3>
+      </article>
+      <!-- 3й ряд товаров -->
+      <article class="best-selling-item">
+        <div class="best-selling-wrap">
+          <a href="">
+            <img src="img/vanilla-icecream-min.jpg" alt="Сливочно-ванильное с кусочками шоколада" width="267"
+              height="267">
+          </a>
+        </div>
+        <p class="best-selling-price title text-reset">440 <span class="best-selling-weight">/кг</span></p>
+        <h3>
+          <a class="best-selling-link" href=""><span class="site-link">Сливочно-ванильное с кусочками
+              шоколада</span></a>
+        </h3>
+      </article>
+      <article class="best-selling-item">
+        <div class="best-selling-wrap">
+          <a href="">
+            <img src="img/mentol-icecream-min.jpg" alt="Сливочноe с ментоловым сиропом" width="267" height="267">
+          </a>
+        </div>
+        <p class="best-selling-price title text-reset">435 <span class="best-selling-weight">/кг</span></p>
+        <h3>
+          <a class="best-selling-link" href=""><span class="site-link">Сливочноe с ментоловым сиропом</span></a>
+        </h3>
+      </article>
+      <article class="best-selling-item">
+        <div class="best-selling-wrap">
+          <a href="">
+            <img src="img/creamy-chocopie-min.jpg" alt="Сливочное с кусочками черного шоколада" width="267"
+              height="267">
+          </a>
+        </div>
+        <p class="best-selling-price title text-reset">355 <span class="best-selling-weight">/кг</span></p>
+        <h3>
+          <a class="best-selling-link" href=""><span class="site-link">Сливочное с кусочками черного
+              шоколада</span></a>
+        </h3>
+      </article>
+      <article class="best-selling-item">
+        <div class="best-selling-wrap">
+          <a href="">
+            <img src="img/mint-icecream-min.jpg" alt="Сливочное с мятным сиропом" width="267" height="267">
+          </a>
+          <p class="best-selling-price title text-reset">420 <span class="best-selling-weight">/кг</span></p>
           <h3>
-            <a class="best-selling-link" href=""><span class="site-link">Сливочно-черничное с цельными ягодами
-                черники</span></a>
+            <a class="best-selling-link" href=""><span class="site-link">Сливочное с мятным сиропом</span></a>
           </h3>
-        </article>
-        <article class="best-selling-item">
-          <div class="best-selling-wrap">
-            <a href="">
-              <img src="img/limon-icecream-min.jpg" alt="Сливочно-лимонное с карамельной присыпкой" width="267"
-                height="267">
-            </a>
-          </div>
-          <p class="best-selling-price title text-reset">315 <span class="best-selling-weight">/кг</span></p>
-          <h3>
-            <a class="best-selling-link" href=""><span class="site-link">Сливочно-лимонное с карамельной
-                присыпкой</span></a>
-          </h3>
-        </article>
-        <article class="best-selling-item">
-          <div class="best-selling-wrap">
-            <a href="">
-              <img src="img/chocolate-icecream-min.jpg" alt="Сливочное с шоколадной стружкой" width="267" height="267">
-            </a>
-          </div>
-          <p class="best-selling-price title text-reset">320 <span class="best-selling-weight">/кг</span></p>
-          <h3>
-            <a class="best-selling-link" href=""><span class="site-link">Сливочное с шоколадной стружкой</span></a>
-          </h3>
-        </article>
-        <!-- 3й ряд товаров -->
-        <article class="best-selling-item">
-          <div class="best-selling-wrap">
-            <a href="">
-              <img src="img/vanilla-icecream-min.jpg" alt="Сливочно-ванильное с кусочками шоколада" width="267"
-                height="267">
-            </a>
-          </div>
-          <p class="best-selling-price title text-reset">440 <span class="best-selling-weight">/кг</span></p>
-          <h3>
-            <a class="best-selling-link" href=""><span class="site-link">Сливочно-ванильное с кусочками
-                шоколада</span></a>
-          </h3>
-        </article>
-        <article class="best-selling-item">
-          <div class="best-selling-wrap">
-            <a href="">
-              <img src="img/mentol-icecream-min.jpg" alt="Сливочноe с ментоловым сиропом" width="267" height="267">
-            </a>
-          </div>
-          <p class="best-selling-price title text-reset">435 <span class="best-selling-weight">/кг</span></p>
-          <h3>
-            <a class="best-selling-link" href=""><span class="site-link">Сливочноe с ментоловым сиропом</span></a>
-          </h3>
-        </article>
-        <article class="best-selling-item">
-          <div class="best-selling-wrap">
-            <a href="">
-              <img src="img/creamy-chocopie-min.jpg" alt="Сливочное с кусочками черного шоколада" width="267"
-                height="267">
-            </a>
-          </div>
-          <p class="best-selling-price title text-reset">355 <span class="best-selling-weight">/кг</span></p>
-          <h3>
-            <a class="best-selling-link" href=""><span class="site-link">Сливочное с кусочками черного
-                шоколада</span></a>
-          </h3>
-        </article>
-        <article class="best-selling-item">
-          <div class="best-selling-wrap">
-            <a href="">
-              <img src="img/mint-icecream-min.jpg" alt="Сливочное с мятным сиропом" width="267" height="267">
-            </a>
-            <p class="best-selling-price title text-reset">420 <span class="best-selling-weight">/кг</span></p>
-            <h3>
-              <a class="best-selling-link" href=""><span class="site-link">Сливочное с мятным сиропом</span></a>
-            </h3>
-        </article>
-      </section>
-      <!--навигация по страницам-->
-      <ul class="catalog-paginator list-reset">
-        <li>
-          <a class="paginator">1</a>
-        </li>
-        <li>
-          <a class="paginator" href="">2</a>
-        </li>
-        <li>
-          <a class="paginator" href="">3</a>
-        </li>
-        <li>
-          <a class="paginator" href="">4</a>
-        </li>
-        <li>
-          <a class="paginator" href="">5</a>
-        </li>
-        <li class="narrow-next">
-          <a class="paginator narrow-next" href="">следующая страница</a>
-          <!--в макете здесь иконка-->
-        </li>
-      </ul>
-    </main>
-    <footer class="footer move">
-      <ul class="footer-socials list-reset">
-        <li class="footer-network fb-network">
-          <a class="fb-network" href="">Магазин Gllacy в Facebook</a>
-        </li>
-        <li class="footer-network vk-network">
-          <a class="vk-network" href="">Магазин Gllacy в Vkontakte</a>
-        </li>
-        <li class="footer-network insta-network"">
+      </article>
+    </section>
+    <!--навигация по страницам-->
+    <ul class="catalog-paginator list-reset">
+      <li>
+        <a class="paginator">1</a>
+      </li>
+      <li>
+        <a class="paginator" href="">2</a>
+      </li>
+      <li>
+        <a class="paginator" href="">3</a>
+      </li>
+      <li>
+        <a class="paginator" href="">4</a>
+      </li>
+      <li>
+        <a class="paginator" href="">5</a>
+      </li>
+      <li class="narrow-next">
+        <a class="paginator narrow-next" href="">следующая страница</a>
+        <!--в макете здесь иконка-->
+      </li>
+    </ul>
+  </main>
+  <footer class="footer move">
+    <ul class="footer-socials list-reset">
+      <li class="footer-network fb-network">
+        <a class="fb-network" href="">Магазин Gllacy в Facebook</a>
+      </li>
+      <li class="footer-network vk-network">
+        <a class="vk-network" href="">Магазин Gllacy в Vkontakte</a>
+      </li>
+      <li class="footer-network insta-network"">
         <a class=" insta-network" href="">Магазин Gllacy в instagram</a>
-        </li>
-        <li class="footer-network twit-network">
-          <a class="twit-network" href="">Магазин Gllacy в Twitter</a>
-        </li>
-      </ul>
-      <ul class="footer-list list-reset">
-        <li class="footer-item for-providers">
-          <a class="site-link" href="">Для поставщиков</a>
-        </li>
-        <li class="footer-item">
-          <a class="site-link" href="">Наши документы</a>
-        </li>
-        <li class="footer-item">
-          <a class="site-link" href="">О производстве</a>
-        </li>
-        <li class="footer-item">
-          <a class="site-link" href="">Экологические стандарты</a>
-        </li>
-      </ul>
-      <div class="copyright">
-        <h3 class="visually-hidden">Разработано в HTML Academy</h3>
-        <a class="copyright-link" href="https://htmlacademy.ru/intensive/htmlcss"
-          aria-label="Логотип HTML Academy">Логотип HTML Academy</a>
-        <p class="copyright-descr text-reset">Сделано в <a class=" copyright-descr-link site-linke"
-            href=" https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019
-        </p>
-      </div>
-    </footer>
-  </div>
+      </li>
+      <li class="footer-network twit-network">
+        <a class="twit-network" href="">Магазин Gllacy в Twitter</a>
+      </li>
+    </ul>
+    <ul class="footer-list list-reset">
+      <li class="footer-item for-providers">
+        <a class="site-link" href="">Для поставщиков</a>
+      </li>
+      <li class="footer-item">
+        <a class="site-link" href="">Наши документы</a>
+      </li>
+      <li class="footer-item">
+        <a class="site-link" href="">О производстве</a>
+      </li>
+      <li class="footer-item">
+        <a class="site-link" href="">Экологические стандарты</a>
+      </li>
+    </ul>
+    <div class="copyright">
+      <h3 class="visually-hidden">Разработано в HTML Academy</h3>
+      <a class="copyright-link" href="https://htmlacademy.ru/intensive/htmlcss"
+        aria-label="Логотип HTML Academy">Логотип HTML Academy</a>
+      <p class="copyright-descr text-reset">Сделано в <a class=" copyright-descr-link site-linke"
+          href=" https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019
+      </p>
+    </div>
+  </footer>
 </body>
 
 </html>
