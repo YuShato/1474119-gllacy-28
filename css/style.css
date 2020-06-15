@@ -884,55 +884,37 @@ img {
   border-top: 1px solid var(--light-gray-button);
 }
 
-.footer-socials {
+.networks {
   width: 164px;
-  /* margin-top: 36px; */
   display: grid;
   grid-template-columns: repeat(4, auto);
   grid-column-gap: 9px;
 }
 
-.footer-network {
+.network {
   width: 32px;
   height: 32px;
   border: 2px solid var(--gray-footer-frame);
   border-radius: 50%;
   font-size: 0px;
   background-repeat: no-repeat;
-  background-color: var(--gray);
   text-align: center;
+  display: block;
+
 }
 
-.footer-network:hover,
-.footer-network:focus,
-.footer-network:active {
-  background-color: var(--white-text);
+
+.network:hover path,
+.network:focus path,
+.network:active path {
+  fill-opacity: 1;
 }
 
-/* .footer-network:hover path,
-.footer-network:focus path {
-  fill: var(--white-text);
-} */
-
-.footer-network:active {
+.network:active {
   border: 2px solid var(--gray-network);
 }
 
-.fb-network {
-  background-image: url(../img/fb.svg);
-}
 
-.vk-network {
-  background-image: url(../img/vk.svg);
-}
-
-.insta-network {
-  background-image: url(../img/instagram.svg);
-}
-
-.twit-network {
-  background-image: url(../img/twitter.svg);
-}
 
 .footer-list {
   width: 328px;
