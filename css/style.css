@@ -916,33 +916,32 @@ img {
 
 
 
-.footer-list {
+.footer-menu {
   width: 328px;
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-column-gap: 33px;
   align-content: center;
-  grid-row-gap: 1px;
+  grid-row-gap: 7px;
   margin-top: 1px;
   margin-left: 2px;
 
 }
 
-.footer-item {
-  display: block;
-  margin-bottom: 0;
-  padding-bottom: 0px;
-}
 
-.footer-item a {
+
+.footer-item {
   font-size: 13px;
   line-height: 18px;
   color: var(--white-text);
   text-decoration: none;
+  display: block;
+  margin-bottom: 0;
+  padding-bottom: 0px;
 
 }
 
-.footer-item:nth-child(3) {
+.about-us {
   padding-left: 22px;
 }
 
