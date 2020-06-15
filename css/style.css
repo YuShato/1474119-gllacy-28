@@ -210,6 +210,14 @@ img {
 
 }
 
+.goods-wrap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 26px;
+  grid-row-gap: 36px;
+}
+
+
 .main-navigation {
   display: flex;
   flex-direction: row;
@@ -499,12 +507,6 @@ img {
 .main-slider-3 {
   background-color: var(--basic-dark-beige);
   background-image: url(../img/strawberry-sorbet-min.png);
-}
-
-.best-selling {
-  display: grid;
-  grid-template-columns: repeat(4, 267px);
-  grid-gap: 26px;
 }
 
 .invisible {
@@ -1065,12 +1067,6 @@ img {
   background-image: url(../img/icon-right-small.svg);
 }
 
-.goods-wrap {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 26px;
-  grid-row-gap: 36px;
-}
 
 .catalog-title {
   grid-column: 1 / 5;
