@@ -814,7 +814,10 @@ img {
   position: relative;
   background: var(--gray);
   height: 430px;
-
+  background-color: var(--gray);
+  background-image: url(../img/map-pin-min.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .contacts {
