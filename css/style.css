@@ -716,11 +716,12 @@ img {
   width: 164px;
 }
 
-.best-selling-wrap {
+.product-wrap {
   width: 267px;
   height: 267px;
   border-radius: 50%;
   overflow: hidden;
+  display: block;
 
 }
 
