@@ -561,7 +561,7 @@ img {
 
 
 
-.best-selling-link {
+.product-link {
   color: var(--white-text);
   text-decoration: none;
   width: 267px;
@@ -575,22 +575,11 @@ img {
   display: block;
 }
 
-.best-selling-link:focus,
-.best-selling-link:hover,
-.best-selling-link:active,
-.footer-item:hover a,
-.footer-item:focus a,
-.footer-item:active a {
-  color: var(--salmon-link);
-}
-
-.best-selling-link:focus span,
-.best-selling-link:hover span,
-.best-selling-link:active span,
-.footer-item:hover a,
-.footer-item:focus a,
-.footer-item:active a {
+.site-link:hover,
+.site-link:active,
+.site-link:focus {
   border-bottom: 1px solid var(--salmon-link);
+  color: var(--salmon-link);
 }
 
 
