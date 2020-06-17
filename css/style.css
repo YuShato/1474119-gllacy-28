@@ -993,7 +993,6 @@ img {
 
 
 .catalog-paginator {
-  outline: 1px solid blue;
   width: 194px;
   display: flex;
   flex-direction: row;
@@ -1001,6 +1000,7 @@ img {
   justify-content: flex-end;
   margin-right: 27px;
   margin-left: auto;
+  padding-bottom: 26px;
 }
 
 .paginator {
@@ -1010,14 +1010,27 @@ img {
   color: var(--white-text);
   text-decoration: none;
   font-weight: 500;
+  padding-top: 4px;
+  padding-bottom: 3px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 50%;
+  text-align: center;
 
 }
 
-.narrow-next {
-  font-size: 0px;
-  width: 7px;
-  height: 12px;
-  background-image: url(../img/icon-right-small.svg);
+.paginator:hover {
+  background-color: var(--light-gray-button);
+}
+
+.paginator.active,
+.paginator:active {
+  background-color: var(--white-text);
+  color: var(--dark-text);
+}
+
+.narrow-next:hover {
+  background-color: transparent;
 }
 
 
