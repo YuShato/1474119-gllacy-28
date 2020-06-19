@@ -54,6 +54,7 @@
   --gray-lead-magnet: #5a5a5a;
   --gray-footer-frame: rgba(255, 255, 255, 0.5);
   --gray-network: rgba(255, 255, 255, 0.7);
+  --gray-scale: rgba(248, 247, 244, 0.5);
   --wine-button-shadow: #942718;
   --orange-button-shadow: #ac1000;
   --bordo-button-shadow: rgba(172, 16, 0, 0.64);
@@ -91,7 +92,6 @@ body {
   box-sizing: border-box;
   background-repeat: no-repeat;
   background-position: center top;
-
 }
 
 img {
@@ -100,7 +100,7 @@ img {
 
 
 .container-wrap {
-  max-width: 1200px;
+  width: 1200px;
   margin: 0 auto;
   box-sizing: border-box;
   display: grid;
@@ -149,19 +149,19 @@ img {
   vertical-align: middle;
   text-transform: uppercase;
   border: none;
-  background: linear-gradient(180deg, var(--orange-button) 0%, var(--red-orange-button) 100%);
-  box-shadow: 0px 2px 2px var(--bordo-button-shadow);
+  background-image: linear-gradient(180deg, var(--orange-button) 0%, var(--red-orange-button) 100%);
+  box-shadow: 0 2px 2px var(--bordo-button-shadow);
   border-radius: 50px;
 }
 
 .button:hover {
-  background: linear-gradient(0deg, var(--light-gray-button), var(--light-gray-button)), linear-gradient(180deg, var(--orange-button) 0%, var(--red-orange-button) 100%);
-  box-shadow: 0px 2px 2px var(--orange-button-shadow);
+  background-image: linear-gradient(0deg, var(--light-gray-button), var(--light-gray-button)), linear-gradient(180deg, var(--orange-button) 0%, var(--red-orange-button) 100%);
+  box-shadow: 0 2px 2px var(--orange-button-shadow);
 }
 
 .button:active {
-  background: linear-gradient(0deg, var(--black-button), var(--black-button)), linear-gradient(180deg, var(--orange-button) 0%, var(--red-orange-button) 100%);
-  box-shadow: inset 0px 2px 2px var(--wine-button-shadow);
+  background-image: linear-gradient(0deg, var(--black-button), var(--black-button)), linear-gradient(180deg, var(--orange-button) 0%, var(--red-orange-button) 100%);
+  box-shadow: inset 0 2px 2px var(--wine-button-shadow);
 }
 
 .button:focus {
@@ -170,7 +170,7 @@ img {
 
 .form {
   background-color: var(--light-gray-form);
-  box-shadow: 0px 20px 20px var(--black-shadow);
+  box-shadow: 0 20px 20px var(--black-shadow);
   border-radius: 4px;
   color: var(--dark-text);
 }
@@ -179,7 +179,7 @@ img {
   font: inherit;
   box-sizing: border-box;
   border-radius: 4px;
-  background: var(--white-text);
+  background-color: var(--white-text);
   border: 1px solid var(--medium-gray);
 }
 
@@ -229,20 +229,12 @@ img {
   flex-direction: row;
   gap: 31px;
   flex-wrap: wrap;
-  /* Андрей, у меня почему-то не применяется свойство gap на флексах. А на гридах работает. Почему так может быть? пришлось выставлять margin */
   align-items: center;
 }
 
 .site-navigation-item {
   font-weight: 700;
   line-height: 18px;
-  max-width: 155px;
-  margin-right: 17px;
-  padding-top: 8px;
-  padding-left: 14px;
-  padding-right: 14px;
-  padding-bottom: 8px;
-  border-radius: 26px;
 }
 
 
@@ -255,7 +247,7 @@ img {
 .working-time {
   display: grid;
   justify-self: end;
-  width: 168px;
+  max-width: 200px;
   margin-top: auto;
   justify-items: end;
 
@@ -275,33 +267,46 @@ img {
   color: var(--white-text);
   text-decoration: none;
   display: block;
-  max-width: 145px;
-}
-
-
-
-.site-navigation-item.active {
-  background-color: var(--orange-brown);
-}
-
-.site-navigation-item:hover,
-.site-navigation-item:focus {
-  background-color: var(--white-text);
-  color: var(--dark-text);
+  max-width: 155px;
+  padding-top: 8px;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-bottom: 8px;
   border-radius: 26px;
   margin-right: 17px;
 }
 
-.site-navigation-item:active a {
-  background: var(--gray-header-btn);
-  box-shadow: inset 0px 2px 1px var(--gray-header-shadow);
-  color: var(--dark-text);
-
+.header-link.active {
+  background-color: var(--orange-brown);
 }
 
-.site-navigation-item.active a,
-.site-navigation-item:hover a,
-.site-navigation-item:focus a {
+.header-link.active span {
+  border: none;
+}
+
+.header-link:hover,
+.header-link:focus {
+  background-color: var(--white-text);
+
+  border-radius: 26px;
+  margin-right: 17px;
+}
+
+.header-link:hover span,
+.header-link:focus span {
+  color: var(--dark-text);
+  border: none;
+}
+
+.header-link:active {
+  background-color: var(--gray-header-btn);
+  box-shadow: inset 0 2px 1px var(--gray-header-shadow);
+  color: var(--dark-text);
+}
+
+.header-link.active,
+.header-link:hover,
+.header-link:focus {
   border-bottom: none;
   color: inherit;
 }
@@ -320,12 +325,11 @@ img {
 
 .search-form {
   width: 341px;
-  height: 84px;
 }
 
 .search-icon-wrap {
   width: 32px;
-  background: var(--light-gray-button);
+  background-color: var(--light-gray-button);
   border-radius: 50%;
   text-align: center;
   padding-top: 8px;
@@ -334,8 +338,19 @@ img {
 
 .item-search {
   width: 311px;
-  height: 44px;
   outline: none;
+  margin-top: 17px;
+  margin-bottom: 17px;
+  padding-left: 15px;
+  padding-right: 20px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  color: var(--dark-text);
+}
+
+.item-search::placeholder {
+  font-size: 14px;
+  line-height: 16;
 }
 
 .nav-link {
@@ -375,7 +390,7 @@ img {
 }
 
 .entrance-link {
-  background: var(--light-gray-button);
+  background-color: var(--light-gray-button);
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -443,7 +458,7 @@ img {
   font-weight: 700;
   font-size: 32px;
   line-height: 44px;
-  text-shadow: 0px 2px 5px var(--bordo);
+  text-shadow: 0 2px 5px var(--bordo);
   text-transform: none;
   border: none;
   cursor: pointer;
@@ -454,23 +469,22 @@ img {
 }
 
 .main-slider-switch {
-  font-size: 0px;
   width: 21px;
   height: 21px;
   border-radius: 50%;
   border: 2px solid var(--white-text);
   box-sizing: border-box;
-  background: transparent;
+  background-color: transparent;
   outline: none;
   cursor: pointer;
 }
 
 .main-slider-switch:hover {
-  background: var(--gray-switch-hover);
+  background-color: var(--gray-switch-hover);
 }
 
 .main-slider-breadcrumbs .current {
-  background: var(--white-text);
+  background-color: var(--white-text);
 }
 
 .main-slider-1 {
@@ -492,31 +506,10 @@ img {
   height: 0;
 }
 
-.product {
-  height: 324px;
-  /* высоту блока поставила временно, т.к. почему-то высота блока стояла автоматически 349рх и никак не менялась другими методами. Никак не могл понять, откуда берется лишнее пустое место внизу после ссылки*/
-}
-
-/* .best-selling-item:hover {
-  background: var(--white-text);
-  opacity: 0.2;
-  box-shadow: 0px 20px 20px var(--black-hover);
-  border-radius: 4px;
-} */
-
-/* Андрей, посмотри пожста, так вообще можно писать? И вообще, у меня проблемы с карточкой товара при наведении. Написала стили как в Фигме, а при верстке получается фигня */
-/* .best-selling-item:hover::after {
-  content: "Быстрый просмотр";
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 24px;
-  color: var(--white-text);
-} */
-
 .best-selling-price {
   font-size: 45px;
   line-height: 45px;
-  text-shadow: 0px 1px 3px var(--blue-black);
+  text-shadow: 0 1px 3px var(--blue-black);
   position: relative;
   bottom: 58px;
 }
@@ -577,7 +570,6 @@ img {
   grid-template-columns: repeat(2, 560px);
   grid-template-rows: auto;
   grid-column-gap: 6px;
-  /* margin-bottom: 40px; */
   color: var(--dark-text);
 }
 
@@ -589,7 +581,6 @@ img {
   grid-column: 1 /3;
   margin-top: 25px;
   margin-left: 20px;
-
 }
 
 .benefit-item {
@@ -653,15 +644,14 @@ img {
   line-height: 24px;
   text-transform: none;
   text-align: center;
-  text-shadow: 0px 2px 5px var(--bordo);
+  text-shadow: 0 2px 5px var(--bordo);
   border-radius: 70px;
   font-weight: 700;
   text-decoration: none;
   display: block;
-  border-image-width: 0px;
+  border-image-width: 0;
   padding-bottom: 12px;
   padding-top: 12px;
-
 }
 
 .offer .button-form {
@@ -669,7 +659,7 @@ img {
   line-height: 24px;
   text-transform: none;
   text-align: center;
-  text-shadow: 0px 2px 5px var(--bordo);
+  text-shadow: 0 2px 5px var(--bordo);
   border-radius: 70px;
   margin-left: auto;
   margin-bottom: 22px;
@@ -684,13 +674,13 @@ img {
   width: 164px;
 }
 
+
 .product-wrap {
   width: 267px;
   height: 267px;
   border-radius: 50%;
   overflow: hidden;
   display: block;
-
 }
 
 
@@ -698,7 +688,7 @@ img {
   content: url(../img/hit.svg);
   width: 61px;
   height: 61px;
-  background: var(--white-text);
+  background-color: var(--white-text);
   position: absolute;
   border-radius: 50%;
   position: absolute;
@@ -791,8 +781,8 @@ img {
 
 .contacts-wrap {
   position: relative;
-  background: var(--gray);
-  height: 430px;
+  background-color: var(--gray);
+  min-height: 430px;
   background-color: var(--gray);
   background-image: url(../img/map-pin-min.png);
   background-repeat: no-repeat;
@@ -875,7 +865,7 @@ img {
   height: 32px;
   border: 2px solid var(--gray-footer-frame);
   border-radius: 50%;
-  font-size: 0px;
+  font-size: 0;
   background-repeat: no-repeat;
   text-align: center;
   display: block;
@@ -916,7 +906,7 @@ img {
   text-decoration: none;
   display: block;
   margin-bottom: 0;
-  padding-bottom: 0px;
+  padding-bottom: 0;
 
 }
 
@@ -942,7 +932,6 @@ img {
 
 .copyright {
   width: 190px;
-  /* height: 60px; */
   font-size: 12px;
   line-height: 18px;
   color: var(--white-text);
@@ -950,7 +939,7 @@ img {
 
 .copyright-link {
   display: block;
-  font-size: 0px;
+  font-size: 0;
   background-image: url(../img/logo-htmlacademy.svg);
   width: 108px;
   height: 39px;
@@ -1033,7 +1022,62 @@ img {
   background-color: transparent;
 }
 
-
 .catalog-title {
   grid-column: 1 / 5;
 }
+
+/* Фильтры, пока не готово */
+
+/* .filter-item {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.range-filter {
+  width: 218px;
+  margin-top: 7px;
+}
+
+.range-controls {
+  position: relative;
+  height: 19px;
+  background-color: var(--light-gray-button);
+  border-radius: 20px;
+  padding-top: 17px;
+
+}
+
+
+.scale {
+  width: 176px;
+  height: 2px;
+  background-color: var(--gray-scale);
+  margin-left: 21px;
+
+}
+
+.bar {
+  height: 2px;
+  background-color: var(--light-gray-form);
+}
+
+.toggle {
+  width: 4px;
+  height: 4px;
+  background-color: var(--gray);
+  border: 8px solid var(--white-text);
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 2px 1px 0 var(--gray);
+  cursor: pointer;
+  top: 8px;
+}
+
+.toggle-min {
+  left: 21px
+}
+
+.toggle-max {
+  left: 119px;
+} */

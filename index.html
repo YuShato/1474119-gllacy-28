@@ -20,13 +20,19 @@
       <!--верхнее меню и навигация-->
       <ul class="site-navigation list-reset">
         <li class="site-navigation-item">
-          <a class="header-link site-link" href="catalog.html"> Каталог</a>
+          <a class="header-link" href="catalog.html">
+            <span class="site-link">Каталог</span>
+          </a>
         </li>
         <li class="site-navigation-item">
-          <a class="header-link site-link" href="">Доставка и оплата</a>
+          <a class="header-link" href="">
+            <span class="site-link">Доставка и оплата</span>
+          </a>
         </li>
         <li class="site-navigation-item">
-          <a class="header-link site-link" href="">О компании</a>
+          <a class="header-link" href="">
+            <span class="site-link">О компании</span>
+          </a>
         </li>
       </ul>
       <!--Поиск, вход, корзина-->
@@ -38,14 +44,12 @@
                 d="M16 14.6652L11.0785 9.73294C11.9827 8.48188 12.3826 6.93501 12.1984 5.40134C12.0141 3.86767 11.2594 2.4601 10.0848 1.45982C8.91022 0.45954 7.40233 -0.0598191 5.86234 0.00548954C4.32234 0.0707982 2.86363 0.715967 1.77757 1.81212C0.691516 2.90827 0.0580813 4.3747 0.0038002 5.91849C-0.050481 7.46228 0.478388 8.96976 1.48476 10.1398C2.49113 11.3098 3.90092 12.0563 5.43251 12.2301C6.96409 12.4039 8.50472 11.9922 9.74663 11.0772L14.6586 16L16 14.6652ZM6.08152 10.3767C5.24079 10.3767 4.41895 10.1268 3.71991 9.65874C3.02087 9.19063 2.47604 8.5253 2.15431 7.74687C1.83258 6.96844 1.7484 6.11188 1.91241 5.28551C2.07643 4.45913 2.48128 3.70006 3.07576 3.10427C3.67024 2.50849 4.42766 2.10276 5.25223 1.93838C6.0768 1.77401 6.93149 1.85837 7.70822 2.1808C8.48495 2.50324 9.14883 3.04927 9.61591 3.74983C10.083 4.4504 10.3323 5.27404 10.3323 6.11661C10.3298 7.24568 9.88115 8.3278 9.08451 9.12618C8.28788 9.92456 7.20813 10.3742 6.08152 10.3767Z"
                 fill="white" />
             </svg>
-            <!--Форма поиска товара-->
-            <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-              Андрей, посмотри пожалуйста, почему у меня при вводе информации в инпут пеерзагружается страница, а текст не появляется в инпуте?-->
-            <form class="form search-form remove" action="https://echo.htmlacademy.ru" method="post">
-              <label for="item-search" class="visually-hidden">Найти товар в каталоге</label>
-              <input class="input item-search" type="text" name="item-search" id="item-search" placeholder="Крем-брюле">
-            </form>
           </a>
+          <!--Форма поиска товара-->
+          <form class="form search-form remove" action="https://echo.htmlacademy.ru" method="get">
+            <label for="item-search" class="visually-hidden">Найти товар в каталоге</label>
+            <input class="input item-search" type="text" name="item-search" id="item-search" placeholder="Крем-брюле">
+          </form>
         </li>
         <li class="user-navigation-item">
           <a class="entrance-link nav-link" href="" aria-label="Вход в личный кабинет">
@@ -55,29 +59,27 @@
                 d="M18 0H5C4.46957 0 3.96086 0.210714 3.58579 0.585786C3.21071 0.960859 3 1.46957 3 2V4H5V2H18V17H5V15H3V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19H18C18.5304 19 19.0391 18.7893 19.4142 18.4142C19.7893 18.0391 20 17.5304 20 17V2C20 1.46957 19.7893 0.960859 19.4142 0.585786C19.0391 0.210714 18.5304 0 18 0Z"
                 fill="white" />
             </svg>
-
             <p class="user-navigation-descr">Вход</p>
-            <!--Форма регистрации и входа-->
-            <section class="user-entrance remove">
-              <h2 class="visually-hidden">Вход в личный кабинет</h2>
-              <form class="form" action="https://echo.htmlacademy.ru" method="post">
-                <p>
-                  <label for="entrance-email">Электронная почта</label>
-                  <input class="input" type="email" name="entrance-email" id="entrance-email"
-                    placeholder="email@example.com">
-                </p>
-                <p>
-                  <label for="entrance-password">Пароль</label>
-                  <input class="input" type="password" name="entrance-password" id="entrance-password"
-                    placeholder="••••••">
-                </p>
-                <a href="">Забыли пароль?</a>
-                <a href="">Новая регистрация</a>
-                <button class="text-reset" type="submit">Войти</button>
-              </form>
-            </section>
           </a>
-
+          <!--Форма регистрации и входа-->
+          <section class="user-entrance remove">
+            <h2 class="visually-hidden">Вход в личный кабинет</h2>
+            <form class="form" action="https://echo.htmlacademy.ru" method="post">
+              <p>
+                <label for="entrance-email">Электронная почта</label>
+                <input class="input" type="email" name="entrance-email" id="entrance-email"
+                  placeholder="email@example.com">
+              </p>
+              <p>
+                <label for="entrance-password">Пароль</label>
+                <input class="input" type="password" name="entrance-password" id="entrance-password"
+                  placeholder="••••••">
+              </p>
+              <a href="">Забыли пароль?</a>
+              <a href="">Новая регистрация</a>
+              <button class="text-reset" type="submit">Войти</button>
+            </form>
+          </section>
         </li>
         <li class="user-navigation-item btn-item basket ">
           <a class="nav-link entrance-link" aria-label="корзина покупателя" href="">
@@ -95,26 +97,26 @@
             <p class="user-navigation-descr">Пусто</p>
           </a>
         </li>
-        <!--Выпадающий список (из каталога)-->
-        <ul class="dropdown-menu list-reset remove">
-          <li class="dropdown-item active">
-            <a href="">Новинки</a>
-          </li>
-          <li class="dropdown-item">
-            <a href="">Сливочное</a>
-          </li>
-          <li class="dropdown-item">
-            <a href="">Щербеты</a>
-          </li>
-          <li class="dropdown-item">
-            <a href="">Фруктовый лед</a>
-          </li>
-          <li class="dropdown-item">
-            <a href="">Мелорин</a>
-          </li>
-
+      </ul>
+      <!--Выпадающий список (из каталога)-->
+      <ul class="dropdown-menu list-reset remove">
+        <li class="dropdown-item active">
+          <a href="">Новинки</a>
+        </li>
+        <li class="dropdown-item">
+          <a href="">Сливочное</a>
+        </li>
+        <li class="dropdown-item">
+          <a href="">Щербеты</a>
+        </li>
+        <li class="dropdown-item">
+          <a href="">Фруктовый лед</a>
+        </li>
+        <li class="dropdown-item">
+          <a href="">Мелорин</a>
+        </li>
+      </ul>
     </nav>
-    </ul>
     <div class="working-time">
       <p class="title header-time text-reset">с 10 до 20, ежедневно</p>
       <a class="title header-tel text-reset" href="tel:+78124502525">8 812 450-25-25</a>
@@ -145,13 +147,13 @@
       <!--три кнопочки-переключателя слайдов-->
       <ul class="main-slider-breadcrumbs list-reset">
         <li class="switch">
-          <button class="main-slider-switch current" type="button">Показать слайд 1</button>
+          <button class="main-slider-switch current" type="button" aria-label="Показать слайд 1"></button>
         </li>
         <li class="switch">
-          <button class="main-slider-switch" type="button">Показать слайд 2</button>
+          <button class="main-slider-switch" type="button" aria-label="Показать слайд 2"></button>
         </li>
         <li class="switch">
-          <button class="main-slider-switch" type="button">Показать слайд 3</button>
+          <button class="main-slider-switch" type="button" aria-label="Показать слайд 3"></button>
         </li>
       </ul>
     </section>
@@ -184,8 +186,10 @@
         </a>
         <p class="best-selling-price title text-reset">310 <span class="best-selling-weight">/кг</span></p>
         <h3 class="invisible">
-          <a class="product-link" href=""><span class="site-link">Сливочное с апельсиновым джемом и
-              цитрусовой стружкой</span></a>
+          <a class="product-link" href="">
+            <span class="site-link">Сливочное с апельсиновым джемом и
+              цитрусовой стружкой</span>
+          </a>
         </h3>
       </article>
       <article class="product hit">
@@ -194,8 +198,10 @@
         </a>
         <p class="best-selling-price title text-reset">380 <span class="best-selling-weight">/кг</span></p>
         <h3 class="invisible">
-          <a class="product-link" href=""><span class="site-link">Сливочно-кофейное с кусочками
-              шоколада</span></a>
+          <a class="product-link" href="">
+            <span class="site-link">Сливочно-кофейное с кусочками
+              шоколада</span>
+          </a>
         </h3>
       </article>
       <article class="product hit">
@@ -205,8 +211,10 @@
         </a>
         <p class="best-selling-price title text-reset">355 <span class="best-selling-weight">/кг</span></p>
         <h3 class="invisible">
-          <a class="product-link" href=""><span class="site-link">Сливочно-клубничное с присыпкой из белого
-              шоколада</span></a>
+          <a class="product-link" href="">
+            <span class="site-link">Сливочно-клубничное с присыпкой из белого
+              шоколада</span>
+          </a>
         </h3>
       </article>
       <article class="product hit">
@@ -215,8 +223,10 @@
         </a>
         <p class="best-selling-price title text-reset">415 <span class="best-selling-weight">/кг</span></p>
         <h3 class="invisible">
-          <a class="product-link" href=""><span class="site-link">Сливочное крем-брюле с карамельной
-              подливкой</span></a>
+          <a class="product-link" href="">
+            <span class="site-link">Сливочное крем-брюле с карамельной
+              подливкой</span>
+          </a>
         </h3>
       </article>
     </section>
@@ -288,7 +298,6 @@
         <button class="button button-form text-reset" type="submit">Форма обратной связи</button>
       </div>
     </section>
-
   </main>
   <footer class="footer move">
     <ul class="networks list-reset">
@@ -302,7 +311,6 @@
               d="M18 2C14.8355 2 11.7421 2.93838 9.11088 4.69649C6.4797 6.45459 4.42894 8.95345 3.21793 11.8771C2.00693 14.8007 1.69008 18.0177 2.30744 21.1214C2.92481 24.2251 4.44866 27.0761 6.6863 29.3137C8.92394 31.5513 11.7749 33.0752 14.8786 33.6926C17.9823 34.3099 21.1993 33.9931 24.1229 32.7821C27.0466 31.5711 29.5454 29.5203 31.3035 26.8891C33.0616 24.2579 34 21.1645 34 18C34 13.7565 32.3143 9.68687 29.3137 6.68629C26.3131 3.68571 22.2435 2 18 2ZM22.06 11.45H19V14.9H22V18.34H19V27H16V18.34H13V14.9H16V11.45C15.9449 10.5957 16.2291 9.75426 16.7908 9.1083C17.3525 8.46234 18.1464 8.06407 19 8H22V11.45H22.06Z"
               fill="white" fill-opacity="0.8" />
           </svg>
-
         </a>
       </li>
       <li>
@@ -321,7 +329,6 @@
               d="M18 2C14.8355 2 11.7421 2.93838 9.11088 4.69649C6.4797 6.45459 4.42894 8.95345 3.21793 11.8771C2.00693 14.8007 1.69008 18.0177 2.30744 21.1214C2.92481 24.2251 4.44866 27.0761 6.6863 29.3137C8.92394 31.5513 11.7749 33.0752 14.8786 33.6926C17.9823 34.3099 21.1993 33.9931 24.1229 32.7821C27.0466 31.5711 29.5454 29.5203 31.3035 26.8891C33.0616 24.2579 34 21.1645 34 18C34 13.7565 32.3143 9.68687 29.3137 6.68629C26.3131 3.68571 22.2435 2 18 2ZM24.6 22.53C24.3376 23.056 23.9537 23.5119 23.48 23.86C22.9342 24.2714 22.3122 24.5705 21.65 24.74C20.8286 24.9383 19.9848 25.029 19.14 25.01H13V11H18.45C19.2781 10.9868 20.1063 11.0235 20.93 11.11C21.473 11.194 21.9994 11.3627 22.49 11.61C22.9868 11.8462 23.4013 12.2258 23.68 12.7C23.9455 13.1728 24.0801 13.7079 24.07 14.25C24.0819 14.8916 23.8931 15.5209 23.53 16.05C23.1452 16.588 22.6142 17.0045 22 17.25V17.32C22.8272 17.4588 23.5898 17.8541 24.18 18.45C24.7295 19.0712 25.0163 19.8815 24.98 20.71C25.0043 21.3386 24.8738 21.9636 24.6 22.53Z"
               fill="white" fill-opacity="0.8" />
           </svg>
-
         </a>
       </li>
       <li>
@@ -340,8 +347,6 @@
                 fill="white" fill-opacity="0.8" />
             </g>
           </svg>
-
-
         </a>
       </li>
       <li>
@@ -354,36 +359,43 @@
               d="M18 2C14.8355 2 11.7421 2.93838 9.11088 4.69649C6.4797 6.45459 4.42894 8.95345 3.21793 11.8771C2.00693 14.8007 1.69008 18.0177 2.30744 21.1214C2.92481 24.2251 4.44866 27.0761 6.6863 29.3137C8.92394 31.5513 11.7749 33.0752 14.8786 33.6926C17.9823 34.3099 21.1993 33.9931 24.1229 32.7821C27.0466 31.5711 29.5454 29.5203 31.3035 26.8891C33.0616 24.2579 34 21.1645 34 18C34 13.7565 32.3143 9.68687 29.3137 6.68629C26.3131 3.68571 22.2435 2 18 2ZM25.94 14.81C25.69 21.33 22.48 25.64 14.94 25.51H14.46C14.01 25.51 9.91001 25.07 9.11001 23.69C10.8989 23.9555 12.7228 23.5494 14.23 22.55C13.18 22.26 11.31 22.09 10.98 19.7C11.3928 19.8642 11.8441 19.9058 12.28 19.82C11 19 9.53001 18.3 9.61001 16.17C10.028 16.4893 10.5445 16.652 11.07 16.63C10.3 16.4 8.92001 13.39 10.07 11.85C12.07 13.64 14.14 15.33 17.87 15.49C18.1 13.28 19.11 11.79 21.04 11.17C21.7375 10.9333 22.4908 10.9157 23.1986 11.1195C23.9065 11.3232 24.5351 11.7387 25 12.31C25.74 12.08 26.45 11.84 27.19 11.62C27.1758 11.9571 27.0846 12.2865 26.9234 12.5829C26.7622 12.8793 26.5353 13.1349 26.26 13.33C26.5167 13.3601 26.7768 13.3336 27.0221 13.2524C27.2674 13.1712 27.492 13.0372 27.68 12.86C27.5628 13.2985 27.3443 13.7034 27.0421 14.0421C26.7399 14.3808 26.3624 14.6438 25.94 14.81Z"
               fill="white" fill-opacity="0.8" />
           </svg>
-
         </a>
       </li>
     </ul>
     <ul class="footer-menu list-reset">
       <li>
-        <a class="footer-item for-providers" href=""><span class=" site-link">Для поставщиков</span></a>
+        <a class="footer-item for-providers" href="">
+          <span class=" site-link">Для поставщиков</span>
+        </a>
       </li>
       <li>
-        <a class="footer-item" href=""><span class="site-link">Наши документы</span></a>
+        <a class="footer-item" href="">
+          <span class="site-link">Наши документы</span>
+        </a>
       </li>
       <li>
-        <a class="footer-item about-us" href=""><span class="site-link">О производстве</span></a>
+        <a class="footer-item about-us" href="">
+          <span class="site-link">О производстве</span>
+        </a>
       </li>
       <li>
-        <a class="footer-item" href=""><span class="site-link">Экологические стандарты</span></a>
+        <a class="footer-item" href="">
+          <span class="site-link">Экологические стандарты</span>
+        </a>
       </li>
     </ul>
     <div class="copyright">
       <h3 class="visually-hidden">Разработано в HTML Academy</h3>
       <a class="copyright-link" href="https://htmlacademy.ru/intensive/htmlcss"
         aria-label="Логотип HTML Academy">Логотип HTML Academy</a>
-      <p class="copyright-descr text-reset"">Сделано в <a class=" copyright-descr-link site-link"
-        href=" https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019
+      <p class="copyright-descr text-reset">Сделано в
+        <a class="copyright-descr-link site-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+        © 2019
       </p>
+    </div>
   </footer>
-  </div>
 
   <!--Форма обратной связи-->
-  <!-- Я не знаю, куда правильно в разметке вставить разметку формы регистрации, поэтому пока оставляю здесь-->
   <section class="popup remove">
     <h2 class="popup-title">Мы обязательно вам ответим!</h2>
     <form class=" form popup-form" action="https://echo.htmlacademy.ru" method="post">
@@ -402,7 +414,6 @@
       <button class="button text-reset" type="submit">Отправить</button>
     </form>
   </section>
-
 </body>
 
 </html>
