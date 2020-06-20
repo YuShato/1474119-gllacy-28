@@ -9,8 +9,8 @@
   <title>Каталог Gllacy Shop</title>
 </head>
 
-<body class="page-body container-wrap catalog-bg">
-  <header class="main-header move">
+<body class="page-body catalog-bg">
+  <header class="main-header container-wrap">
     <nav class="main-navigation">
       <!--логотип магазина-->
       <a href="index.html" class="main-header-logo">
@@ -142,32 +142,36 @@
         </li>
       </ul>
     </nav>
-    <ul class="list-reset header-time catalog-nav remove">
+    <ul class="list-reset header-time catalog-nav breadcrumbs">
       <li>
-        <a class="contacts-link copywrite-descr-link right-narrow" href="index.html">Главная</a>
+        <a class="contacts-link copywrite-descr-link right-narrow" href="index.html">
+          <span class="site-link">Главная</span>
+        </a>
       </li>
       <li>
-        <a class="contacts-link copywrite-descr-link right-narrow" href="catalog.html">Каталог</a>
+        <a class="contacts-link copywrite-descr-link right-narrow" href="catalog.html">
+          <span class="site-link">Каталог</span>
+        </a>
       </li>
-      <li>
-        <a class="contacts-link" href="">Сливочное</a>
-      </li>
+      <li class="contacts-link">Сливочное</li>
     </ul>
     <div class="working-time">
       <p class="title header-time text-reset">с 10 до 20, ежедневно</p>
       <a class="title header-tel text-reset" href="tel:+78124502525">8 812 450-25-25</a>
     </div>
   </header>
-  <main class="container">
-    <section class="goods-wrap move">
+  <main class="container container-wrap">
+    <section class="goods-wrap">
       <h2 class="title offer-title catalog-title text-reset">Сливочное мороженое</h2>
       <!--фильтр, пока не готовы-->
-      <!-- <section class="filters">
+      <section class="filters">
+        <h2 class="visually-hidden">Фильтр товаров</h2>
+        <!-- Сортировка по цене -->
         <form method="get" action="https://echo.htmlacademy.ru">
           <fieldset class="filter-item">
-            <legend class="user-navigation-descr ">Цена: 100 ₽ – 500 ₽</legend>
+            <legend class="user-navigation-descr">Цена: 100 ₽ – 500 ₽</legend>
             <div class="range-filter">
-              <div class="range-controls">
+              <div class="range-controls filter-bg">
                 <div class="scale">
                   <div class="bar" style="width: 60%; margin-left: 20%;"></div>
                 </div>
@@ -177,7 +181,32 @@
             </div>
           </fieldset>
         </form>
-      </section> -->
+        <!-- Сортировка по жирности продукта -->
+        <fieldset class=" filter-item">
+                  <legend class="user-navigation-descr checkbox-title">Жирность:</legend>
+                  <ul class="chexboxes filter-bg list-reset">
+                    <li class="filter-checkbox filter-option">
+                      <input class="visually-hidden filter-input-checkbox first-item" type="checkbox" name="0%"
+                        id="filter-0">
+                      <label for="filter-0" class="site-text">0%</label>
+                    </li>
+                    <li class=" filter-checkbox filter-option">
+                      <input class="visually-hidden filter-input-checkbox" type="checkbox" name="10%" id="filter-10"
+                        checked>
+                      <label for="filter-10" class="site-text">до 10%</label>
+                    </li>
+                    <li class=" filter-checkbox filter-option">
+                      <input class="visually-hidden filter-input-checkbox" type="checkbox" name="30%" id="filter-30">
+                      <label for="filter-30" class="site-text">до 30%</label>
+                    </li>
+                    <li class=" filter-checkbox filter-option">
+                      <input class="visually-hidden filter-input-checkbox" type="checkbox" name="more-30"
+                        id="filter-more-30">
+                      <label for="filter-more-30" class="site-text">выше 30%</label>
+                    </li>
+                  </ul>
+          </fieldset>
+      </section>
       <!-- 1й ряд товаров -->
       <article class=" product">
         <a class="product-wrap" href="">
@@ -341,19 +370,19 @@
         </a>
       </li>
       <li>
-        <a class="paginator active">1</a>
+        <a class="paginator site-text active">1</a>
       </li>
       <li>
-        <a class="paginator" href="">2</a>
+        <a class="paginator site-text" href="">2</a>
       </li>
       <li>
-        <a class="paginator" href="">3</a>
+        <a class="paginator site-text" href="">3</a>
       </li>
       <li>
-        <a class="paginator" href="">4</a>
+        <a class="paginator site-text" href="">4</a>
       </li>
       <li>
-        <a class="paginator" href="">5</a>
+        <a class="paginator site-text" href="">5</a>
       </li>
       <li>
         <a class="paginator narrow-next" href="" aria-label="следующая страница">
@@ -367,7 +396,7 @@
       </li>
     </ul>
   </main>
-  <footer class="footer move">
+  <footer class="footer container-wrap">
     <ul class="networks list-reset">
       <li>
         <a class="network" href="" aria-label="Магазин Gllacy в Facebook">
