@@ -74,7 +74,6 @@
   --bordo: rgba(160, 32, 11, 0.76);
 }
 
-/*Global*/
 .page {
   height: 100%;
 }
@@ -102,19 +101,16 @@ img {
   max-width: 100%;
 }
 
-
 .container-wrap {
   width: 1146px;
   margin: 0 auto;
+  position: relative;
 }
-
-
 
 .container {
   display: grid;
   grid-row-gap: 40px;
 }
-
 
 .list-reset {
   list-style: none;
@@ -203,7 +199,6 @@ img {
   grid-row-gap: 9px;
   width: 1146px;
   grid-template-rows: repeat(2, 1fr);
-
 }
 
 .goods-wrap {
@@ -212,7 +207,6 @@ img {
   grid-column-gap: 26px;
   grid-row-gap: 36px;
 }
-
 
 .main-navigation {
   display: flex;
@@ -234,7 +228,6 @@ img {
   line-height: 18px;
 }
 
-
 .main-header-logo {
   width: 154px;
   height: 64px;
@@ -247,14 +240,12 @@ img {
   max-width: 200px;
   margin-top: auto;
   justify-items: end;
-
 }
 
 .title {
   color: var(--white-text);
   font-weight: 700;
 }
-
 
 .remove {
   display: none;
@@ -284,7 +275,6 @@ img {
 .header-link:hover,
 .header-link:focus {
   background-color: var(--white-text);
-
   border-radius: 26px;
   margin-right: 17px;
 }
@@ -361,7 +351,6 @@ img {
 }
 
 .user-navigation {
-  /* outline: 3px solid rgb(10, 58, 8); */
   width: 244px;
   display: grid;
   column-gap: 10px;
@@ -372,10 +361,8 @@ img {
   margin-left: 22px;
 }
 
-
 .user-navigation-item {
   display: block;
-  /* outline: 1px solid fuchsia; */
 }
 
 .user-navigation-item:hover p {
@@ -423,7 +410,6 @@ img {
   width: 1146px;
   position: relative;
   padding-top: 494px;
-  /* text-align: center; */
   background-repeat: no-repeat;
   background-position: top center;
   display: flex;
@@ -455,7 +441,6 @@ img {
   top: 284px;
   text-align: center;
   left: 237px;
-
 }
 
 .main-slider-item .button-form {
@@ -510,49 +495,47 @@ img {
   background-image: url(../img/strawberry-sorbet-min.png);
 }
 
-.invisible {
-  height: 0;
+.product {
+  position: relative;
 }
 
-.best-selling-price {
+.product-price {
   font-size: 45px;
   line-height: 45px;
   text-shadow: 0 1px 3px var(--blue-black);
-  position: relative;
-  bottom: 58px;
+  position: absolute;
+  top: 211px;
 }
 
-.best-selling-weight::before {
+.product-weight::before {
   content: url(../img/ruble.svg);
   height: 31px;
   width: 31px;
   position: absolute;
   left: -2px;
-  top: -4px;
+  top: -5px;
 }
 
-.best-selling-weight {
+.product-weight {
   font-size: 30px;
   line-height: 35px;
   position: relative;
   padding-left: 32px;
-
 }
 
-
+.product-title {
+  text-align: center;
+  max-width: 267px;
+  margin-top: 14px;
+  margin-bottom: 0;
+}
 
 .product-link {
   color: var(--white-text);
   text-decoration: none;
-  width: 267px;
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
-  top: -50px;
-  left: -2px;
-  position: relative;
-  text-align: center;
-  display: block;
 }
 
 .site-link:hover,
@@ -561,7 +544,6 @@ img {
   border-bottom: 1px solid var(--salmon-link);
   color: var(--salmon-link);
 }
-
 
 .site-link {
   border-bottom: 1px solid var(--light-gray-button);
@@ -645,8 +627,6 @@ img {
   line-height: 22px;
 }
 
-
-
 .button-form {
   font-size: 18px;
   line-height: 24px;
@@ -682,7 +662,6 @@ img {
   width: 164px;
 }
 
-
 .product-wrap {
   width: 267px;
   height: 267px;
@@ -690,7 +669,6 @@ img {
   overflow: hidden;
   display: block;
 }
-
 
 .hit::before {
   content: url(../img/hit.svg);
@@ -797,7 +775,6 @@ img {
   width: 130px;
   padding-bottom: 9px;
   padding-top: 9px;
-
 }
 
 .contacts-wrap {
@@ -807,13 +784,10 @@ img {
   background-image: url(../img/map-pin-min.png);
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.contacts-container {
   position: relative;
 }
 
-.contacts {
+.contacts-container {
   width: 303px;
   background-color: var(--light-gray-contacts);
   border-radius: 16px;
@@ -821,7 +795,7 @@ img {
   padding-bottom: 30px;
   position: absolute;
   top: 62px;
-  right: 27px;
+  right: 0;
   z-index: 1;
 }
 
@@ -834,12 +808,8 @@ img {
 
 .contacts-info:first-child {
   width: 155px;
-  /* padding-bottom: 1px; */
   padding-top: 30px;
-
 }
-
-
 
 .contacts-descr {
   font-weight: 700;
@@ -860,14 +830,13 @@ img {
   padding-top: 3px;
 }
 
-.contacts .button-form {
+.contacts-container .button-form {
   width: 253px;
   margin-top: 27px;
   margin-left: 25px;
   padding-bottom: 10px;
   padding-top: 10px;
 }
-
 
 .footer {
   display: flex;
@@ -893,9 +862,7 @@ img {
   background-repeat: no-repeat;
   text-align: center;
   display: block;
-
 }
-
 
 .network:hover path,
 .network:focus path,
@@ -907,8 +874,6 @@ img {
   border: 2px solid var(--gray-network);
 }
 
-
-
 .footer-menu {
   width: 328px;
   display: grid;
@@ -918,10 +883,7 @@ img {
   grid-row-gap: 7px;
   margin-top: 1px;
   margin-left: 2px;
-
 }
-
-
 
 .footer-item {
   font-size: 13px;
@@ -931,7 +893,6 @@ img {
   display: block;
   margin-bottom: 0;
   padding-bottom: 0;
-
 }
 
 .about-us {
@@ -952,7 +913,6 @@ img {
   margin-right: 6px;
   margin-top: 1px;
 }
-
 
 .copyright {
   width: 190px;
@@ -1005,7 +965,6 @@ img {
   padding-left: 14px;
   padding-right: 14px;
 }
-
 
 .catalog-paginator {
   width: 194px;
@@ -1087,7 +1046,6 @@ img {
   height: 2px;
   background-color: var(--gray-scale);
   margin-left: 21px;
-
 }
 
 .bar {
@@ -1134,7 +1092,7 @@ img {
   margin-left: 8px;
 }
 
-.filter-input-checkbox+label {
+.filter-input-checkbox + label {
   padding-top: 11px;
   padding-bottom: 10px;
   margin-left: 52px;
@@ -1144,7 +1102,7 @@ img {
   margin-left: 49px;
 }
 
-.filter-input-checkbox+label::before {
+.filter-input-checkbox + label::before {
   content: "";
   position: absolute;
   width: 14px;
@@ -1155,11 +1113,11 @@ img {
   top: 9px;
 }
 
-.filter-input-checkbox:hover+label::before {
+.filter-input-checkbox:hover + label::before {
   border: 4px solid var(--white-text);
 }
 
-.filter-input-checkbox:checked+label::after {
+.filter-input-checkbox:checked + label::after {
   content: "";
   position: absolute;
   top: 16px;
@@ -1170,6 +1128,6 @@ img {
   border-radius: 50%;
 }
 
-.filter-input-checkbox:checked:hover+label::after {
+.filter-input-checkbox:checked:hover + label::after {
   background-color: var(--white-text);
 }
