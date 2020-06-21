@@ -23,6 +23,24 @@
           <a class="header-link active" href="catalog.html">
             <span class="site-link">Каталог</span>
           </a>
+          <!--Выпадающий список (из каталога)-->
+          <ul class="dropdown-menu list-reset remove">
+            <li class="dropdown-item active">
+              <a href="">Новинки</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="">Сливочное</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="">Щербеты</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="">Фруктовый лед</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="">Мелорин</a>
+            </li>
+          </ul>
         </li>
         <li class="site-navigation-item">
           <a class="header-link" href="">
@@ -162,14 +180,22 @@
   </header>
   <main class="container container-wrap">
     <section class="goods-wrap">
-      <h2 class="title offer-title catalog-title text-reset">Сливочное мороженое</h2>
+      <h1 class="title offer-title catalog-title text-reset">Сливочное мороженое</h1>
       <!--фильтр, пока не готовы-->
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <!-- Сортировка по цене -->
-        <form method="get" action="https://echo.htmlacademy.ru">
+        <form  method="get" action="https://echo.htmlacademy.ru">
           <fieldset class="filter-item">
-            <legend class="user-navigation-descr">Цена: 100 ₽ – 500 ₽</legend>
+            <legend class="user-navigation-descr">Цена:</legend>
+            <div class="price-controls">
+              <label class="price min-price user-navigation-descr">
+                <input class="user-navigation-descr" type="number" name="min-price" value="100" step="100">
+              </label>
+              <label class="price max-price user-navigation-descr">
+               <input class="user-navigation-descr" type="number" name="max-price" value="500" step="100">
+              </label>
+            </div>
             <div class="range-filter">
               <div class="range-controls filter-bg">
                 <div class="scale">

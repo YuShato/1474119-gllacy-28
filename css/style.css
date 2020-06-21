@@ -173,16 +173,6 @@ img {
   box-sizing: border-box;
   border-radius: 4px;
   background-color: var(--white-text);
-  border: 1px solid var(--medium-gray);
-}
-
-.input:hover {
-  border: 2px solid var(--medium-gray);
-}
-
-.input:focus {
-  border: 2px solid var(--blue-gray);
-  outline: none;
 }
 
 .input::placeholder {
@@ -752,6 +742,7 @@ img {
   margin-right: 10px;
   border: none;
   box-shadow: 0px 0px 0px 1px var(--medium-gray);
+  color: var(--dark-text);
 }
 
 .lead-input:hover {
@@ -762,6 +753,7 @@ img {
 .lead-input:active,
 .lead-input:focus {
   border: none;
+  outline: none;
   box-shadow: 0px 0px 0px 2px var(--blue-gray);
 }
 
@@ -1098,7 +1090,7 @@ img {
   margin-left: 52px;
 }
 
-.first-item+label {
+.first-item + label {
   margin-left: 49px;
 }
 
@@ -1131,3 +1123,39 @@ img {
 .filter-input-checkbox:checked:hover + label::after {
   background-color: var(--white-text);
 }
+
+.filter-item legend {
+  padding-left: 0;
+}
+
+.price {
+  padding: 0;
+}
+
+.price-controls {
+  width: 93px;
+} 
+
+.price-controls input {
+  background-color: inherit;
+  border: none;
+  padding: 0;
+  width: 26px;
+  text-align: center;
+}
+
+.price::after {
+  content: "₽";
+}
+
+.max-price::before {
+  content: "-";
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+
