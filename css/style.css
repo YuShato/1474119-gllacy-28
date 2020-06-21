@@ -719,7 +719,6 @@ img {
   border-radius: 16px;
   display: flex;
   flex-direction: column;
-
 }
 
 .lead-magnet-descr {
@@ -1046,8 +1045,7 @@ img {
 }
 
 .toggle {
-  width: 4px;
-  height: 4px;
+  padding: 2px;
   background-color: var(--gray);
   border: 8px solid var(--white-text);
   border-radius: 50%;
@@ -1055,6 +1053,18 @@ img {
   box-shadow: 0 2px 1px 0 var(--gray);
   cursor: pointer;
   top: 8px;
+}
+
+.toggle:hover {
+  border-bottom: 9px solid var(--white-text);
+  border-top: 9px solid var(--white-text);
+  top: 7px;
+}
+
+.toggle:active, 
+.toggle:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 1px var(--blue-gray);
 }
 
 .toggle-min {
@@ -1072,7 +1082,6 @@ img {
   margin-top: 6px;
 }
 
-
 .filter-checkbox label {
   position: relative;
   display: block;
@@ -1080,7 +1089,7 @@ img {
   user-select: none;
 }
 
-.checkbox-title {
+.filter-title {
   margin-left: 8px;
 }
 
@@ -1157,5 +1166,4 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none; 
   margin: 0; 
 }
-
 
