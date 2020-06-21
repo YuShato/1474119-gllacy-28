@@ -791,7 +791,6 @@ img {
   border-radius: 16px;
   color: var(--dark-text);
   padding-bottom: 30px;
-  position: absolute;
   top: 62px;
   right: 0;
   z-index: 1;
