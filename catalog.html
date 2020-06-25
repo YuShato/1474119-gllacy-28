@@ -24,21 +24,21 @@
             <span class="site-link">Каталог</span>
           </a>
           <!--Выпадающий список (из каталога)-->
-          <ul class="dropdown-menu list-reset remove">
-            <li class="dropdown-item active">
-              <a href="">Новинки</a>
+          <ul class="dropdown-menu modal list-reset">
+            <li>
+              <a class="dropdown-item active" href="">Новинки</a>
             </li>
-            <li class="dropdown-item">
-              <a href="">Сливочное</a>
+            <li>
+              <a class="dropdown-item" href="">Сливочное</a>
             </li>
-            <li class="dropdown-item">
-              <a href="">Щербеты</a>
+            <li>
+              <a class="dropdown-item" href="">Щербеты</a>
             </li>
-            <li class="dropdown-item">
-              <a href="">Фруктовый лед</a>
+            <li>
+              <a class="dropdown-item" href="">Фруктовый лед</a>
             </li>
-            <li class="dropdown-item">
-              <a href="">Мелорин</a>
+            <li>
+              <a class="dropdown-item" href="">Мелорин</a>
             </li>
           </ul>
         </li>
@@ -64,7 +64,7 @@
             </svg>
           </a>
           <!--Форма поиска товара-->
-          <form class="form search-form remove" action="https://echo.htmlacademy.ru" method="get">
+          <form class="modal search-form remove" action="https://echo.htmlacademy.ru" method="get">
             <label for="item-search" class="visually-hidden">Найти товар в каталоге</label>
             <input class="inp item-search" type="text" name="item-search" id="item-search" placeholder="Крем-брюле">
           </form>
@@ -80,21 +80,21 @@
             <p class="user-navigation-descr">Вход</p>
           </a>
           <!--Форма регистрации и входа-->
-          <section class="user-entrance remove">
+          <section class="user-entrance modal">
             <h2 class="visually-hidden">Вход в личный кабинет</h2>
-            <form class="form" action="https://echo.htmlacademy.ru" method="post">
-              <p>
-                <label for="entrance-email">Электронная почта</label>
-                <input class="inp" type="email" name="entrance-email" id="entrance-email"
+            <form class="entrance-form" action="https://echo.htmlacademy.ru" method="post">
+              <p class="text-reset">
+                <label class="visually-hidden" for="entrance-email">Электронная почта</label>
+                <input class="modal-input lead-input input" type="email" name="entrance-email" id="entrance-email"
                   placeholder="email@example.com">
               </p>
-              <p>
-                <label for="entrance-password">Пароль</label>
-                <input class="inp" type="password" name="entrance-password" id="entrance-password" placeholder="••••••">
+              <p class="text-reset">
+                <label class="visually-hidden" for="entrance-password">Пароль</label>
+                <input class="modal-input lead-input input" type="password" name="entrance-password" id="entrance-password" placeholder="••••••">
               </p>
               <a href="">Забыли пароль?</a>
               <a href="">Новая регистрация</a>
-              <button type="submit">Войти</button>
+              <button class="button button-form" type="submit" aria-label="Войти в личный кабинет">Войти</button>
             </form>
           </section>
         </li>
@@ -178,59 +178,108 @@
     </div>
   </header>
   <main class="container container-wrap">
+
     <section class="goods-wrap">
       <h1 class="title offer-title catalog-title text-reset">Сливочное мороженое</h1>
       <!--фильтр, пока не готовы-->
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <!-- Сортировка по цене -->
-        <form method="get" action="https://echo.htmlacademy.ru">
+        <form class="product-filters" method="get" action="https://echo.htmlacademy.ru">
+          <!-- выпадающий список -->
+          <h3 class="visually-hidden">Сортировка товаров на странице</h3>
           <fieldset class="filter-item">
-            <legend class="user-navigation-descr">Цена:</legend>
-            <div class="price-controls">
-              <label class="price min-price user-navigation-descr">
-                <input class="user-navigation-descr" type="number" name="min-price" value="100" step="100">
-              </label>
-              <label class="price max-price user-navigation-descr">
-                <input class="user-navigation-descr" type="number" name="max-price" value="500" step="100">
-              </label>
+            <legend class="user-navigation-descr filter-legend">Сортировка:</legend>
+            <div class="select">
+              <select class="sorting site-text filter-bg" name="sorting[]" id="sorting" size="1">
+                <option value="popular">по популярности</option>
+                <option value="cheap">сначала недорогие</option>
+                <option value="expensive">сначала дорогие</option>
+                <option value="fat-content">по жирности</option>
+              </select>
+            </div>
+          </fieldset>
+          <!-- Сортировка по цене -->
+          <h3 class="visually-hidden">Сортировать по цене продукта</h3>
+          <fieldset class="filter-item price-filter">
+            <div class="flex-wrapper">
+              <legend class="user-navigation-descr filter-legend">Цена:</legend>
+              <div class="price-controls">
+                <label class="price min-price user-navigation-descr">
+                  <input class="user-navigation-descr" type="number" name="min-price" value="100" step="100">
+                </label>
+                <label class="price max-price user-navigation-descr">
+                  <input class="user-navigation-descr" type="number" name="max-price" value="500" step="100">
+                </label>
+              </div>
             </div>
             <div class="range-filter">
               <div class="range-controls filter-bg">
                 <div class="scale">
-                  <div class="bar" style="width: 60%; margin-left: 20%;"></div>
+                  <div class="bar" style="width: 60%; margin-left: 16%;"></div>
                 </div>
-                <button class="toggle toggle-min" type="button" aria-label="установите минимальную цену" style="left: 22%"></button>
-                <button class="toggle toggle-max" type="button" aria-label="установите максимальную цену" style="left: 70%"></button>
+                <button class="toggle toggle-min" type="button" aria-label="установите минимальную цену"
+                  style="left: 16%"></button>
+                <button class="toggle toggle-max" type="button" aria-label="установите максимальную цену"
+                  style="left: 61%"></button>
               </div>
             </div>
           </fieldset>
           <!-- Сортировка по жирности продукта -->
-          <fieldset class=" filter-item">
-            <legend class="user-navigation-descr filter-title">Жирность:</legend>
-            <ul class="chexboxes filter-bg list-reset">
+          <h3 class="visually-hidden">Сортировать по жирности продукта</h3>
+          <fieldset class="filter-item">
+            <legend class="user-navigation-descr filter-legend">Жирность:</legend>
+            <ul class="radio-list filter-bg list-reset">
               <li class="filter-radio filter-option">
-                <input class="visually-hidden filter-input-radio first-item" type="radio" name="fat-content"
-                  id="filter-0" value="0">
-                <label for="filter-0" class="site-text">0%</label>
+                <input class="visually-hidden filter-input-radio first-item" type="radio" name="fat-content" id="fat-0"
+                  value="0">
+                <label for="fat-0" class="site-text">0%</label>
               </li>
               <li class=" filter-radio filter-option">
-                <input class="visually-hidden filter-input-radio" type="radio" name="fat-content" id="filter-10"
-                  value="10" checked>
-                <label for="filter-10" class="site-text">до 10%</label>
+                <input class="visually-hidden filter-input-radio" type="radio" name="fat-content" id="fat-10" value="10"
+                  checked>
+                <label for="fat-10" class="site-text">до 10%</label>
               </li>
               <li class=" filter-radio filter-option">
-                <input class="visually-hidden filter-input-radio" type="radio" name="fat-content" id="filter-30"
+                <input class="visually-hidden filter-input-radio" type="radio" name="fat-content" id="fat-30"
                   value="30">
-                <label for="filter-30" class="site-text">до 30%</label>
+                <label for="fat-30" class="site-text">до 30%</label>
               </li>
               <li class=" filter-radio filter-option">
-                <input class="visually-hidden filter-input-radio" type="radio" name="fat-content" id="filter-more-30"
+                <input class="visually-hidden filter-input-radio" type="radio" name="fat-content" id="fat-more-30"
                   value="more-30">
-                <label for="filter-more-30" class="site-text">выше 30%</label>
+                <label for="fat-more-30" class="site-text">выше 30%</label>
               </li>
             </ul>
           </fieldset>
+          <!-- сортировка по наполнителям -->
+          <h3 class="visually-hidden">Сортировать по наполнителям</h3>
+          <fieldset class=" filter-item">
+            <legend class="user-navigation-descr filter-legend">Наполнители:</legend>
+            <ul class="filler-filter filter-bg list-reset">
+              <li class="filter-checkbox filter-option">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="choco" id="choco" checked>
+                <label for="choco" class="site-text">шоколадные</label>
+              </li>
+              <li class="filter-checkbox filter-option">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="sugar" id="sugar" checked>
+                <label for="sugar" class="site-text">сахарные присыпки</label>
+              </li>
+              <li class="filter-checkbox filter-option">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="fruit" id="fruit">
+                <label for="fruit" class="site-text">фрукты</label>
+              </li>
+              <li class="filter-checkbox filter-option">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="syrup" id="syrup">
+                <label for="syrup" class="site-text">сиропы</label>
+              </li>
+              <li class="filter-checkbox filter-option">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="jam" id="jam">
+                <label for="jam" class="site-text">джемы</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="user-navigation-descr filter-bg filter-button header-link" type="submit"
+            aria-label="Выполнить подбор товара">Применить</button>
         </form>
       </section>
       <!-- 1й ряд товаров -->
@@ -243,6 +292,7 @@
         <h3 class="product-title">
           <a class="product-link site-link" href="">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
         </h3>
+        <a class="view button button-form text-reset" href="">Быстрый просмотр</a>
       </article>
       <article class="product">
         <a class="product-wrap" href="">
@@ -252,6 +302,7 @@
         <h3 class="product-title">
           <a class="product-link site-link" href="">Сливочно-кофейное с кусочками шоколада</a>
         </h3>
+        <a class="view button button-form text-reset" href="">Быстрый просмотр</a>
       </article>
       <article class="product">
         <a class="product-wrap" href="">
@@ -262,6 +313,7 @@
         <h3 class="product-title">
           <a class="product-link site-link" href="">Сливочно-клубничное с присыпкой из белого шоколада</a>
         </h3>
+        <a class="view button button-form text-reset" href="">Быстрый просмотр</a>
       </article>
       <article class="product">
         <a class="product-wrap" href="">
@@ -272,6 +324,7 @@
         <h3 class="product-title">
           <a class="product-link site-link" href="">Сливочное крем-брюле с карамельной подливкой</a>
         </h3>
+        <a class="view button button-form text-reset" href="">Быстрый просмотр</a>
       </article>
       <!-- 2й ряд товаров -->
       <article class="product">
@@ -282,6 +335,7 @@
         <h3 class="product-title">
           <a class="product-link site-link" href="">Сливочное с брусничным <br> джемом</a>
         </h3>
+        <a class="view button button-form text-reset" href="">Быстрый просмотр</a>
       </article>
       <article class="product">
         <a class="product-wrap" href="">
@@ -292,6 +346,7 @@
         <h3 class="product-title">
           <a class="product-link site-link" href="">Сливочно-черничное с цельными ягодами черники</a>
         </h3>
+        <a class="view button button-form text-reset" href="">Быстрый просмотр</a>
       </article>
       <article class="product">
         <a class="product-wrap" href="">
@@ -302,6 +357,7 @@
         <h3 class="product-title">
           <a class="product-link site-link" href=""> Сливочно-лимонное с карамельной присыпкой</a>
         </h3>
+        <a class="view button button-form text-reset" href="">Быстрый просмотр</a>
       </article>
       <article class="product">
         <a class="product-wrap" href="">
@@ -311,6 +367,7 @@
         <h3 class="product-title">
           <a class="product-link site-link" href="">Сливочное с шоколадной стружкой</a>
         </h3>
+        <a class="view button button-form text-reset" href="">Быстрый просмотр</a>
       </article>
       <!-- 3й ряд товаров -->
       <article class="product">
@@ -322,6 +379,7 @@
         <h3 class="product-title">
           <a class="product-link site-link" href="">Сливочно-ванильное с кусочками шоколада</a>
         </h3>
+        <a class="view button button-form text-reset" href="">Быстрый просмотр</a>
       </article>
       <article class="product">
         <a class="product-wrap" href="">
@@ -331,6 +389,7 @@
         <h3 class="product-title">
           <a class="product-link site-link" href="">Сливочноe с ментоловым сиропом</a>
         </h3>
+        <a class="view button button-form text-reset" href="">Быстрый просмотр</a>
       </article>
       <article class="product">
         <a class="product-wrap" href="">
@@ -340,6 +399,7 @@
         <h3 class="product-title">
           <a class="product-link site-link" href="">Сливочное с кусочками черного шоколада</a>
         </h3>
+        <a class="view button button-form text-reset" href="">Быстрый просмотр</a>
       </article>
       <article class="product">
         <a class="product-wrap" href="">
@@ -349,6 +409,7 @@
         <h3 class="product-title">
           <a class="product-link site-link" href="">Сливочное с мятным сиропом</a>
         </h3>
+        <a class="view button button-form text-reset" href="">Быстрый просмотр</a>
       </article>
     </section>
     <!--навигация по страницам-->
