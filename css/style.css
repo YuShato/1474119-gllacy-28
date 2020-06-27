@@ -173,6 +173,11 @@ img {
   margin-top: 4px;
 }
 
+.modal .button-form {
+  font-size: 18px;
+  line-height: 16px;
+}
+
 .input {
   font: inherit;
   box-sizing: border-box;
@@ -312,6 +317,11 @@ img {
 
 .search-form {
   width: 341px;
+  z-index: 3;
+  right: 217px;
+  position: absolute;
+  top: 47px;
+  display: none;
 }
 
 .search-icon-wrap {
@@ -324,15 +334,18 @@ img {
 }
 
 .item-search {
-  width: 311px;
   outline: none;
-  margin-top: 17px;
-  margin-bottom: 17px;
-  padding-left: 15px;
-  padding-right: 20px;
-  padding-top: 13px;
-  padding-bottom: 13px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 15px;
+}
+
+.lead-input.item-search {
+  width: 311px;
+  margin-right: 15px;
   color: var(--dark-text);
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .item-search::placeholder {
@@ -358,6 +371,10 @@ img {
   grid-template-rows: 32px;
   padding-top: 13px;
   margin-left: 14px;
+}
+
+.empty-basket {
+  margin-left: 28px;
 }
 
 .user-navigation-item {
@@ -435,11 +452,11 @@ img {
 .dropdown-item.active {
   font-weight: 700;
   line-height: 18px;
-display: block;
-position: relative;
-padding-top: 4px;
-padding-bottom: 9px;
-margin-bottom: 7px;
+  display: block;
+  position: relative;
+  padding-top: 4px;
+  padding-bottom: 9px;
+  margin-bottom: 7px;
 }
 
 .dropdown-item.active::before {
@@ -453,37 +470,56 @@ margin-bottom: 7px;
 }
 
 .user-entrance {
-  z-index: 3;
+  z-index: 4;
   position: absolute;
   width: 277px;
-  right: 0;
+  right: 115px;
+  display: none;
 }
 
 .entrance-form {
-  display: flex;
-  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-left: 19px;
+  margin-right: 17px;
+  margin-bottom: 20px;
 }
 
 .entrance-form .modal-input {
   width: 241px;
-  margin-top: 20px;
-  margin-left: 19px;
-  margin-right: 17px;
   font-size: 14px;
   line-height: 16px;
   padding-left: 15px;
-  padding-right: 1px;
+  padding-right: 15px;
   padding-bottom: 14px;
   padding-top: 15px;
+  margin-bottom: 20px;
 }
 
-.entrance-form a {
+.entrance-password::placeholder {
+  font-size: 9px;
+}
+
+.entrance-form-link {
   font-size: 13px;
   line-height: 15px;
   display: block;
   text-decoration: none;
   color: var(--dark-text);
   border-bottom: 1px solid var(--gray-bottom);
+  align-self: end;
+  position: absolute;
+  left: 142px;
+  top: 152px;
+}
+
+.entrance-form-link:last-of-type {
+  top: 173px;
+}
+
+.entrance-form .button-form {
+  width: 103px;
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
 
 .breadcrumbs {
@@ -1094,11 +1130,116 @@ margin-bottom: 7px;
 .full-basket .entrance-link {
   background-color: var(--white-text);
   min-width: 90px;
+  position: relative;
 }
 
 .full-basket .nav-link {
   padding-left: 14px;
   padding-right: 14px;
+}
+
+.shopping-basket {
+  width: 539px;
+  position: absolute;
+  right: 5px;
+  z-index: 3;
+  display: none;
+}
+
+.shop-order {
+  margin-top: 17px;
+  margin-left: 19px;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin-right: 14px;
+  vertical-align: middle;
+}
+
+.shop-order a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.shop-order-item {
+  width: 246px;
+  vertical-align: middle;
+}
+
+.special-text {
+  vertical-align: bottom;
+}
+
+
+.shop-order th,
+.shop-order td {
+  padding-bottom: 18px;
+}
+
+.shop-order tr:nth-last-of-type(2) {
+  width: 510px;
+  border-bottom: 1px solid var(--gray-basket-hr);
+}
+
+.shop-order-img {
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+.delete-item {
+  width: 11px;
+  height: 11px;
+  background-image: url(../img/cross-small.svg);
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+.delete-item:hover,
+.delete-item:active,
+.delete-item:focus {
+  border: none;
+  outline: none;
+}
+
+.delete-item:active,
+.delete-item:focus {
+  box-shadow: 0px 0px 0px 1px var(--blue-gray);
+}
+
+.basket-price {
+  color: var(--gray);
+  margin-right: 20px;
+}
+
+.basket-weight {
+  color: var(--black);
+  font-weight: 500;
+  /* свойство font-weight в макете не указано, но явно что оно там должно быть. Поставила "на глаз". Оставить или убрать? */
+}
+
+.item-sum {
+  padding-right: 19px;
+}
+
+.basket-sum {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 16px;
+  text-align: right;
+  padding-top: 19px;
+  margin-right: 2px;
+  width: 510px;
+}
+
+.shopping-basket .button-form {
+  width: 172px;
+  margin-bottom: 25px;
+  margin-right: 14px;
+  margin-left: auto;
 }
 
 .catalog-paginator {
@@ -1472,6 +1613,86 @@ input[type=number]::-webkit-outer-spin-button {
   box-sizing: content-box;
 }
 
-.select:hover::after {
+.select:hover::after,
+.select:active::after,
+.select:focus::after {
   color: var(--dark-text);
+}
+
+.popup {
+  position: fixed;
+  top: 57%;
+  left: 50%;
+  width: 477px;
+  z-index: 5;
+  transform: translateX(-50%) translateY(-50%);
+  margin-top: -2px;
+  margin-left: -1px;
+  display: none;
+}
+
+.popup-show {
+  display: block;
+  animation: bounce 0.7s;
+  animation-duration: 0.7s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  animation-name: bounce;
+}
+
+
+.popup-title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  margin-left: 24px;
+  margin-top: 17px;
+  margin-bottom: 23px;
+  color: var(--dark-text);
+}
+
+.popup .modal-input {
+  width: 267px;
+  margin-left: 24px;
+  margin-bottom: 20px;
+}
+
+.popup .modal-input::placeholder {
+  margin-top: 13px;
+  margin-left: 14px;
+  padding-top: 6px;
+  padding-bottom: 12px;
+}
+
+.popup .popup-question {
+  width: 428px;
+  height: 154px;
+  resize: none;
+  margin-bottom: 20px;
+}
+
+.popup .button-form {
+  width: 140px;
+  margin-bottom: 29px;
+  margin-right: 25px;
+  margin-left: auto;
+  padding-top: 15px;
+  padding-bottom: 14px;
+}
+
+.popup-close {
+  position: absolute;
+  top: 15px;
+  right: 16px;
+  width: 18px;
+  height: 17px;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-image: url(../img/cross-big.svg);
+  box-sizing: content-box;
 }

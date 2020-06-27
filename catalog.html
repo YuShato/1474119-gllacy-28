@@ -64,13 +64,14 @@
             </svg>
           </a>
           <!--Форма поиска товара-->
-          <form class="modal search-form remove" action="https://echo.htmlacademy.ru" method="get">
+          <form class="modal search-form" action="https://echo.htmlacademy.ru" method="get">
             <label for="item-search" class="visually-hidden">Найти товар в каталоге</label>
-            <input class="inp item-search" type="text" name="item-search" id="item-search" placeholder="Крем-брюле">
+            <input class="input item-search lead-input" type="text" name="item-search" id="item-search"
+              placeholder="Крем-брюле">
           </form>
         </li>
         <li class="user-navigation-item">
-          <a class="entrance-link nav-link" href="">
+          <a class="entrance-link nav-link" href="" aria-label="Вход в личный кабинет">
             <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M6.04 14.88L12.96 9.5L6.04 4.13V7.04H0V11.96H6.04V14.88Z" fill="white" />
               <path
@@ -90,15 +91,16 @@
               </p>
               <p class="text-reset">
                 <label class="visually-hidden" for="entrance-password">Пароль</label>
-                <input class="modal-input lead-input input" type="password" name="entrance-password" id="entrance-password" placeholder="••••••">
+                <input class="modal-input lead-input input entrance-password" type="password" name="entrance-password"
+                  id="entrance-password" placeholder="••••••">
               </p>
-              <a href="">Забыли пароль?</a>
-              <a href="">Новая регистрация</a>
+              <a class="entrance-form-link" href="">Забыли пароль?</a>
+              <a class="entrance-form-link" href="">Новая регистрация</a>
               <button class="button button-form" type="submit" aria-label="Войти в личный кабинет">Войти</button>
             </form>
           </section>
         </li>
-        <li class="user-navigation-item btn-item full-basket ">
+        <li class="user-navigation-item full-basket ">
           <a class="nav-link entrance-link" aria-label="корзина покупателя" href="">
             <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -115,46 +117,47 @@
             <p class="user-navigation-descr full-basket">2 товара</p>
           </a>
           <!--Выпадающая корзина с товарами-->
-          <div class="remove">
-            <table>
+          <div class="shopping-basket modal">
+            <table class="shop-order">
               <!--первый товар в корзине-->
               <tr>
                 <td>
-                  <button class="button" type="button" aria-label="Удалить товар"></button>
+                  <button class="delete-item" type="button" aria-label="Удалить товар"></button>
                 </td>
                 <td>
                   <a href="">
-                    <img src="img/jam-icecream-mini-min.jpg" alt="Пломбир с апельсиновым джемом" width="33" height="33">
+                    <img class="shop-order-img" src="img/jam-icecream-mini-min.jpg" alt="Пломбир с апельсиновым джемом"
+                      width="33" height="33">
                   </a>
                 </td>
-                <td>
+                <td class="shop-order-item">
                   <a href="">Пломбир с апельсиновым джемом</a>
                 </td>
-                <td>1,5 кг х <span>200 руб.</span></td>
-                <td>300 руб.</td>
+                <td class="basket-weight">1,5 кг х <span class="basket-price">200 руб.</span></td>
+                <td class="item-sum">300 руб.</td>
               </tr>
               <!--второй товар в корзине-->
               <tr>
                 <td>
-                  <button class="button" type="button" aria-label="Удалить товар"></button>
+                  <button class="delete-item" type="button" aria-label="Удалить товар"></button>
                 </td>
                 <td>
                   <a href="">
-                    <img src="img/strawberry-choco-mini-min.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада"
-                      width="33" height="33">
+                    <img class="shop-order-img" src="img/strawberry-choco-mini-min.jpg"
+                      alt="Клубничный пломбир с присыпкой из белого шоколада" width="33" height="33">
                   </a>
                 </td>
-                <td>
-                  <a href="">Клубничный пломбир с присыпкой из белого шоколада</a>
+                <td class="shop-order-item special-text">
+                  <a href="">Клубничный пломбир с присыпкой <br> из белого шоколада</a>
                 </td>
-                <td>1,5 кг х <span>300 руб.</span></td>
-                <td>450 руб.</td>
+                <td class="basket-weight">1,5 кг х <span class="basket-price">300 руб.</span></td>
+                <td class="item-sum">450 руб.</td>
               </tr>
               <tr>
-                <td colspan="5">Итого: 750 руб.</td>
+                <td class="basket-sum" colspan="5">Итого: 750 руб.</td>
               </tr>
             </table>
-            <a href="">Оформить заказ</a>
+            <a class="button button-form" href="">Оформить заказ</a>
           </div>
         </li>
       </ul>
@@ -202,7 +205,7 @@
           <h3 class="visually-hidden">Сортировать по цене продукта</h3>
           <fieldset class="filter-item price-filter">
             <div class="flex-wrapper">
-              <legend class="user-navigation-descr filter-legend">Цена:</legend>
+              <p class="user-navigation-descr filter-legend">Цена:</p>
               <div class="price-controls">
                 <label class="price min-price user-navigation-descr">
                   <input class="user-navigation-descr" type="number" name="min-price" value="100" step="100">
@@ -446,11 +449,11 @@
               fill="white" />
           </svg>
         </a>
-        <!--в макете здесь иконка-->
       </li>
     </ul>
   </main>
   <footer class="footer container-wrap">
+    <!-- Соцсети -->
     <ul class="networks list-reset">
       <li>
         <a class="network" href="" aria-label="Магазин Gllacy в Facebook">
@@ -514,6 +517,7 @@
         </a>
       </li>
     </ul>
+    <!-- Ссылки о компании -->
     <ul class="footer-menu list-reset">
       <li>
         <a class="footer-item for-providers" href="">

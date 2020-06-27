@@ -24,7 +24,7 @@
             <span class="site-link">Каталог</span>
           </a>
           <!--Выпадающий список (из каталога)-->
-          <ul class="dropdown-menu list-reset remove">
+          <ul class="dropdown-menu list-reset">
             <li class="dropdown-item active">
               <a href="">Новинки</a>
             </li>
@@ -54,7 +54,7 @@
         </li>
       </ul>
       <!--Поиск, вход, корзина-->
-      <ul class="user-navigation list-reset">
+      <ul class="user-navigation empty-basket list-reset">
         <li class="user-navigation-item search-icon-wrap">
           <a class="search-link" href="" aria-label="Поиск товаров в каталоге Gllacy">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -64,9 +64,10 @@
             </svg>
           </a>
           <!--Форма поиска товара-->
-          <form class="form search-form remove" action="https://echo.htmlacademy.ru" method="get">
+          <form class="modal search-form" action="https://echo.htmlacademy.ru" method="get">
             <label for="item-search" class="visually-hidden">Найти товар в каталоге</label>
-            <input class="input item-search" type="text" name="item-search" id="item-search" placeholder="Крем-брюле">
+            <input class="input item-search lead-input" type="text" name="item-search" id="item-search"
+              placeholder="Крем-брюле">
           </form>
         </li>
         <li class="user-navigation-item">
@@ -80,22 +81,22 @@
             <p class="user-navigation-descr">Вход</p>
           </a>
           <!--Форма регистрации и входа-->
-          <section class="user-entrance remove">
+          <section class="user-entrance modal">
             <h2 class="visually-hidden">Вход в личный кабинет</h2>
-            <form class="form" action="https://echo.htmlacademy.ru" method="post">
-              <p>
-                <label for="entrance-email">Электронная почта</label>
-                <input class="input" type="email" name="entrance-email" id="entrance-email"
-                  placeholder="email@example.com" required>
+            <form class="entrance-form" action="https://echo.htmlacademy.ru" method="post">
+              <p class="text-reset">
+                <label class="visually-hidden" for="entrance-email">Электронная почта</label>
+                <input class="modal-input lead-input input" type="email" name="entrance-email" id="entrance-email"
+                  placeholder="email@example.com">
               </p>
-              <p>
-                <label for="entrance-password">Пароль</label>
-                <input class="input" type="password" name="entrance-password" id="entrance-password"
-                  placeholder="••••••" required>
+              <p class="text-reset">
+                <label class="visually-hidden" for="entrance-password">Пароль</label>
+                <input class="modal-input lead-input input entrance-password" type="password" name="entrance-password"
+                  id="entrance-password" placeholder="••••••">
               </p>
-              <a href="">Забыли пароль?</a>
-              <a href="">Новая регистрация</a>
-              <button class="text-reset" type="submit">Войти</button>
+              <a class="entrance-form-link" href="">Забыли пароль?</a>
+              <a class="entrance-form-link" href="">Новая регистрация</a>
+              <button class="button button-form" type="submit" aria-label="Войти в личный кабинет">Войти</button>
             </form>
           </section>
         </li>
@@ -124,7 +125,7 @@
   </header>
   <main class="container">
     <!--главный экран со слайдером-->
-    <!--как бы слайдер-->
+    <!--слайдер-->
     <section class="main-slider container-wrap">
       <h2 class="visually-hidden">Скидка при покупке двух товаров</h2>
       <ul class="main-slider-list list-reset">
@@ -291,6 +292,7 @@
     </section>
   </main>
   <footer class="footer container-wrap">
+    <!--Соцсети-->
     <ul class="networks list-reset">
       <li>
         <a class="network" href="" aria-label="Магазин Gllacy в Facebook">
@@ -353,6 +355,7 @@
         </a>
       </li>
     </ul>
+    <!-- Ссылки о компании -->
     <ul class="footer-menu list-reset">
       <li>
         <a class="footer-item for-providers" href="">
@@ -387,22 +390,26 @@
   </footer>
 
   <!--Форма обратной связи-->
-  <section class="popup remove">
+  <section class="popup modal">
     <h2 class="popup-title">Мы обязательно вам ответим!</h2>
     <form class=" form popup-form" action="https://echo.htmlacademy.ru" method="post">
-      <p>
+      <p class="text-reset">
         <label for="question-name" class="visually-hidden">Как вас зовут?</label>
-        <input class="input" type="text" name="question-name" id="question-name" placeholder="Имя Фамилия">
+        <input class="lead-input modal-input" type="text" name="question-name" id="question-name"
+          placeholder="Имя Фамилия" required>
       </p>
-      <p>
+      <p class="text-reset">
         <label for="question-email" class="visually-hidden">Введите ваш e-mail</label>
-        <input class="input" type="email" name="question-email" id="question-email" placeholder="email@example.com">
+        <input class="lead-input modal-input" type="email" name="question-email" id="question-email"
+          placeholder="email@example.com" required>
       </p>
-      <p>
+      <p class="text-reset">
         <label for="question-text" class="visually-hidden">Введите ваше сообщение</label>
-        <input class="input" type="text" name="question-text" id="question-text" placeholder="В свободной форме">
+        <textarea class="lead-input modal-input popup-question" name="question-text" id="question-text" cols="30"
+          rows="10" placeholder="В свободной форме" required></textarea>
       </p>
-      <button class="button text-reset" type="submit">Отправить</button>
+      <button class="button button-form text-reset" type="submit">Отправить</button>
+      <button class="popup-close" aria-label="Закрыть"></button>
     </form>
   </section>
 </body>
