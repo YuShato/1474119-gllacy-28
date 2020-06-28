@@ -206,7 +206,7 @@ img {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 25px;
-  grid-row-gap: 36px;
+  grid-row-gap: 35px;
 }
 
 .main-navigation {
@@ -238,11 +238,11 @@ img {
 
 .working-time {
   display: grid;
+  grid-row: 2 / 4;
   justify-self: end;
+  justify-items: end;
   max-width: 200px;
   margin-top: -2px;
-  justify-items: end;
-  grid-row: 2 / 4;
   margin-right: 3px;
 }
 
@@ -256,10 +256,10 @@ img {
 }
 
 .header-link {
-  color: var(--white-text);
-  text-decoration: none;
   display: block;
   max-width: 155px;
+  color: var(--white-text);
+  text-decoration: none;
   padding-top: 8px;
   padding-left: 14px;
   padding-right: 14px;
@@ -354,21 +354,21 @@ img {
 }
 
 .nav-link {
-  text-decoration: inherit;
   display: flex;
   flex-direction: row;
   padding-top: 8px;
   padding-bottom: 8px;
   padding-right: 16px;
   padding-left: 16px;
+  text-decoration: inherit;
 }
 
 .user-navigation {
-  width: 244px;
   display: grid;
   column-gap: 10px;
   grid-template-columns: repeat(3, auto);
   grid-template-rows: 32px;
+  width: 244px;
   padding-top: 13px;
   margin-left: 14px;
 }
@@ -412,25 +412,25 @@ img {
 }
 
 .dropdown-menu {
-  background-color: var(--white-text);
   width: 143px;
+  position: absolute;
+  z-index: 3;
+  background-color: var(--white-text);
   padding-top: 5px;
   padding-bottom: 2px;
-  z-index: 3;
-  position: absolute;
   margin-left: -7px;
   display: none;
 }
 
 .dropdown-item {
+  display: block;
   text-decoration: none;
   font-size: 14px;
-  line-height: 16px;
   font-style: normal;
   font-weight: 400;
+  line-height: 16px;
   padding-top: 6px;
   padding-bottom: 6px;
-  display: block;
   padding-left: 20px;
   margin-bottom: 4px;
 }
@@ -450,10 +450,10 @@ img {
 }
 
 .dropdown-item.active {
-  font-weight: 700;
-  line-height: 18px;
   display: block;
   position: relative;
+  font-weight: 700;
+  line-height: 18px;
   padding-top: 4px;
   padding-bottom: 9px;
   margin-bottom: 7px;
@@ -500,14 +500,14 @@ img {
 }
 
 .entrance-form-link {
+  display: block;
+  align-self: end;
+  position: absolute;
   font-size: 13px;
   line-height: 15px;
-  display: block;
   text-decoration: none;
   color: var(--dark-text);
   border-bottom: 1px solid var(--gray-bottom);
-  align-self: end;
-  position: absolute;
   left: 142px;
   top: 152px;
 }
@@ -536,12 +536,12 @@ img {
 }
 
 .main-slider {
-  width: 1146px;
+  display: flex;
   position: relative;
+  width: 1146px;
   padding-top: 494px;
   background-repeat: no-repeat;
   background-position: top center;
-  display: flex;
   justify-content: center;
   align-content: flex-end;
 }
@@ -552,21 +552,21 @@ img {
 
 .main-slider-breadcrumbs {
   display: flex;
+  justify-content: space-between;
   position: absolute;
   top: 446px;
   left: 0;
   z-index: 20;
   width: 79px;
-  justify-content: space-between;
 }
 
 .main-slider-title {
+  position: absolute;
   font-size: 60px;
   line-height: 60px;
   width: 672px;
   margin: 0 auto;
   margin-bottom: 27px;
-  position: absolute;
   top: 284px;
   text-align: center;
   left: 237px;
@@ -640,17 +640,17 @@ img {
 
 .product-weight::before {
   content: url(../img/ruble.svg);
+  position: absolute;
   height: 31px;
   width: 31px;
-  position: absolute;
   left: -2px;
   top: -4px;
 }
 
 .product-weight {
+  position: relative;
   font-size: 30px;
   line-height: 35px;
-  position: relative;
   padding-left: 32px;
 }
 
@@ -672,7 +672,7 @@ img {
 
 .product:hover::after {
   content: "";
-  z-index: 1;
+  position: absolute;
   background-color: var(--white-text);
   opacity: 0.2;
   border-radius: 4px;
@@ -683,7 +683,7 @@ img {
   bottom: -75px;
   width: 293px;
   height: 402px;
-  position: absolute;
+  z-index: 1;
 }
 
 .site-link:hover,
@@ -698,16 +698,16 @@ img {
 }
 
 .benefits {
+  display: grid;
+  grid-template-columns: repeat(2, 560px);
+  grid-template-rows: auto;
+  grid-column-gap: 6px;
   width: 1146px;
   min-height: 306px;
   border-radius: 16px;
   background-image: url(../img/pattern-min.png);
   background-color: var(--beige);
   background-repeat: repeat;
-  display: grid;
-  grid-template-columns: repeat(2, 560px);
-  grid-template-rows: auto;
-  grid-column-gap: 6px;
   color: var(--dark-text);
 }
 
@@ -743,13 +743,13 @@ img {
 }
 
 .offer {
+  display: flex;
+  flex-direction: column;
   border-radius: 16px;
   font-size: 18px;
   color: var(--white-text);
   font-weight: 700;
   background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
 }
 
 .offer-title {
@@ -776,6 +776,7 @@ img {
 }
 
 .button-form {
+  display: block;
   font-size: 18px;
   line-height: 24px;
   text-transform: none;
@@ -784,7 +785,6 @@ img {
   border-radius: 70px;
   font-weight: 700;
   text-decoration: none;
-  display: block;
   border-image-width: 0;
   padding-bottom: 12px;
   padding-top: 12px;
@@ -792,13 +792,13 @@ img {
 
 .view {
   display: none;
+  position: absolute;
   width: 200px;
   padding-top: 10px;
   padding-bottom: 10px;
-  z-index: 2;
-  position: absolute;
   left: 34px;
   top: 333px;
+  z-index: 2;
 }
 
 .product:hover .view {
@@ -826,21 +826,20 @@ img {
 }
 
 .product-wrap {
+  display: block;
+  overflow: hidden;
   width: 267px;
   height: 267px;
   border-radius: 50%;
-  overflow: hidden;
-  display: block;
 }
 
 .hit::before {
   content: url(../img/hit.svg);
+  position: absolute;
   width: 61px;
   height: 61px;
   background-color: var(--white-text);
-  position: absolute;
   border-radius: 50%;
-  position: absolute;
 }
 
 /* сделать дополнительно шрифт 14 пкс на плейсхолдеры в шапке!!! */
@@ -868,15 +867,14 @@ img {
   margin-bottom: 5px;
 }
 
-
 .news-link {
+  display: block;
+  width: 287px;
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
   color: inherit;
   margin-left: 20px;
-  display: block;
-  width: 287px;
 }
 
 .news-link:hover,
@@ -885,21 +883,20 @@ img {
   color: var(--orange-link);
 }
 
-
 .lead-magnet {
+  display: flex;
+  flex-direction: column;
   background-image: url(../img/post-backgr-min.png);
   background-color: var(--gray);
   border-radius: 16px;
-  display: flex;
-  flex-direction: column;
 }
 
 .lead-magnet-descr {
+  display: block;
+  width: 512px;
   color: var(--gray-lead-magnet);
   margin-left: 26px;
   padding-top: 12px;
-  width: 512px;
-  display: block;
   margin-bottom: 44px;
 }
 
@@ -1022,6 +1019,8 @@ img {
   display: grid;
   grid-template-columns: repeat(4, auto);
   grid-column-gap: 9px;
+  margin-top: 5px;
+  margin-left: 2px;
 }
 
 .network {
@@ -1046,22 +1045,22 @@ img {
 }
 
 .footer-menu {
-  width: 328px;
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-column-gap: 33px;
   align-content: center;
   grid-row-gap: 7px;
-  margin-top: 1px;
+  width: 328px;
+  margin-top: 9px;
   margin-left: 2px;
 }
 
 .footer-item {
+  display: block;
   font-size: 13px;
   line-height: 18px;
   color: var(--white-text);
   text-decoration: none;
-  display: block;
   margin-bottom: 0;
   padding-bottom: 0;
 }
@@ -1071,9 +1070,9 @@ img {
 }
 
 .for-providers {
-  font-weight: 700;
   display: flex;
   align-self: end;
+  font-weight: 700;
 }
 
 .for-providers::before {
@@ -1081,8 +1080,8 @@ img {
   width: 15px;
   height: 13px;
   align-self: end;
-  margin-right: 6px;
-  margin-top: 1px;
+  margin-right: 4px;
+  margin-top: 2px;
 }
 
 .copyright {
@@ -1128,9 +1127,9 @@ img {
 }
 
 .full-basket .entrance-link {
+  position: relative;
   background-color: var(--white-text);
   min-width: 90px;
-  position: relative;
 }
 
 .full-basket .nav-link {
@@ -1139,8 +1138,8 @@ img {
 }
 
 .shopping-basket {
-  width: 539px;
   position: absolute;
+  width: 539px;
   right: 5px;
   z-index: 3;
   display: none;
@@ -1171,7 +1170,6 @@ img {
 .special-text {
   vertical-align: bottom;
 }
-
 
 .shop-order th,
 .shop-order td {
@@ -1218,7 +1216,7 @@ img {
 .basket-weight {
   color: var(--black);
   font-weight: 500;
-  /* свойство font-weight в макете не указано, но явно что оно там должно быть. Поставила "на глаз". Оставить или убрать? */
+  /*Андрей, свойство font-weight в макете не указано, но явно что оно там должно быть. Поставила "на глаз". Оставить или убрать? */
 }
 
 .item-sum {
@@ -1243,23 +1241,26 @@ img {
 }
 
 .catalog-paginator {
-  width: 194px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-end;
-  margin-right: 27px;
   margin-left: auto;
+  margin-top: 36px;
   padding-bottom: 26px;
 }
 
+.catalog-paginator li {
+  margin-left: 5px;
+}
+
 .paginator {
+  border-radius: 50%;
+  text-align: center;
   padding-top: 4px;
   padding-bottom: 3px;
   padding-left: 8px;
   padding-right: 8px;
-  border-radius: 50%;
-  text-align: center;
 }
 
 .site-text {
@@ -1280,6 +1281,10 @@ img {
   color: var(--dark-text);
 }
 
+.narrow-next {
+  margin-left: 3px;
+}
+
 .narrow-next:hover {
   background-color: transparent;
 }
@@ -1291,7 +1296,6 @@ img {
   padding-top: 3px;
 }
 
-/* Фильтры, пока не готово */
 .filters {
   min-width: 870px;
   grid-column: 1 / 5;
@@ -1322,6 +1326,7 @@ img {
 }
 
 .filter-legend {
+  display:block;
   padding-right: 4px;
   padding-bottom: 2px;
   margin-left: 8px;
@@ -1516,15 +1521,14 @@ input[type=number]::-webkit-outer-spin-button {
   margin-right: 21px;
 }
 
-.filter-input-checkbox+label {
+.filter-input-checkbox + label {
   padding-top: 9px;
   padding-bottom: 9px;
   position: relative;
   padding-left: 32px;
-
 }
 
-.filter-input-checkbox+label::before {
+.filter-input-checkbox + label::before {
   content: "";
   position: absolute;
   width: 16px;
@@ -1534,20 +1538,19 @@ input[type=number]::-webkit-outer-spin-button {
   left: 0;
 }
 
-
-.filter-input-checkbox:hover+label::before {
+.filter-input-checkbox:hover + label::before {
   border: 2px solid var(--white-text);
 }
 
-.filter-input-checkbox:disabled+label::before {
+.filter-input-checkbox:disabled + label::before {
   border: 2px solid var(--gray-switch-hover);
 }
 
-.filter-input-checkbox:checked+label::before {
+.filter-input-checkbox:checked + label::before {
   display: block;
-  border: none;
   content: "";
   position: absolute;
+  border: none;
   background-image: url(../img/checkbox-on.svg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -1556,11 +1559,11 @@ input[type=number]::-webkit-outer-spin-button {
   left: 0;
 }
 
-.filter-input-checkbox:checked:hover+label::before {
+.filter-input-checkbox:checked:hover + label::before {
   background-image: url(../img/checkbox-on-hover.svg);
 }
 
-.filter-input-checkbox:checked:disabled+label::before {
+.filter-input-checkbox:checked:disabled + label::before {
   background-image: url(../img/checkbox-on-disabled.svg);
 }
 
@@ -1603,11 +1606,11 @@ input[type=number]::-webkit-outer-spin-button {
 
 .select::after {
   content: "\25BC";
+  display: block;
   position: absolute;
   color: var(--gray-radio);
   right: 31px;
   top: 11px;
-  display: block;
   width: 11px;
   height: 10px;
   box-sizing: content-box;
@@ -1624,10 +1627,10 @@ input[type=number]::-webkit-outer-spin-button {
   top: 57%;
   left: 50%;
   width: 477px;
-  z-index: 5;
   transform: translateX(-50%) translateY(-50%);
   margin-top: -2px;
   margin-left: -1px;
+  z-index: 5;
   display: none;
 }
 
@@ -1643,7 +1646,6 @@ input[type=number]::-webkit-outer-spin-button {
   animation-play-state: running;
   animation-name: bounce;
 }
-
 
 .popup-title {
   font-weight: 500;
