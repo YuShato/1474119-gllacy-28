@@ -163,14 +163,21 @@ img {
 
 .button:focus {
   outline: none;
+  box-shadow: 0px 0px 0px 2px var(--blue-black);
 }
 
 .modal {
+  position: absolute;
+  display: none;
   background-color: var(--light-gray-form);
   box-shadow: 0 20px 20px var(--black-shadow);
   border-radius: 4px;
   color: var(--dark-text);
   margin-top: 4px;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 .modal .button-form {
@@ -228,6 +235,7 @@ img {
 .site-navigation-item {
   font-weight: 700;
   line-height: 18px;
+  position: relative;
 }
 
 .main-header-logo {
@@ -318,10 +326,8 @@ img {
 .search-form {
   width: 341px;
   z-index: 3;
-  right: 217px;
-  position: absolute;
-  top: 47px;
-  display: none;
+  right: 0px;
+  top: 34px;
 }
 
 .search-icon-wrap {
@@ -331,6 +337,12 @@ img {
   text-align: center;
   padding-top: 8px;
   padding-bottom: 8px;
+}
+
+.search-icon-wrap:hover .search-form,
+.search-icon-wrap:active .search-form,
+.search-icon-wrap:focus .search-form {
+  display: block;
 }
 
 .item-search {
@@ -379,13 +391,19 @@ img {
 
 .user-navigation-item {
   display: block;
+  position: relative;
 }
 
-.user-navigation-item:hover p {
+.user-navigation-item:hover p,
+.entrance-link:focus p {
   color: var(--dark-text);
 }
 
-.user-navigation-item:hover:not(.full-basket) path {
+.user-navigation-item:hover:not(.full-basket) path,
+.user-navigation-item:active:not(.full-basket) path,
+.user-navigation-item:focus:not(.full-basket) path,
+.search-link:focus path,
+.nav-link:focus :not(.full-basket) path {
   fill: var(--dark-text);
 }
 
@@ -396,8 +414,13 @@ img {
   align-items: center;
 }
 
+.search-icon-wrap:hover,
+.search-icon-wrap:active,
+.search-icon-wrap:focus,
 .entrance-link:hover,
-.search-icon-wrap:hover {
+.entrance-link:active,
+.entrance-link:focus,
+.search-link:focus {
   background-color: var(--white-text);
 }
 
@@ -411,6 +434,12 @@ img {
   padding-left: 8px;
 }
 
+.user-navigation-item:hover .user-navigation-descr,
+.user-navigation-item:active .user-navigation-descr,
+.user-navigation-item:focus .user-navigation-descr {
+  color: var(--dark-text);
+}
+
 .dropdown-menu {
   width: 143px;
   position: absolute;
@@ -419,8 +448,15 @@ img {
   padding-top: 5px;
   padding-bottom: 2px;
   margin-left: -7px;
-  display: none;
 }
+
+.catalog-list:hover .dropdown-menu,
+.catalog-list:active .dropdown-menu,
+.catalog-list:focus .dropdown-menu {
+  display: block;
+}
+
+
 
 .dropdown-item {
   display: block;
@@ -433,6 +469,7 @@ img {
   padding-bottom: 6px;
   padding-left: 20px;
   margin-bottom: 4px;
+  color: var(--dark-text);
 }
 
 .dropdown-item:hover {
@@ -473,10 +510,18 @@ img {
   z-index: 4;
   position: absolute;
   width: 277px;
-  right: 115px;
-  display: none;
+  right: 0;
+  top: 34px;
 }
 
+.entrance:hover .user-entrance,
+.entrance:focus .user-entrance,
+.entrance-link:hover .user-entrance,
+.entrance-link:focus .user-entrance {
+  display: block;
+}
+
+/* Андрей, посмотри плиз как ведет себя  этот элемент (.user-entrance). Он появляется при наведении, но совершенно невозможно туда ввести какую-либо информацию. Только убираешь мышку с родителя, форма сворачивается. Может js на нее добавить?*/
 .entrance-form {
   margin-top: 20px;
   margin-left: 19px;
@@ -821,6 +866,11 @@ img {
   width: 191px;
 }
 
+.offer-choco-link:focus,
+.offer-raspberry-link:focus {
+  box-shadow: 0px 0px 0px 1px var(--white-text);
+}
+
 .offer-raspberry-link {
   width: 164px;
 }
@@ -833,6 +883,11 @@ img {
   border-radius: 50%;
 }
 
+.product:hover .product-wrap {
+  position: relative;
+  z-index: 2;
+}
+
 .hit::before {
   content: url(../img/hit.svg);
   position: absolute;
@@ -842,7 +897,6 @@ img {
   border-radius: 50%;
 }
 
-/* сделать дополнительно шрифт 14 пкс на плейсхолдеры в шапке!!! */
 .news-post {
   width: 560px;
   height: 220px;
@@ -1142,7 +1196,12 @@ img {
   width: 539px;
   right: 5px;
   z-index: 3;
-  display: none;
+}
+
+.full-basket:hover .shopping-basket,
+.full-basket:active .shopping-basket,
+.full-basket:focus .shopping-basket {
+  display: block;
 }
 
 .shop-order {
@@ -1303,14 +1362,14 @@ img {
   margin-bottom: -10px;
 }
 
+.filter-input-radio:focus + label::before,
+.filter-input-checkbox:focus + label::before {
+  outline: 1px solid var(--black);
+}
+
 .product-filters {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-end;
-}
-
-.flex-wrapper {
-  display: flex;
   align-items: flex-end;
 }
 
@@ -1326,7 +1385,7 @@ img {
 }
 
 .filter-legend {
-  display:block;
+  display: block;
   padding-right: 4px;
   padding-bottom: 2px;
   margin-left: 8px;
@@ -1408,14 +1467,14 @@ img {
   padding-left: 14px;
 }
 
-.filter-input-radio+label {
+.filter-input-radio + label {
   padding-top: 9px;
   padding-bottom: 9px;
   padding-left: 31px;
   padding-right: 20px;
 }
 
-.filter-input-radio+label::before {
+.filter-input-radio + label::before {
   content: "";
   position: absolute;
   width: 14px;
@@ -1426,15 +1485,15 @@ img {
   top: 7px;
 }
 
-.filter-input-radio:hover+label::before {
+.filter-input-radio:hover + label::before {
   border: 4px solid var(--white-text);
 }
 
-.filter-input-radio:disabled+label::before {
+.filter-input-radio:disabled + label::before {
   border: 4px solid var(--gray-switch-hover);
 }
 
-.filter-input-radio:checked+label::after {
+.filter-input-radio:checked + label::after {
   content: "";
   position: absolute;
   width: 8px;
@@ -1445,11 +1504,11 @@ img {
   top: 14px;
 }
 
-.filter-input-radio:disabled+label::after {
+.filter-input-radio:disabled + label::after {
   background-color: var(--gray-switch-hover);
 }
 
-.filter-input-radio:checked:hover+label::after {
+.filter-input-radio:checked:hover + label::after {
   background-color: var(--white-text);
 }
 
@@ -1594,14 +1653,18 @@ input[type=number]::-webkit-outer-spin-button {
   appearance: none;
 }
 
-.select:hover .sorting {
+.select:hover,
+.select:focus,
+.select:active {
   color: var(--dark-text);
 }
 
 .sorting:focus,
-.sorting:active {
+.sorting:active,
+.sorting:hover {
   outline: none;
   color: var(--dark-text);
+  box-shadow: 0px 0px 0px 1px var(--blue-gray);
 }
 
 .select::after {
@@ -1614,6 +1677,7 @@ input[type=number]::-webkit-outer-spin-button {
   width: 11px;
   height: 10px;
   box-sizing: content-box;
+  pointer-events: none;
 }
 
 .select:hover::after,
@@ -1631,20 +1695,11 @@ input[type=number]::-webkit-outer-spin-button {
   margin-top: -2px;
   margin-left: -1px;
   z-index: 5;
-  display: none;
 }
 
 .popup-show {
   display: block;
   animation: bounce 0.7s;
-  animation-duration: 0.7s;
-  animation-timing-function: ease;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: none;
-  animation-play-state: running;
-  animation-name: bounce;
 }
 
 .popup-title {
@@ -1697,4 +1752,46 @@ input[type=number]::-webkit-outer-spin-button {
   padding: 0;
   background-image: url(../img/cross-big.svg);
   box-sizing: content-box;
+}
+
+/* Animations */
+@keyframes bounce {
+  0% {
+    transform: translateY(-1500px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
