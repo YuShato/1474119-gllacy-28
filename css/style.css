@@ -235,15 +235,12 @@ img {
 
 .main-navigation {
   display: flex;
-  flex-direction: row;
   width: 100%;
 }
 
 .site-navigation {
   width: 702px;
   display: flex;
-  flex-direction: row;
-  gap: 31px;
   flex-wrap: wrap;
   align-items: center;
   margin-top: -3px;
@@ -396,7 +393,6 @@ img {
 
 .nav-link {
   display: flex;
-  flex-direction: row;
   padding-top: 8px;
   padding-bottom: 8px;
   padding-right: 16px;
@@ -1100,7 +1096,6 @@ img {
 
 .footer {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   border-top: 1px solid var(--light-gray-button);
@@ -1341,7 +1336,6 @@ img {
 
 .catalog-paginator {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-end;
   margin-left: auto;
