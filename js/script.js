@@ -1,22 +1,22 @@
 // Форма регистрации в шапке
 (function () {
-  const loginLink = document.querySelector(".login-link");
-  const loginPopup = document.querySelector(".user-entrance");
-  const loginForm = loginPopup.querySelector(".entrance-form");
-  const loginPassword = loginPopup.querySelector("#entrance-password");
-  const loginLogin = loginPopup.querySelector("#entrance-email");
+  const loginLink = document.querySelector('.login-link');
+  const loginPopup = document.querySelector('.user-entrance');
+  const loginForm = loginPopup.querySelector('.entrance-form');
+  const loginPassword = loginPopup.querySelector('#entrance-password');
+  const loginLogin = loginPopup.querySelector('#entrance-email');
 
   const isStorageSupport = true;
-  let storage = "";
+  let storage = '';
   try {
-    storage = localStorage.getItem("login");
+    storage = localStorage.getItem('login');
   } catch (err) {
     isStorageSupport = false;
   }
 
-  loginLink.addEventListener("mouseover", function (evt) {
+  loginLink.addEventListener('mouseover', function (evt) {
     evt.preventDefault();
-    loginPopup.classList.add("show");
+    loginPopup.classList.add('show');
     if (storage) {
       loginLogin.value = storage;
       loginPassword.focus();
@@ -25,15 +25,15 @@
     }
   });
 
-  loginForm.addEventListener("submit", function (evt) {
+  loginForm.addEventListener('submit', function (evt) {
     if (!loginLogin.value || !loginPassword.value) {
       evt.preventDefault();
-      loginPopup.classList.remove("modal-error");
+      loginPopup.classList.remove('modal-error');
       loginPopup.offsetWidth = loginPopup.offsetWidth;
-      loginPopup.classList.add("modal-error");
+      loginPopup.classList.add('modal-error');
     } else {
       if (isStorageSupport) {
-        localStorage.setItem("login", loginLogin.value);
+        localStorage.setItem('login', loginLogin.value);
       }
     }
   });
@@ -42,27 +42,27 @@
 //  Модальное окно (форма обратной связи)
 (function () {
   const body = document.body;
-  const feedback = body.querySelector(".popup");
-  const feedbackForm = feedback.querySelector(".popup-form");
-  const feedbackBtn = body.querySelector(".feedback-btn");
-  const feedbackClose = feedback.querySelector(".popup-close");
-  const questionName = feedbackForm.querySelector("#question-name");
-  const questionEmail = feedbackForm.querySelector("#question-email");
-  const questionText = feedbackForm.querySelector("#question-text");
-  const feedbackFormBtn = feedbackForm.querySelector(".button-form");
+  const feedback = body.querySelector('.popup');
+  const feedbackForm = feedback.querySelector('.popup-form');
+  const feedbackBtn = body.querySelector('.feedback-btn');
+  const feedbackClose = feedback.querySelector('.popup-close');
+  const questionName = feedbackForm.querySelector('#question-name');
+  const questionEmail = feedbackForm.querySelector('#question-email');
+  const questionText = feedbackForm.querySelector('#question-text');
+  const feedbackFormBtn = feedbackForm.querySelector('.button-form');
 
   const isStorageSupport = true;
-  let storage = "";
+  let storage = '';
   try {
-    storage = localStorage.getItem("name");
+    storage = localStorage.getItem('name');
   } catch (err) {
     isStorageSupport = false;
   }
 
-  feedbackBtn.addEventListener("click", function (evt) {
+  feedbackBtn.addEventListener('click', function (evt) {
     evt.preventDefault();
-    feedback.classList.add("popup-show");
-    body.classList.add("overlay");
+    feedback.classList.add('popup-show');
+    body.classList.add('overlay');
     if (storage) {
       questionName.value = storage;
       questionEmail.value = storage;
@@ -72,32 +72,32 @@
     }
   });
 
-  feedbackClose.addEventListener("click", function (evt) {
+  feedbackClose.addEventListener('click', function (evt) {
     evt.preventDefault();
-    feedback.classList.remove("popup-show");
-    body.classList.remove("overlay");
+    feedback.classList.remove('popup-show');
+    body.classList.remove('overlay');
   });
 
-  window.addEventListener("keydown", function (evt) {
+  window.addEventListener('keydown', function (evt) {
     if (evt.keyCode === 27) {
-      if (feedback.classList.contains("popup-show")) {
+      if (feedback.classList.contains('popup-show')) {
         evt.preventDefault();
-        feedback.classList.remove("popup-show");
-        body.classList.remove("overlay");
+        feedback.classList.remove('popup-show');
+        body.classList.remove('overlay');
       }
     }
   });
 
-  feedbackFormBtn.addEventListener("click", function (evt) {
+  feedbackFormBtn.addEventListener('click', function (evt) {
     if (!questionName.value || !questionEmail.value) {
       evt.preventDefault();
-      feedbackForm.classList.remove("modal-error");
+      feedbackForm.classList.remove('modal-error');
       feedbackForm.offsetWidth = feedbackForm.offsetWidth;
-      feedbackForm.classList.add("modal-error");
+      feedbackForm.classList.add('modal-error');
     } else {
       if (isStorageSupport) {
-        localStorage.setItem("name", questionName.value);
-        localStorage.setItem("email", questionEmail.value);
+        localStorage.setItem('name', questionName.value);
+        localStorage.setItem('email', questionEmail.value);
       }
     }
   });
@@ -106,16 +106,16 @@
 // Главный слайдер
 (function () {
   const body = document.body;
-  const sliderSwitches = body.querySelectorAll(".main-slider-switch");
+  const sliderSwitches = body.querySelectorAll('.main-slider-switch');
 
   for (let i = 0; i < sliderSwitches.length; i++) {
-    sliderSwitches[i].addEventListener("click", function (evt) {
+    sliderSwitches[i].addEventListener('click', function (evt) {
       for (let i = 0; i < sliderSwitches.length; i++) {
         if (sliderSwitches[i] === evt.target) {
-          sliderSwitches[i].classList.add("current");
+          sliderSwitches[i].classList.add('current');
           body.classList.add(`main-slider-${i}`);
         } else {
-          sliderSwitches[i].classList.remove("current");
+          sliderSwitches[i].classList.remove('current');
           body.classList.remove(`main-slider-${i}`);
         }
       }
