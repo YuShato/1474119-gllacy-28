@@ -228,28 +228,16 @@
     <section class="benefits container-wrap">
       <h1 class="benefits-title text-reset">Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого
         собственного производства на развес </h1>
-      <div class="benefit-item">
-        <img class="benefit-item-img" src="img/ice-cream.svg" alt="Собственное производство и проверенные технологии"
-          width="49" height="49">
+      <div class="benefit-items">
         <p class="benefit-item-descr">Все наше мороженое изготавливается на собственном производстве, с использованием
           современного оборудования<br> и
           проверенных временем технологий.</p>
-      </div>
-      <div class="benefit-item">
-        <img class="benefit-item-img" src="img/cow.svg" alt="Проверенные поставщики" width="49" height="49">
         <p class="benefit-item-descr">Закупка ингредиентов производится только у проверенных фермерских хозяйств и
           компаний, с которыми нас
           связывает долговременное сотрудничество.</p>
-      </div>
-      <div class="benefit-item">
-        <img class="benefit-item-img" src="img/eco.svg" alt="Только продукты высочайшего качества" width="49"
-          height="49">
         <p class="benefit-item-descr">Для приготовления мороженого используются настоящие сливки и молоко высочайшего
           качества. Все дополнительные
           ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
-      </div>
-      <div class="benefit-item">
-        <img class="benefit-item-img" src="img/thermometer.svg" alt="Качественная доставка" width="49" height="49">
         <p class="benefit-item-descr">Доставка нашего мороженного до заказчиков осуществляется в специальном
           термопаке,
           который не дает мороженому
@@ -261,7 +249,7 @@
       <section class="news news-post">
         <h3 class="news-title text-reset">Новое в нашем блоге</h3>
         <p class="news-descr text-reset">
-          <a class="news-link " href="">10 способов сервировки фруктовых щербетов <br> к столу</a>
+          <a class="news-link " href="">10 способов сервировки фруктовых щербетов &nbsp;&nbsp;<br>к столу</a>
         </p>
       </section>
       <!--лид-магнит-->
@@ -273,7 +261,8 @@
           что у нас происходит.
           Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
         <form class="lead-form" action="https://echo.htmlacademy.ru" method="post">
-          <input class=" lead-input" type="email" placeholder="email@example.com">
+          <label class="visually-hidden" aria-label="введите ваш email" for="lead-input"></label>
+          <input class="lead-input" id="lead-input" type="email" placeholder="email@example.com">
           <button class="button button-form text-reset" type="submit">Отправить</button>
         </form>
       </section>
@@ -413,7 +402,7 @@
       </p>
       <button class="button button-form text-reset" type="submit">Отправить</button>
     </form>
-    <button class="popup-close" aria-label="Закрыть"></button>
+    <button class="popup-close" type="button" aria-label="Закрыть"></button>
   </section>
   <!-- Javascript -->
   <script src="https://api-maps.yandex.ru/2.1/?apikey=1fb243a3-0f6e-42e7-95ca-37202837e50e&lang=ru_RU"></script>

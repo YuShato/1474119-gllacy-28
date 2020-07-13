@@ -29,7 +29,7 @@
               <a class="dropdown-item active" href="">Новинки</a>
             </li>
             <li>
-              <a class="dropdown-item" href="">Сливочное</a>
+              <a class="dropdown-item current" href="">Сливочное</a>
             </li>
             <li>
               <a class="dropdown-item" href="">Щербеты</a>
@@ -118,6 +118,7 @@
           </a>
           <!--Выпадающая корзина с товарами-->
           <div class="shopping-basket modal">
+            <form method="post" action="https://echo.htmlacademy.ru">
             <table class="shop-order">
               <!--первый товар в корзине-->
               <tr>
@@ -157,7 +158,8 @@
                 <td class="basket-sum" colspan="5">Итого: 750 руб.</td>
               </tr>
             </table>
-            <a class="button button-form" href="">Оформить заказ</a>
+            <button class="button button-form" type="submit">Оформить заказ</button>
+          </form>
           </div>
         </li>
       </ul>
@@ -192,6 +194,7 @@
           <fieldset class="filter-item">
             <legend class="user-navigation-descr filter-legend">Сортировка:</legend>
             <div class="select">
+              <label class="visually-hidden" for="sorting" aria-label="Фильтр"></label>
               <select class="sorting site-text filter-bg" name="sorting[]" id="sorting" size="1">
                 <option value="popular">по популярности</option>
                 <option value="cheap">сначала недорогие</option>
